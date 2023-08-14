@@ -1,7 +1,7 @@
 export default function App() {
   return (
     <>
-      <div>Desafio Técnico Pecege - Frontend</div>
+      <h1>Desafio Técnico Pecege - Frontend</h1>
     </>
   )
 }
