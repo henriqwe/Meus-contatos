@@ -32,12 +32,13 @@ export function Input({
     <Controller
       name={fieldName}
       control={control}
-      render={({ field: { onChange } }) => (
+      render={({ field: { onChange, value } }) => (
         <>
           <input
             autoComplete="off"
             id={fieldName}
             type="text"
+            value={value}
             onChange={(e) => {
               onChange(e.target.value)
               debounceChange?.(e.target.value)

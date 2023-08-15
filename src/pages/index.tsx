@@ -1,13 +1,5 @@
-import { ContactList } from '&components/ContactList/ContactList'
-import React from 'react'
+import { ContactList } from '&domains/Contact/List'
 
-const Page = () => {
-  return (
-    <>
-      <h1>Desafio Técnico Pecege - Frontend</h1>
-      <ContactList />
-    </>
-  )
+export default function Page() {
+  return <ContactList />
 }
-
-export default Page

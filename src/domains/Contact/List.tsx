@@ -4,9 +4,11 @@ import { Input } from '&components/Input/Input'
 
 import { useForm } from 'react-hook-form'
 import { useEffect, useState } from 'react'
-import { sortArray } from '&utils/sortArray'
+import { sortArray } from '&utils/handles/sortArray'
 import { useContacts } from '&contexts/contactsContext'
 import { useNavigate } from 'react-router-dom'
+import { Loading } from '&components/Loading/Loading'
+import { routes } from '&utils/routes'
 
 export function ContactList() {
   const navigate = useNavigate()
@@ -41,17 +43,19 @@ export function ContactList() {
   }, [contactsQuery?.data])
 
   if (contactsQuery?.isLoading) {
-    return <h2>🌀 Loading...</h2>
+    return <Loading />
   }
 
   return (
     <div>
+      <h1>Desafio Técnico Pecege - Frontend</h1>
+
       <Input
         control={control}
         fieldName="Nome"
         handleChangeDebounce={handleOnChange}
       />
-      <div onClick={() => navigate('/novo')}>ADICIONAR</div>
+      <div onClick={() => navigate(routes.createContact.path)}>ADICIONAR</div>
       <Table
         data={contacts}
         titles={[
@@ -67,10 +71,16 @@ export function ContactList() {
           { name: 'Email', key: 'email' }
         ]}
         actions={(contact: IContact) => (
-          <div>
-            <div onClick={() => navigate(`/${contact.id}`)}>VER</div>
+          <td>
+            <div
+              onClick={() =>
+                navigate(routes.editContact.path(contact.id.toString()))
+              }
+            >
+              EDITAR
+            </div>
             <div onClick={() => removeContact(contact.id)}>REMOVER</div>
-          </div>
+          </td>
         )}
       />
     </div>

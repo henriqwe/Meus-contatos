@@ -16,7 +16,7 @@ export function Table({
 }: Props) {
   return (
     <table test-id="table">
-      <TableHeader titles={titles} />
+      <TableHeader titles={titles} hasActions={!!actions} />
       <TableBody
         data={data}
         titles={titles}

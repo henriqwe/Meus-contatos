@@ -3,8 +3,9 @@ import { TTitle } from './types'
 
 interface Props {
   titles: TTitle[]
+  hasActions: boolean
 }
-export function TableHeader({ titles }: Props) {
+export function TableHeader({ titles, hasActions }: Props) {
   return (
     <thead>
       <tr>
@@ -16,6 +17,7 @@ export function TableHeader({ titles }: Props) {
             )}
           </th>
         ))}
+        {hasActions && <th key={'action'} />}
       </tr>
     </thead>
   )
