@@ -1,17 +1,16 @@
-import { useQuery } from '@tanstack/react-query'
-import { IContact, fetchContacts } from '&operations/queries/fetchContacts'
+import { IContact } from '&operations/queries/fetchContacts'
 import { Table } from '&components/Table/Table'
 import { Input } from '&components/Input/Input'
 
 import { useForm } from 'react-hook-form'
 import { useEffect, useState } from 'react'
 import { sortArray } from '&utils/sortArray'
+import { useContacts } from '&contexts/contactsContext'
+import { useNavigate } from 'react-router-dom'
 
 export function ContactList() {
-  const { data, isLoading } = useQuery({
-    queryKey: ['contacts'],
-    queryFn: () => fetchContacts()
-  })
+  const navigate = useNavigate()
+  const { contactsQuery, removeContact } = useContacts()
 
   const [contacts, setContacts] = useState<IContact[]>()
   const [ascendentName, setAscendentName] = useState(true)
@@ -23,7 +22,7 @@ export function ContactList() {
   }
 
   function handleOnChange(value: string) {
-    const newDataList = data?.filter(
+    const newDataList = contactsQuery?.data?.filter(
       (contact) =>
         contact.name.toLocaleLowerCase()?.includes(value.toLocaleLowerCase())
     )
@@ -36,12 +35,12 @@ export function ContactList() {
   }
 
   useEffect(() => {
-    if (data) {
-      handleData(data, ascendentName)
+    if (contactsQuery?.data) {
+      handleData(contactsQuery?.data, ascendentName)
     }
-  }, [data])
+  }, [contactsQuery?.data])
 
-  if (isLoading) {
+  if (contactsQuery?.isLoading) {
     return <h2>🌀 Loading...</h2>
   }
 
@@ -52,6 +51,7 @@ export function ContactList() {
         fieldName="Nome"
         handleChangeDebounce={handleOnChange}
       />
+      <div onClick={() => navigate('/novo')}>ADICIONAR</div>
       <Table
         data={contacts}
         titles={[
@@ -66,6 +66,12 @@ export function ContactList() {
           { name: 'Telefone', key: 'phone' },
           { name: 'Email', key: 'email' }
         ]}
+        actions={(contact: IContact) => (
+          <div>
+            <div onClick={() => navigate(`/${contact.id}`)}>VER</div>
+            <div onClick={() => removeContact(contact.id)}>REMOVER</div>
+          </div>
+        )}
       />
     </div>
   )

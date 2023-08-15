@@ -4,8 +4,9 @@ interface Props {
   data?: TData[]
   titles: TTitle[]
   emptyMessage: string
+  actions?: (item: any) => JSX.Element
 }
-export function TableBody({ data, titles, emptyMessage }: Props) {
+export function TableBody({ data, titles, emptyMessage, actions }: Props) {
   if (!data?.length) {
     return (
       <tbody>
@@ -22,6 +23,7 @@ export function TableBody({ data, titles, emptyMessage }: Props) {
           {titles?.map((title) => (
             <td key={tableData[title.key]}>{tableData[title.key]}</td>
           ))}
+          {actions?.(tableData)}
         </tr>
       ))}
     </tbody>

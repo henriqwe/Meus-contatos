@@ -23,7 +23,8 @@
       "&components/*": ["./src/components/*"],
       "&utils/*": ["./src/utils/*"],
       "&hooks/*": ["./src/hooks/*"],
-      "&operations/*": ["./src/operations/*"]
+      "&operations/*": ["./src/operations/*"],
+      "&contexts/*": ["./src/contexts/*"]
     }
   },
   "include": ["src"],
