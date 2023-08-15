@@ -8,21 +8,24 @@ import {
   Path
 } from 'react-hook-form'
 import { useDebounce } from '&hooks/useDebounce'
+import { SErrorMessage, SInput, SInputWrapper, SLabel } from './style'
 
 type InputType = {
-  fieldName: Path<FieldValues>
+  name: Path<FieldValues>
   error?: DeepMap<FieldValues, FieldError> & { message?: string }
   icon?: ReactNode
-  control: Control<FieldValues, object>
+  control: Control<any, any>
   handleChangeDebounce?: (value: string) => any
   debounceDelay?: number
+  label: string
 }
 export function Input({
-  fieldName,
+  name,
   control,
   handleChangeDebounce,
   debounceDelay = 1000,
-  error
+  error,
+  label
 }: InputType) {
   const debounceChange = handleChangeDebounce
     ? useDebounce(handleChangeDebounce, debounceDelay)
@@ -30,21 +33,22 @@ export function Input({
 
   return (
     <Controller
-      name={fieldName}
+      name={name}
       control={control}
       render={({ field: { onChange, value } }) => (
         <>
-          <input
+          <SLabel htmlFor={name}>{label}</SLabel>
+          <SInput
             autoComplete="off"
-            id={fieldName}
+            id={name}
             type="text"
-            value={value}
+            value={value || ''}
             onChange={(e) => {
               onChange(e.target.value)
               debounceChange?.(e.target.value)
             }}
           />
-          {error && <div>{error?.message as string}</div>}
+          <SErrorMessage>{error?.message as string}</SErrorMessage>
         </>
       )}
     />
