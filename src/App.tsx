@@ -1,4 +1,4 @@
-import { ContactList } from './components/ContactList/ContactList'
+import { ContactList } from '&components/ContactList/ContactList'
 
 export default function App() {
   return (
