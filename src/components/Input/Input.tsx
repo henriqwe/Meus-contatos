@@ -1,4 +1,3 @@
-import { ReactNode } from 'react'
 import {
   Control,
   Controller,
@@ -12,20 +11,21 @@ import { SErrorMessage, SInput, SLabel } from './style'
 
 type InputType = {
   name: Path<FieldValues>
-  error?: DeepMap<FieldValues, FieldError> & { message?: string }
-  icon?: ReactNode
   control: Control<any, any>
+  label: string
   handleChangeDebounce?: (value: string) => any
   debounceDelay?: number
-  label: string
+  error?: DeepMap<FieldValues, FieldError> & { message?: string }
+  disabled?: boolean
 }
 export function Input({
   name,
   control,
   handleChangeDebounce,
-  debounceDelay = 1000,
   error,
-  label
+  label,
+  debounceDelay = 1000,
+  disabled = false
 }: InputType) {
   const debounceChange = handleChangeDebounce
     ? useDebounce(handleChangeDebounce, debounceDelay)
@@ -42,6 +42,7 @@ export function Input({
             autoComplete="off"
             id={name}
             type="text"
+            disabled={disabled}
             value={value || ''}
             onChange={(e) => {
               onChange(e.target.value)

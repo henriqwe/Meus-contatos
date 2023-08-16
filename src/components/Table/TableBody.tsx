@@ -21,7 +21,9 @@ export function TableBody({ data, titles, emptyMessage, actions }: Props) {
       {data?.map((tableData, idx) => (
         <tr key={idx}>
           {titles?.map((title) => (
-            <td key={tableData[title.key]}>{tableData[title.key]}</td>
+            <td key={tableData[title.key] + title.key}>
+              {tableData[title.key]}
+            </td>
           ))}
           {actions?.(tableData)}
         </tr>

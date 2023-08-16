@@ -1,24 +1,6 @@
-import { sortArray } from './sortArray'
+import { sortArrayByKey } from './sortArrayByKey'
 
-describe('sortArray test', () => {
-  it('should return a new array in descending with out change in the  array', () => {
-    const array = [1, 2, 3]
-    const newArray = sortArray({ data: array, asc: false })
-    expect(newArray).toEqual([3, 2, 1])
-    expect(array).toEqual([1, 2, 3])
-  })
-  it('should return a new array in ascending with out change in the  array', () => {
-    const array = [3, 2, 1]
-    const newArray = sortArray({ data: array })
-    expect(newArray).toEqual([1, 2, 3])
-    expect(array).toEqual([3, 2, 1])
-  })
-  it('should return a new array in ascending with out change in the  array', () => {
-    const array = [3, 2, 1]
-    const newArray = sortArray({ data: array })
-    expect(newArray).toEqual([1, 2, 3])
-    expect(array).toEqual([3, 2, 1])
-  })
+describe('sortArrayByKey test', () => {
   it('should return a new array in ascending order by name', () => {
     const array = [
       {
@@ -38,10 +20,22 @@ describe('sortArray test', () => {
         name: 'Clementine Bauch',
         email: 'Nathan@yesenia.net',
         phone: '1-463-123-4447'
+      },
+      {
+        id: 4,
+        name: 'abraao silva',
+        email: 'abraao@yesenia.net',
+        phone: '1-263-123-4447'
       }
     ]
-    const newArray = sortArray({ data: array, key: 'name' })
+    const newArray = sortArrayByKey({ data: array, key: 'name' })
     expect(newArray).toEqual([
+      {
+        id: 4,
+        name: 'abraao silva',
+        email: 'abraao@yesenia.net',
+        phone: '1-263-123-4447'
+      },
       {
         id: 3,
         name: 'Clementine Bauch',
