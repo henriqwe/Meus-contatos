@@ -1,5 +1,4 @@
 import { IContact } from '&operations/queries/fetchContacts'
-import { Table } from '&components/Table/Table'
 import { Input } from '&components/Input/Input'
 
 import { useForm } from 'react-hook-form'
@@ -9,6 +8,15 @@ import { useContacts } from '&contexts/contactsContext'
 import { useNavigate } from 'react-router-dom'
 import { Loading } from '&components/Loading/Loading'
 import { routes } from '&utils/routes'
+import { ContactCard } from '&components/ContactCard/ContactCard'
+import { AscIcon } from './AscIcon'
+import {
+  SCardList,
+  SContainer,
+  SListHeading,
+  SOrderByNameContent,
+  SSeparator
+} from './style'
 
 export function ContactList() {
   const navigate = useNavigate()
@@ -46,44 +54,45 @@ export function ContactList() {
     return <Loading />
   }
 
+  function handleNavigate(id: number) {
+    navigate(routes.editContact.path(id.toString()))
+  }
   return (
-    <div>
-      <h1>Desafio Técnico Pecege - Frontend</h1>
+    <SContainer>
+      <h1>Home</h1>
 
       <Input
         control={control}
         name="name"
         handleChangeDebounce={handleOnChange}
-        label="Nome"
+        label="Pesquisar por nome"
       />
-      <div onClick={() => navigate(routes.createContact.path)}>ADICIONAR</div>
-      <Table
-        data={contacts}
-        titles={[
-          {
-            name: 'Nome',
-            key: 'name',
-            onClick: {
-              fn: () => toggleAscendentName(contacts as IContact[]),
-              ascIcon: ascendentName
-            }
-          },
-          { name: 'Telefone', key: 'phone' },
-          { name: 'Email', key: 'email' }
-        ]}
-        actions={(contact: IContact) => (
-          <td>
-            <div
-              onClick={() =>
-                navigate(routes.editContact.path(contact.id.toString()))
-              }
-            >
-              EDITAR
-            </div>
-            <div onClick={() => removeContact(contact.id)}>REMOVER</div>
-          </td>
-        )}
-      />
-    </div>
+      {/* <div onClick={() => navigate(routes.createContact.path)}>ADICIONAR</div> */}
+
+      <SListHeading>
+        <h3>Contatos</h3>
+        <SOrderByNameContent
+          onClick={() => toggleAscendentName(contacts as IContact[])}
+        >
+          <span>Nome</span> <AscIcon asc={ascendentName} />
+        </SOrderByNameContent>
+      </SListHeading>
+      <SSeparator />
+
+      <SCardList>
+        {contacts?.length === 0 && <span>Nem um dado a ser exibido</span>}
+        {contacts?.map((contact) => (
+          <ContactCard
+            key={contact.id}
+            id={contact.id}
+            phone={contact.phone}
+            name={contact.name}
+            email={contact.email}
+            removeAction={removeContact}
+            navigateAction={handleNavigate}
+          />
+        ))}
+      </SCardList>
+    </SContainer>
   )
 }
