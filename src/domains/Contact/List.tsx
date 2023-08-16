@@ -4,7 +4,7 @@ import { Input } from '&components/Input/Input'
 
 import { useForm } from 'react-hook-form'
 import { useEffect, useState } from 'react'
-import { sortArray } from '&utils/handles/sortArray'
+import { sortArrayByKey } from '&utils/handles/sortArrayByKey'
 import { useContacts } from '&contexts/contactsContext'
 import { useNavigate } from 'react-router-dom'
 import { Loading } from '&components/Loading/Loading'
@@ -20,7 +20,7 @@ export function ContactList() {
   const { control } = useForm()
 
   function handleData(data: IContact[], asc: boolean) {
-    setContacts(sortArray({ data, asc: asc, key: 'name' }))
+    setContacts(sortArrayByKey({ data, asc, key: 'name' }))
   }
 
   function handleOnChange(value: string) {
@@ -52,8 +52,9 @@ export function ContactList() {
 
       <Input
         control={control}
-        fieldName="Nome"
+        name="name"
         handleChangeDebounce={handleOnChange}
+        label="Nome"
       />
       <div onClick={() => navigate(routes.createContact.path)}>ADICIONAR</div>
       <Table
