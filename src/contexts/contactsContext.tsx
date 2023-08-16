@@ -7,6 +7,7 @@ interface props {
   children: ReactNode
 }
 export interface IFormData {
+  id?: number
   name: string
   email: string
   phone: string
@@ -15,19 +16,40 @@ export interface IFormData {
   suite?: string
   city?: string
   zipcode?: string
-  geo?: {
-    lat: string
-    lng: string
-  }
+  lat?: string
+  lng?: string
   website?: string
   companyName?: string
   catchPhrase?: string
   bs?: string
 }
-
+export interface INewContact {
+  id?: number
+  name: string
+  email: string
+  username: string | undefined
+  address: {
+    street: string | undefined
+    suite: string | undefined
+    city: string | undefined
+    zipcode: string | undefined
+    geo: {
+      lat: string | undefined
+      lng: string | undefined
+    }
+  }
+  phone: string | undefined
+  website: string | undefined
+  company: {
+    name: string | undefined
+    catchPhrase: string | undefined
+    bs: string | undefined
+  }
+}
 interface ContactsContextProps {
   contactsQuery: UseQueryResult<IContact[], unknown>
-  addContact(contact: IFormData): void
+  addContact(contact: INewContact): void
+  editContact(contact: INewContact): void
   removeContact(id: number): void
   getContactById(id: number | string): IContact | undefined
   contactSchema: Yup.AnyObjectSchema
@@ -45,11 +67,23 @@ export const ContactsProvider = ({ children }: props) => {
     refetchOnWindowFocus: false
   })
 
-  function addContact(contact: IContact) {
+  function addContact(contact: INewContact) {
     queryClient.setQueryData(['contacts'], (old: any) => [
       ...old,
       { ...contact, id: nextId }
     ])
+    setNextId((old) => old++)
+  }
+
+  function editContact(contact: INewContact) {
+    queryClient.setQueryData(['contacts'], (old: any) =>
+      old.map((oldContact: IContact) => {
+        if (oldContact.id === contact.id) {
+          return contact
+        }
+        return oldContact
+      })
+    )
     setNextId((old) => old++)
   }
 
@@ -78,6 +112,7 @@ export const ContactsProvider = ({ children }: props) => {
     phone: Yup.string().required('Campo obrigatório'),
     username: Yup.string(),
     street: Yup.string(),
+    zipcode: Yup.string(),
     suite: Yup.string(),
     city: Yup.string(),
     lat: Yup.string(),
@@ -91,6 +126,7 @@ export const ContactsProvider = ({ children }: props) => {
   return (
     <ContactsContext.Provider
       value={{
+        editContact,
         contactsQuery,
         removeContact,
         addContact,

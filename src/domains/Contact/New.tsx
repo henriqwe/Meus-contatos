@@ -16,7 +16,29 @@ export function NewContact() {
   function onSubmit(formData: IFormData) {
     try {
       setIsLoading(true)
-      addContact(formData)
+      const newContact = {
+        email: formData.email,
+        name: formData.name,
+        phone: formData.phone,
+        username: formData.username,
+        website: formData.website,
+        address: {
+          city: formData.city,
+          geo: {
+            lat: formData.lat,
+            lng: formData.lng
+          },
+          street: formData.street,
+          suite: formData.suite,
+          zipcode: formData.zipcode
+        },
+        company: {
+          bs: formData.bs,
+          catchPhrase: formData.catchPhrase,
+          name: formData.companyName
+        }
+      }
+      addContact(newContact)
       notification('Contato cadastrado com sucesso!', 'success')
       reset()
       navigate(routes.home.path)
