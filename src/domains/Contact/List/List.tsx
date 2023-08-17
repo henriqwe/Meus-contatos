@@ -11,12 +11,17 @@ import { routes } from '&utils/routes'
 import { ContactCard } from '&components/ContactCard/ContactCard'
 import { AscIcon } from './AscIcon'
 import {
+  SActionsContainer,
+  SButtonText,
   SCardList,
   SContainer,
   SListHeading,
   SOrderByNameContent,
-  SSeparator
+  SSeparator,
+  SUserPlusIcon
 } from './style'
+import { Button } from '&components/Button/Button'
+import { styled } from 'styled-components'
 
 export function ContactList() {
   const navigate = useNavigate()
@@ -61,14 +66,22 @@ export function ContactList() {
     <SContainer>
       <h1>Home</h1>
 
-      <Input
-        control={control}
-        name="name"
-        handleChangeDebounce={handleOnChange}
-        label="Pesquisar por nome"
-      />
-      {/* <div onClick={() => navigate(routes.createContact.path)}>ADICIONAR</div> */}
-
+      <SActionsContainer>
+        <Input
+          control={control}
+          name="name"
+          handleChangeDebounce={handleOnChange}
+          label="Pesquisar por nome"
+        />
+        <div>
+          <Button
+            onClick={() => navigate(routes.createContact.path)}
+            variant="success"
+          >
+            <SButtonText>Novo</SButtonText> <SUserPlusIcon />
+          </Button>
+        </div>
+      </SActionsContainer>
       <SListHeading>
         <h3>Contatos</h3>
         <SOrderByNameContent

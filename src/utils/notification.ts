@@ -5,7 +5,7 @@ export function notification(
   type: 'success' | 'error' | 'warning' | 'info'
 ) {
   toast[type](message, {
-    position: 'top-center',
+    position: 'bottom-right',
     autoClose: 5000,
     hideProgressBar: false,
     closeOnClick: true,

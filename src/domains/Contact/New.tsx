@@ -5,7 +5,7 @@ import { IFormData, useContacts } from '&contexts/contactsContext'
 import { useNavigate } from 'react-router-dom'
 import { routes } from '&utils/routes'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { SButtonPrimary } from '&components/Button/Button'
+import { Button } from '&components/Button/Button'
 import { notification } from '&utils/notification'
 
 export function NewContact() {
@@ -160,7 +160,9 @@ export function NewContact() {
           error={errors['bs']}
           disabled={isLoading}
         />
-        <SButtonPrimary disabled={isLoading}>Salvar</SButtonPrimary>
+        <Button disabled={isLoading} variant="primary">
+          Salvar
+        </Button>
       </form>
     </div>
   )

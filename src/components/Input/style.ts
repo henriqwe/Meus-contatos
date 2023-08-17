@@ -23,3 +23,7 @@ export const SErrorMessage = styled.label`
   color: red;
   margin-top: 3px;
 `
+export const SInputWrapper = styled.div`
+  display: block;
+  flex: 1;
+`

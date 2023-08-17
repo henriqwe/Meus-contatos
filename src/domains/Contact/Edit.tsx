@@ -7,7 +7,7 @@ import { Loading } from '&components/Loading/Loading'
 import { routes } from '&utils/routes'
 import { notification } from '&utils/notification'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { SButtonPrimary } from '&components/Button/Button'
+import { Button } from '&components/Button/Button'
 
 export function EditContact() {
   const navigate = useNavigate()
@@ -192,7 +192,9 @@ export function EditContact() {
           error={errors['bs']}
           disabled={isLoading}
         />
-        <SButtonPrimary disabled={isLoading}>Atualizar</SButtonPrimary>
+        <Button disabled={isLoading} variant="primary">
+          Atualizar
+        </Button>
       </form>
     </div>
   )

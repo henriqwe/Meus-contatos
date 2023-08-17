@@ -61,7 +61,7 @@ export default function WrapperApp() {
     <ContactsProvider>
       <App />
       <ToastContainer
-        position="top-center"
+        position="bottom-right"
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}
