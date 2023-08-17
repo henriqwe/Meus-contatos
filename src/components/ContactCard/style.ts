@@ -1,5 +1,5 @@
 import { styled } from 'styled-components'
-import { TrashIcon } from '@heroicons/react/24/outline'
+import { ChevronRightIcon } from '@heroicons/react/24/outline'
 
 export const SContactCard = styled.div`
   background-color: #fff;
@@ -51,18 +51,15 @@ export const SSecondaryDetail = styled.span`
   color: rgb(100 116 139);
   font-weight: 400;
 `
-export const SActionsWrapper = styled.div`
-  background-color: red;
-  border-top-right-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-  width: 2.5rem;
-  height: 50%;
+export const SIconWrapper = styled.div`
+  height: 100%;
+  padding-right: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
 `
-export const STrashIcon = styled(TrashIcon)`
-  width: 1.4rem;
-  height: 1.4rem;
-  color: white;
+export const SChevronRightIcon = styled(ChevronRightIcon)`
+  width: 1.5rem;
+  height: 1.5rem;
+  color: rgb(15 23 42);
 `

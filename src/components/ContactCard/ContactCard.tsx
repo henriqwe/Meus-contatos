@@ -1,5 +1,5 @@
 import {
-  SActionsWrapper,
+  SIconWrapper,
   SAvatar,
   SAvatarContainer,
   SContactCard,
@@ -7,7 +7,7 @@ import {
   SDetailsWrapper,
   SPrimaryDetail,
   SSecondaryDetail,
-  STrashIcon
+  SChevronRightIcon
 } from './style'
 
 interface props {
@@ -18,18 +18,11 @@ interface props {
   removeAction: (id: number) => void
   navigateAction(id: number): void
 }
-export function ContactCard({
-  id,
-  removeAction,
-  email,
-  name,
-  phone,
-  navigateAction
-}: props) {
+export function ContactCard({ id, email, name, phone, navigateAction }: props) {
   const avatarLetters = name?.toUpperCase().split(' ')
   return (
-    <SContactCard>
-      <SContactCardWrapper onClick={() => navigateAction(id)}>
+    <SContactCard onClick={() => navigateAction(id)}>
+      <SContactCardWrapper>
         <SAvatarContainer>
           <SAvatar>
             {avatarLetters?.[0]?.[0]}
@@ -42,10 +35,9 @@ export function ContactCard({
           <SSecondaryDetail>{email}</SSecondaryDetail>
         </SDetailsWrapper>
       </SContactCardWrapper>
-
-      <SActionsWrapper onClick={() => removeAction(id)}>
-        <STrashIcon />
-      </SActionsWrapper>
+      <SIconWrapper>
+        <SChevronRightIcon />
+      </SIconWrapper>
     </SContactCard>
   )
 }
