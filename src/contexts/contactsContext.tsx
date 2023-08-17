@@ -1,61 +1,14 @@
 import { fetchContacts, IContact } from '&operations/queries/fetchContacts'
-import { fakePromise } from '&utils/fakePromise'
-import {
-  useMutation,
-  UseMutationResult,
-  useQuery,
-  useQueryClient,
-  UseQueryResult
-} from '@tanstack/react-query'
+import { useQuery, useQueryClient, UseQueryResult } from '@tanstack/react-query'
 import { createContext, ReactNode, useContext, useState } from 'react'
 import * as Yup from 'yup'
 
 interface props {
   children: ReactNode
 }
-export interface IFormData {
-  id?: number
-  name: string
-  email: string
-  phone: string
-  username?: string
-  street?: string
-  suite?: string
-  city?: string
-  zipcode?: string
-  lat?: string
-  lng?: string
-  website?: string
-  companyName?: string
-  catchPhrase?: string
-  bs?: string
-}
-export interface INewContact {
-  id?: number
-  name: string
-  email: string
-  username: string | undefined
-  address: {
-    street: string | undefined
-    suite: string | undefined
-    city: string | undefined
-    zipcode: string | undefined
-    geo: {
-      lat: string | undefined
-      lng: string | undefined
-    }
-  }
-  phone: string | undefined
-  website: string | undefined
-  company: {
-    name: string | undefined
-    catchPhrase: string | undefined
-    bs: string | undefined
-  }
-}
+
 interface ContactsContextProps {
   contactsQuery: UseQueryResult<IContact[], unknown>
-  editContact(contact: INewContact): void
   removeContact(id: number): void
   getContactById(id: number | string): IContact | undefined
   contactSchema: Yup.AnyObjectSchema
@@ -75,17 +28,6 @@ export const ContactsProvider = ({ children }: props) => {
     refetchOnWindowFocus: false
   })
 
-  function editContact(contact: INewContact) {
-    queryClient.setQueryData(['contacts'], (old: any) =>
-      old.map((oldContact: IContact) => {
-        if (oldContact.id === contact.id) {
-          return contact
-        }
-        return oldContact
-      })
-    )
-  }
-
   function removeContact(id: number) {
     queryClient.setQueryData(['contacts'], (old: any) =>
       old.filter((contact: any) => contact.id !== id)
@@ -97,10 +39,7 @@ export const ContactsProvider = ({ children }: props) => {
       (contact) => contact.id.toString() === id.toString()
     )
 
-    if (contact) {
-      return contact
-    }
-    return
+    return contact
   }
 
   const contactSchema = Yup.object().shape({
@@ -125,7 +64,6 @@ export const ContactsProvider = ({ children }: props) => {
   return (
     <ContactsContext.Provider
       value={{
-        editContact,
         contactsQuery,
         removeContact,
         getContactById,

@@ -57,7 +57,7 @@ export function ContactList() {
   }, [contactsQuery?.data])
 
   function handleNavigate(id: number) {
-    navigate(routes.editContact.path(id.toString()))
+    navigate(routes.viewContact.path(id.toString()))
   }
   return (
     <SContainer>

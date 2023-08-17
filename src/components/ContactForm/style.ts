@@ -21,3 +21,11 @@ export const SActionsButtons = styled.div`
   bottom: 0;
   padding: 0.5rem;
 `
+export const SForm = styled.form`
+  display: flex;
+  gap: 0.3rem;
+  flex: 1;
+  flex-direction: column;
+  width: 100vw;
+  padding: 0.5rem;
+`

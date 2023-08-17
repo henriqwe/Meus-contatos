@@ -4,24 +4,24 @@ import axios from 'axios'
 export interface IContact {
   id: number
   name: string
-  username: string
   email: string
+  phone: string
+  username: string | undefined
   address: {
-    street: string
-    suite: string
-    city: string
-    zipcode: string
+    street: string | undefined
+    suite: string | undefined
+    city: string | undefined
+    zipcode: string | undefined
     geo: {
-      lat: string
-      lng: string
+      lat: string | undefined
+      lng: string | undefined
     }
   }
-  phone: string
-  website: string
+  website: string | undefined
   company: {
-    name: string
-    catchPhrase: string
-    bs: string
+    name: string | undefined
+    catchPhrase: string | undefined
+    bs: string | undefined
   }
 }
 

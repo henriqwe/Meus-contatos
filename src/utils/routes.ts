@@ -3,9 +3,12 @@ export const routes = {
     path: '/'
   },
   createContact: {
-    path: '/cadastro'
+    path: '/cadastrar'
+  },
+  viewContact: {
+    path: (id: string | number) => `/${id}`
   },
   editContact: {
-    path: (id: string) => `/${id}`
+    path: (id: string | number) => `/editar/${id}`
   }
 }

@@ -1,5 +1,5 @@
-import { EditContact } from '&domains/Contact/Edit'
+import { ViewContact } from '&domains/Contact/View/View'
 
 export default function Page() {
-  return <EditContact />
+  return <ViewContact />
 }
