@@ -1,3 +1,4 @@
+import { fakePromise } from '&utils/fakePromise'
 import axios from 'axios'
 
 export interface IContact {
@@ -25,6 +26,7 @@ export interface IContact {
 }
 
 export async function fetchContacts(): Promise<IContact[]> {
+  await fakePromise()
   return axios
     .get('https://jsonplaceholder.typicode.com/users')
     .then((res) => res.data)

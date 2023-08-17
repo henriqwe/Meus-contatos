@@ -21,7 +21,9 @@ export const SContainer = styled.section`
   padding: 0.5rem;
   max-height: 100vh;
   min-height: 100vh;
-  display: block;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   overflow-x: none;
 `
 export const SSeparator = styled.div`
@@ -33,6 +35,8 @@ export const SListHeading = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: end;
+  flex: 1;
+  width: 100%;
 `
 export const SOrderByNameContent = styled.div`
   display: flex;
@@ -52,11 +56,21 @@ export const SActionsContainer = styled.div`
   align-items: center;
   gap: 1rem;
   margin-top: 1rem;
+  flex: 1;
+  width: 100%;
 `
 export const SButtonText = styled.span`
   font-weight: 700;
 `
 export const SIllustrationContainer = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  padding-top: 6rem;
+`
+export const SLoadingContainer = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;

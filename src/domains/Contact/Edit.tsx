@@ -22,7 +22,7 @@ export function EditContact() {
     formState: { errors }
   } = useForm({ resolver: yupResolver(contactSchema) })
 
-  const { getContactById, contactsQuery } = useContacts()
+  const { getContactById, contactsQuery, removeContact } = useContacts()
 
   const contact = getContactById(id as string)
   function onSubmit(formData: IFormData) {
@@ -91,6 +91,14 @@ export function EditContact() {
   return (
     <div>
       <div onClick={() => navigate(routes.home.path)}>VOLTAR</div>
+      <div
+        onClick={() => {
+          removeContact(contact?.id as number)
+          navigate(routes.home.path)
+        }}
+      >
+        remover
+      </div>
 
       <h1>Edição de contato</h1>
       <form onSubmit={handleSubmit(onSubmit)}>

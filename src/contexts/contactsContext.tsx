@@ -1,5 +1,12 @@
 import { fetchContacts, IContact } from '&operations/queries/fetchContacts'
-import { useQuery, useQueryClient, UseQueryResult } from '@tanstack/react-query'
+import { fakePromise } from '&utils/fakePromise'
+import {
+  useMutation,
+  UseMutationResult,
+  useQuery,
+  useQueryClient,
+  UseQueryResult
+} from '@tanstack/react-query'
 import { createContext, ReactNode, useContext, useState } from 'react'
 import * as Yup from 'yup'
 
@@ -48,11 +55,12 @@ export interface INewContact {
 }
 interface ContactsContextProps {
   contactsQuery: UseQueryResult<IContact[], unknown>
-  addContact(contact: INewContact): void
   editContact(contact: INewContact): void
   removeContact(id: number): void
   getContactById(id: number | string): IContact | undefined
   contactSchema: Yup.AnyObjectSchema
+  nextId: number
+  setNextId: React.Dispatch<React.SetStateAction<number>>
 }
 export const ContactsContext = createContext<ContactsContextProps>(
   {} as ContactsContextProps
@@ -67,14 +75,6 @@ export const ContactsProvider = ({ children }: props) => {
     refetchOnWindowFocus: false
   })
 
-  function addContact(contact: INewContact) {
-    queryClient.setQueryData(['contacts'], (old: any) => [
-      ...old,
-      { ...contact, id: nextId }
-    ])
-    setNextId((old) => old++)
-  }
-
   function editContact(contact: INewContact) {
     queryClient.setQueryData(['contacts'], (old: any) =>
       old.map((oldContact: IContact) => {
@@ -84,7 +84,6 @@ export const ContactsProvider = ({ children }: props) => {
         return oldContact
       })
     )
-    setNextId((old) => old++)
   }
 
   function removeContact(id: number) {
@@ -129,9 +128,10 @@ export const ContactsProvider = ({ children }: props) => {
         editContact,
         contactsQuery,
         removeContact,
-        addContact,
         getContactById,
-        contactSchema
+        contactSchema,
+        nextId,
+        setNextId
       }}
     >
       {children}

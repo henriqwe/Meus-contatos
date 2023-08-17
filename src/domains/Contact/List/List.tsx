@@ -16,6 +16,7 @@ import {
   SCardList,
   SContainer,
   SListHeading,
+  SLoadingContainer,
   SOrderByNameContent,
   SSeparator,
   SUserPlusIcon
@@ -55,10 +56,6 @@ export function ContactList() {
     }
   }, [contactsQuery?.data])
 
-  if (contactsQuery?.isLoading) {
-    return <Loading />
-  }
-
   function handleNavigate(id: number) {
     navigate(routes.editContact.path(id.toString()))
   }
@@ -72,6 +69,7 @@ export function ContactList() {
           name="name"
           handleChangeDebounce={handleOnChange}
           label="Buscar"
+          disabled={contactsQuery?.isLoading}
         />
         <div>
           <Button
@@ -84,7 +82,7 @@ export function ContactList() {
       </SActionsContainer>
       <SListHeading>
         <h3>Contatos</h3>
-        {contacts?.length !== 0 && (
+        {contacts?.length !== 0 && !contactsQuery?.isLoading && (
           <SOrderByNameContent
             onClick={() => toggleAscendentName(contacts as IContact[])}
           >
@@ -96,17 +94,23 @@ export function ContactList() {
       <SSeparator />
 
       <SCardList>
+        {contactsQuery?.isLoading && (
+          <SLoadingContainer>
+            <Loading />
+          </SLoadingContainer>
+        )}
         {(contacts?.length === 0 ||
           contactsQuery?.data?.length === 0 ||
-          contactsQuery?.data === undefined) && (
-          <IllustrationCard
-            notFound={contacts?.length === 0}
-            isEmpty={
-              contactsQuery?.data?.length === 0 ||
-              contactsQuery?.data === undefined
-            }
-          />
-        )}
+          contactsQuery?.data === undefined) &&
+          !contactsQuery?.isLoading && (
+            <IllustrationCard
+              notFound={contacts?.length === 0}
+              isEmpty={
+                contactsQuery?.data?.length === 0 ||
+                contactsQuery?.data === undefined
+              }
+            />
+          )}
         {contacts?.map((contact) => (
           <ContactCard
             key={contact.id}
