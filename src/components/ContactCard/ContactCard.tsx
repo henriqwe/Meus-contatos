@@ -1,6 +1,6 @@
+import { Avatar } from '&components/Avatar/Avatar'
 import {
   SIconWrapper,
-  SAvatar,
   SAvatarContainer,
   SContactCard,
   SContactCardWrapper,
@@ -19,15 +19,11 @@ interface props {
   navigateAction(id: number): void
 }
 export function ContactCard({ id, email, name, phone, navigateAction }: props) {
-  const avatarLetters = name?.toUpperCase().split(' ')
   return (
     <SContactCard onClick={() => navigateAction(id)}>
       <SContactCardWrapper>
         <SAvatarContainer>
-          <SAvatar>
-            {avatarLetters?.[0]?.[0]}
-            {avatarLetters?.[1]?.[0]}
-          </SAvatar>
+          <Avatar name={name} variant="sm" />
         </SAvatarContainer>
         <SDetailsWrapper>
           <SPrimaryDetail>{name}</SPrimaryDetail>

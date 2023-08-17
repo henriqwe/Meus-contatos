@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { TVariant } from '&components/Button/types'
 
 const variantOptions = {
   primary: {
@@ -19,6 +18,8 @@ const variantOptions = {
     color: 'black'
   }
 }
+
+export type TVariant = keyof typeof variantOptions
 
 export const SButton = styled.button<{ variant: TVariant }>`
   border: none;

@@ -21,17 +21,7 @@ export const SAvatarContainer = styled.div`
   align-items: center;
   padding: 0.5rem;
 `
-export const SAvatar = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(30 64 175);
-  color: white;
-  border-radius: 100%;
-  width: 4.5rem;
-  height: 4.5rem;
-  font-size: 2rem;
-`
+
 export const SDetailsWrapper = styled.div`
   display: flex;
   padding-left: 0.1rem;
