@@ -1,4 +1,4 @@
-import './style.css'
+import '&components/Loading/style.css'
 
 export function Loading() {
   return (

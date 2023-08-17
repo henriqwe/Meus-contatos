@@ -1,4 +1,4 @@
-import { sortArrayByKey } from './sortArrayByKey'
+import { sortArrayByKey } from '&utils/handles/sortArrayByKey'
 
 describe('sortArrayByKey test', () => {
   it('should return a new array in ascending order by name', () => {

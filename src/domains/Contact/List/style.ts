@@ -1,5 +1,9 @@
 import styled from 'styled-components'
-import { UserPlusIcon } from '@heroicons/react/24/outline'
+import {
+  BarsArrowDownIcon,
+  BarsArrowUpIcon,
+  UserPlusIcon
+} from '@heroicons/react/24/outline'
 
 export const SCardList = styled.div`
   display: flex;
@@ -8,7 +12,8 @@ export const SCardList = styled.div`
   overflow-x: auto;
   flex: 1;
   padding-right: 0.8rem;
-  max-height: calc(100vh - 10rem);
+  max-height: calc(100vh - 11rem);
+  min-height: calc(100vh - 11rem);
 `
 
 export const SContainer = styled.section`
@@ -27,11 +32,11 @@ export const SSeparator = styled.div`
 export const SListHeading = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
 `
 export const SOrderByNameContent = styled.div`
   display: flex;
-  align-items: center;
+  align-items: end;
   gap: 0.3rem;
   color: rgb(30 41 59);
 `
@@ -50,4 +55,27 @@ export const SActionsContainer = styled.div`
 `
 export const SButtonText = styled.span`
   font-weight: 700;
+`
+export const SIllustrationContainer = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  padding-top: 6rem;
+`
+export const SIllustrationWrapper = styled.div`
+  height: 12rem;
+  width: 12rem;
+`
+export const SIllustrationMessage = styled.span`
+  font-size: 1.1rem;
+`
+export const SBarsArrowDownIcon = styled(BarsArrowDownIcon)`
+  width: 1.3rem;
+  height: 1.3rem;
+`
+export const SBarsArrowUpIcon = styled(BarsArrowUpIcon)`
+  width: 1.3rem;
+  height: 1.3rem;
 `

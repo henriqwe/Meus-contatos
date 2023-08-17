@@ -1,5 +1,5 @@
 import { ArrowUpIcon, ArrowDownIcon } from '@heroicons/react/20/solid'
-import { TTitle } from './types'
+import { TTitle } from '&components/Table/types'
 
 interface Props {
   titles: TTitle[]

@@ -1,4 +1,4 @@
-import { TData, TTitle } from './types'
+import { TData, TTitle } from '&components/Table/types'
 
 interface Props {
   data?: TData[]

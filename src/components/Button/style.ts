@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { TVariant } from './types'
+import { TVariant } from '&components/Button/types'
 
 const variantOptions = {
   primary: {

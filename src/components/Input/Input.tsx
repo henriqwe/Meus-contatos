@@ -7,7 +7,12 @@ import {
   Path
 } from 'react-hook-form'
 import { useDebounce } from '&hooks/useDebounce'
-import { SErrorMessage, SInput, SInputWrapper, SLabel } from './style'
+import {
+  SErrorMessage,
+  SInput,
+  SInputWrapper,
+  SLabel
+} from '&components/Input/style'
 
 type InputType = {
   name: Path<FieldValues>

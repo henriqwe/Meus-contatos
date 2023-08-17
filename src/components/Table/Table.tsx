@@ -1,6 +1,6 @@
-import { TData, TTitle } from './types'
-import { TableHeader } from './TableHeader'
-import { TableBody } from './TableBody'
+import { TData, TTitle } from '&components/Table/types'
+import { TableHeader } from '&components/Table/TableHeader'
+import { TableBody } from '&components/Table/TableBody'
 
 interface Props {
   data?: TData[]

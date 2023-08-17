@@ -1,6 +1,6 @@
 import React from 'react'
-import { SButton, SButtonContainer } from './style'
-import { TVariant } from './types'
+import { SButton, SButtonContainer } from '&components/Button/style'
+import { TVariant } from '&components/Button/types'
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant: TVariant

@@ -1,6 +1,5 @@
 import { IContact } from '&operations/queries/fetchContacts'
 import { Input } from '&components/Input/Input'
-
 import { useForm } from 'react-hook-form'
 import { useEffect, useState } from 'react'
 import { sortArrayByKey } from '&utils/handles/sortArrayByKey'
@@ -9,9 +8,10 @@ import { useNavigate } from 'react-router-dom'
 import { Loading } from '&components/Loading/Loading'
 import { routes } from '&utils/routes'
 import { ContactCard } from '&components/ContactCard/ContactCard'
-import { AscIcon } from './AscIcon'
 import {
   SActionsContainer,
+  SBarsArrowDownIcon,
+  SBarsArrowUpIcon,
   SButtonText,
   SCardList,
   SContainer,
@@ -19,9 +19,9 @@ import {
   SOrderByNameContent,
   SSeparator,
   SUserPlusIcon
-} from './style'
+} from '&domains/Contact/List/style'
 import { Button } from '&components/Button/Button'
-import { styled } from 'styled-components'
+import { IllustrationCard } from '&domains/Contact/List/IllustrationCard'
 
 export function ContactList() {
   const navigate = useNavigate()
@@ -71,7 +71,7 @@ export function ContactList() {
           control={control}
           name="name"
           handleChangeDebounce={handleOnChange}
-          label="Pesquisar por nome"
+          label="Buscar"
         />
         <div>
           <Button
@@ -84,16 +84,29 @@ export function ContactList() {
       </SActionsContainer>
       <SListHeading>
         <h3>Contatos</h3>
-        <SOrderByNameContent
-          onClick={() => toggleAscendentName(contacts as IContact[])}
-        >
-          <span>Nome</span> <AscIcon asc={ascendentName} />
-        </SOrderByNameContent>
+        {contacts?.length !== 0 && (
+          <SOrderByNameContent
+            onClick={() => toggleAscendentName(contacts as IContact[])}
+          >
+            <span>Nome</span>
+            {ascendentName ? <SBarsArrowUpIcon /> : <SBarsArrowDownIcon />}
+          </SOrderByNameContent>
+        )}
       </SListHeading>
       <SSeparator />
 
       <SCardList>
-        {contacts?.length === 0 && <span>Nem um dado a ser exibido</span>}
+        {(contacts?.length === 0 ||
+          contactsQuery?.data?.length === 0 ||
+          contactsQuery?.data === undefined) && (
+          <IllustrationCard
+            notFound={contacts?.length === 0}
+            isEmpty={
+              contactsQuery?.data?.length === 0 ||
+              contactsQuery?.data === undefined
+            }
+          />
+        )}
         {contacts?.map((contact) => (
           <ContactCard
             key={contact.id}

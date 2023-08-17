@@ -8,7 +8,7 @@ import {
   SPrimaryDetail,
   SSecondaryDetail,
   SChevronRightIcon
-} from './style'
+} from '&components/ContactCard/style'
 
 interface props {
   phone: string
