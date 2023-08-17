@@ -7,6 +7,12 @@ import { routes } from '&utils/routes'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { Button } from '&components/Button/Button'
 import { notification } from '&utils/notification'
+import { Stepper } from '&components/Stepper/Stepper'
+import {
+  BuildingStorefrontIcon,
+  MapPinIcon,
+  UserIcon
+} from '@heroicons/react/24/outline'
 
 export function NewContact() {
   const navigate = useNavigate()
@@ -56,11 +62,26 @@ export function NewContact() {
     formState: { errors }
   } = useForm({ resolver: yupResolver(contactSchema) })
 
+  const steps = [
+    {
+      icon: <UserIcon />,
+      label: 'Dados pessoais'
+    },
+    {
+      icon: <MapPinIcon />,
+      label: 'Endereço'
+    },
+    {
+      icon: <BuildingStorefrontIcon />,
+      label: 'Empresa'
+    }
+  ]
   return (
     <div>
       <div onClick={() => navigate(routes.home.path)}>VOLTAR</div>
 
       <h1>Cadastro de contato</h1>
+      <Stepper steps={steps} activeStep={1} />
       <form onSubmit={handleSubmit(onSubmit)}>
         <Input
           control={control}
