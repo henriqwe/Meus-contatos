@@ -75,14 +75,29 @@ export const TabItemContainer = styled.section`
   flex: 1;
   flex-direction: column;
   background-color: red;
-  margin-top: 1rem;
+  margin: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 `
 export const InfoWrapper = styled.div<{ variant: 'white' | 'gray' }>`
   display: flex;
   flex: 1;
   gap: 0.2rem;
-  padding: 0.3rem;
+  padding: 0.7rem;
   flex-direction: column;
   background-color: ${({ variant }) =>
     variant === 'white' ? '#fff' : '#F1F5F9'};
+`
+export const DropdownOptionContent = styled.div`
+  display: flex;
+  gap: 0.5rem;
+  align-items: end;
+`
+export const PencilIcon = styled(Icons.PencilIcon)`
+  width: 1.3rem;
+  height: 1.3rem;
+`
+export const TrashIcon = styled(Icons.TrashIcon)`
+  width: 1.3rem;
+  height: 1.3rem;
+  color: red;
 `

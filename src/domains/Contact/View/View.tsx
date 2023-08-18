@@ -11,6 +11,7 @@ import { useState } from 'react'
 import { ContactData } from './ContactData'
 import { ContactAddrees } from './ContactAddrees'
 import { ContactCompany } from './ContactCompany'
+import { Dropdown } from '&components/Dropdown/Dropdown'
 
 type TSelectedTab = 0 | 1 | 2
 
@@ -44,6 +45,26 @@ export function ViewContact() {
     1: <ContactAddrees contact={contact} />,
     2: <ContactCompany contact={contact} />
   }
+  const dropdownOption = [
+    {
+      content: (
+        <S.DropdownOptionContent>
+          Editar
+          <S.PencilIcon />
+        </S.DropdownOptionContent>
+      ),
+      fn: () => navigate(routes.editContact.path(contact?.id!))
+    },
+    {
+      content: (
+        <S.DropdownOptionContent>
+          Excluir
+          <S.TrashIcon />
+        </S.DropdownOptionContent>
+      ),
+      fn: () => navigate(routes.editContact.path(contact?.id!))
+    }
+  ]
   return (
     <S.Container>
       <S.ContactHeaderWrapper>
@@ -53,11 +74,7 @@ export function ViewContact() {
           </div>
           <h1>Contato</h1>
 
-          <div>
-            <S.EllipsisVerticalIcon
-              onClick={() => navigate(routes.editContact.path(contact?.id!))}
-            />
-          </div>
+          <Dropdown options={dropdownOption} />
         </S.ContactHeader>
         <S.AvatarWrapper>
           <Avatar name={contact?.name} variant="md" />

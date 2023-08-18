@@ -42,7 +42,7 @@ export function Input({
               autoComplete="off"
               id={name}
               type="text"
-              placeholder=""
+              placeholder={value || ''}
               disabled={disabled}
               value={value || ''}
               onChange={(e) => {
