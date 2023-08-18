@@ -6,10 +6,21 @@ import { useQuery } from '@tanstack/react-query'
 import { notification } from '&utils/notification'
 import { useContacts } from '&contexts/contactsContext'
 import * as S from './style'
+import { Tab, TabItem } from '&components/Tab/Tabs'
+import { useState } from 'react'
+import { ContactData } from './ContactData'
+import { ContactAddrees } from './ContactAddrees'
+import { ContactCompany } from './ContactCompany'
+
+type TSelectedTab = 0 | 1 | 2
 
 export function ViewContact() {
   const { id } = useParams()
 
+  const onTabSelected = (index: number) => {
+    setSelectedTab(index as TSelectedTab)
+  }
+  const [selectedTab, setSelectedTab] = useState<TSelectedTab>(0)
   const navigate = useNavigate()
   const { fetchContact, contactsQuery } = useContacts()
 
@@ -28,6 +39,11 @@ export function ViewContact() {
     return <Loading />
   }
 
+  const TabsContent = {
+    0: <ContactData contact={contact} />,
+    1: <ContactAddrees contact={contact} />,
+    2: <ContactCompany contact={contact} />
+  }
   return (
     <S.Container>
       <S.ContactHeaderWrapper>
@@ -50,8 +66,21 @@ export function ViewContact() {
         </S.AvatarWrapper>
       </S.ContactHeaderWrapper>
       <div>
-        <div>abas</div>
-        <div>conteudo</div>
+        <Tab onTabSelected={onTabSelected}>
+          <TabItem>
+            <S.UserIcon />
+            Dados
+          </TabItem>
+          <TabItem>
+            <S.MapPinIcon />
+            Endereço
+          </TabItem>
+          <TabItem>
+            <S.BuildingStorefrontIcon />
+            Empresa
+          </TabItem>
+        </Tab>
+        <div>{TabsContent[selectedTab]}</div>
       </div>
     </S.Container>
   )
