@@ -1,11 +1,7 @@
 import styled from 'styled-components'
-import {
-  BarsArrowDownIcon,
-  BarsArrowUpIcon,
-  UserPlusIcon
-} from '@heroicons/react/24/outline'
+import * as Icons from '@heroicons/react/24/outline'
 
-export const SCardList = styled.div`
+export const CardList = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
@@ -16,7 +12,7 @@ export const SCardList = styled.div`
   min-height: calc(100vh - 11rem);
 `
 
-export const SContainer = styled.section`
+export const Container = styled.section`
   position: relative;
   padding: 0.5rem;
   max-height: 100vh;
@@ -26,32 +22,32 @@ export const SContainer = styled.section`
   flex-direction: column;
   overflow-x: none;
 `
-export const SSeparator = styled.div`
+export const Separator = styled.div`
   width: 100%;
   border: 1px solid rgba(68, 67, 90, 0.3);
   margin-bottom: 1rem;
 `
-export const SListHeading = styled.div`
+export const ListHeading = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: end;
   flex: 1;
   width: 100%;
 `
-export const SOrderByNameContent = styled.div`
+export const OrderByNameContent = styled.div`
   display: flex;
   align-items: end;
   gap: 0.3rem;
   color: rgb(30 41 59);
 `
 
-export const SUserPlusIcon = styled(UserPlusIcon)`
+export const UserPlusIcon = styled(Icons.UserPlusIcon)`
   width: 1.3rem;
   height: 1.3rem;
   color: rgb(15 23 42);
   font-weight: 600;
 `
-export const SActionsContainer = styled.div`
+export const ActionsContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -59,10 +55,10 @@ export const SActionsContainer = styled.div`
   flex: 1;
   width: 100%;
 `
-export const SButtonText = styled.span`
+export const ButtonText = styled.span`
   font-weight: 700;
 `
-export const SIllustrationContainer = styled.div`
+export const IllustrationContainer = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -70,7 +66,7 @@ export const SIllustrationContainer = styled.div`
   align-items: center;
   padding-top: 6rem;
 `
-export const SLoadingContainer = styled.div`
+export const LoadingContainer = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -78,18 +74,18 @@ export const SLoadingContainer = styled.div`
   align-items: center;
   padding-top: 6rem;
 `
-export const SIllustrationWrapper = styled.div`
+export const IllustrationWrapper = styled.div`
   height: 12rem;
   width: 12rem;
 `
-export const SIllustrationMessage = styled.span`
+export const IllustrationMessage = styled.span`
   font-size: 1.1rem;
 `
-export const SBarsArrowDownIcon = styled(BarsArrowDownIcon)`
+export const BarsArrowDownIcon = styled(Icons.BarsArrowDownIcon)`
   width: 1.3rem;
   height: 1.3rem;
 `
-export const SBarsArrowUpIcon = styled(BarsArrowUpIcon)`
+export const BarsArrowUpIcon = styled(Icons.BarsArrowUpIcon)`
   width: 1.3rem;
   height: 1.3rem;
 `

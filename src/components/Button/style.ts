@@ -21,7 +21,7 @@ const variantOptions = {
 
 export type TVariant = keyof typeof variantOptions
 
-export const SButton = styled.button<{ variant: TVariant }>`
+export const Button = styled.button<{ variant: TVariant }>`
   border: none;
   display: inline-flex;
   padding-top: 0.5rem;
@@ -35,7 +35,7 @@ export const SButton = styled.button<{ variant: TVariant }>`
   cursor: pointer;
   ${({ variant }) => variantOptions[variant]}
 `
-export const SButtonContainer = styled.div`
+export const ButtonContainer = styled.div`
   display: flex;
   gap: 0.5rem;
   justify-content: space-between;

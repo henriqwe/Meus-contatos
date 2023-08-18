@@ -16,7 +16,7 @@ import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { fakePromise } from '&utils/fakePromise'
 import { IContact } from '&operations/queries/fetchContacts'
 import { IFormData } from './type'
-import { SContainer, SForm } from './style'
+import * as S from './style'
 import { ActionButtons } from './ActionButtons'
 
 interface props {
@@ -169,7 +169,7 @@ export function ContactForm({ contact }: props) {
   }, [contact])
 
   return (
-    <SContainer>
+    <S.Container>
       {typeForm === 'newContact' ? (
         <h1>Cadastro de contato</h1>
       ) : (
@@ -179,7 +179,7 @@ export function ContactForm({ contact }: props) {
       <Stepper steps={steps} activeStep={activeStep} />
       <div>
         {activeStep === 0 && (
-          <SForm onSubmit={handleSubmit(handleNextStep)}>
+          <S.Form onSubmit={handleSubmit(handleNextStep)}>
             <Input
               control={control}
               name="name"
@@ -220,10 +220,10 @@ export function ContactForm({ contact }: props) {
               handlePreviusStep={handlePreviusStep}
               isLoading={createContact.isLoading || editContact.isLoading}
             />
-          </SForm>
+          </S.Form>
         )}
         {activeStep === 1 && (
-          <SForm onSubmit={handleSubmit(handleNextStep)}>
+          <S.Form onSubmit={handleSubmit(handleNextStep)}>
             <Input
               control={control}
               name="street"
@@ -271,10 +271,10 @@ export function ContactForm({ contact }: props) {
               handlePreviusStep={handlePreviusStep}
               isLoading={createContact.isLoading || editContact.isLoading}
             />
-          </SForm>
+          </S.Form>
         )}
         {activeStep === 2 && (
-          <SForm onSubmit={handleSubmit(onSubmit)}>
+          <S.Form onSubmit={handleSubmit(onSubmit)}>
             <Input
               control={control}
               name="companyName"
@@ -301,9 +301,9 @@ export function ContactForm({ contact }: props) {
               handlePreviusStep={handlePreviusStep}
               isLoading={createContact.isLoading || editContact.isLoading}
             />
-          </SForm>
+          </S.Form>
         )}
       </div>
-    </SContainer>
+    </S.Container>
   )
 }

@@ -15,7 +15,7 @@ const variantOptions = {
 
 export type TVariant = keyof typeof variantOptions
 
-export const SAvatar = styled.div<{ variant: TVariant }>`
+export const Avatar = styled.div<{ variant: TVariant }>`
   display: flex;
   justify-content: center;
   align-items: center;

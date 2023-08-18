@@ -7,6 +7,8 @@ import {
   ActionFunction
 } from 'react-router-dom'
 import { ContactsProvider } from '&contexts/contactsContext'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+
 interface RouteCommon {
   loader?: LoaderFunction
   action?: ActionFunction
@@ -72,6 +74,7 @@ export default function WrapperApp() {
         pauseOnHover
         theme="light"
       />
+      <ReactQueryDevtools initialIsOpen={false} />
     </ContactsProvider>
   )
 }

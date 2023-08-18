@@ -2,32 +2,29 @@ import { useContacts } from '&contexts/contactsContext'
 import { useNavigate, useParams } from 'react-router-dom'
 import { Loading } from '&components/Loading/Loading'
 import { routes } from '&utils/routes'
-
 import { ContactForm } from '&components/ContactForm/ContactForm'
+import { useQuery } from '@tanstack/react-query'
+import { notification } from '&utils/notification'
 
 export function EditContact() {
   const { id } = useParams()
-  const { getContactById, contactsQuery } = useContacts()
+  const { fetchContact } = useContacts()
+  const navigate = useNavigate()
 
-  const contact = getContactById(id as string)
+  const { data: contact, isLoading } = useQuery({
+    queryKey: ['contact'],
+    queryFn: () => fetchContact(id!),
+    onError: (error: Error) => {
+      notification(error.message, 'error')
+      navigate(routes.home.path)
+    },
+    refetchOnWindowFocus: false,
+    retry: false
+  })
 
-  if (contactsQuery.isLoading) {
+  if (isLoading || !contact) {
     return <Loading />
-  }
-  if (!contact && !contactsQuery.isLoading) {
-    throw new Error()
   }
 
   return <ContactForm contact={contact} />
-}
-
-export const ErrorBoundary = () => {
-  const navigate = useNavigate()
-
-  return (
-    <div>
-      <div onClick={() => navigate(routes.home.path)}>VOLTAR</div>
-      <h3>Some Error Boundary</h3>
-    </div>
-  )
 }

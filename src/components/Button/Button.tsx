@@ -1,5 +1,5 @@
 import React from 'react'
-import { SButton, SButtonContainer } from '&components/Button/style'
+import * as S from '&components/Button/style'
 import type { TVariant } from '&components/Button/style'
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -8,8 +8,8 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 export function Button({ variant, children, ...res }: ButtonProps) {
   return (
-    <SButton {...res} variant={variant}>
-      <SButtonContainer>{children}</SButtonContainer>
-    </SButton>
+    <S.Button {...res} variant={variant}>
+      <S.ButtonContainer>{children}</S.ButtonContainer>
+    </S.Button>
   )
 }

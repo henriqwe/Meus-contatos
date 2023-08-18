@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const SContainer = styled.section`
+export const Container = styled.section`
   position: relative;
   padding: 0.5rem;
   max-height: 100vh;
@@ -12,7 +12,7 @@ export const SContainer = styled.section`
   gap: 2rem;
 `
 
-export const SActionsButtons = styled.div`
+export const ActionsButtons = styled.div`
   display: flex;
   position: absolute;
   width: calc(100vw - 0.5rem);
@@ -21,7 +21,7 @@ export const SActionsButtons = styled.div`
   bottom: 0;
   padding: 0.5rem;
 `
-export const SForm = styled.form`
+export const Form = styled.form`
   display: flex;
   gap: 0.3rem;
   flex: 1;

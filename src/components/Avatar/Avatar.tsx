@@ -1,4 +1,4 @@
-import { SAvatar } from './style'
+import * as S from './style'
 import type { TVariant } from './style'
 
 interface props {
@@ -10,9 +10,9 @@ export function Avatar({ name, variant = 'sm' }: props) {
   const avatarLetters = name?.toUpperCase().split(' ')
 
   return (
-    <SAvatar variant={variant}>
+    <S.Avatar variant={variant}>
       {avatarLetters?.[0]?.[0]}
       {avatarLetters?.[1]?.[0]}
-    </SAvatar>
+    </S.Avatar>
   )
 }

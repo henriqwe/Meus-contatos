@@ -7,12 +7,7 @@ import {
   Path
 } from 'react-hook-form'
 import { useDebounce } from '&hooks/useDebounce'
-import {
-  SErrorMessage,
-  SInput,
-  SInputWrapper,
-  SLabel
-} from '&components/Input/style'
+import * as S from '&components/Input/style'
 
 type InputType = {
   name: Path<FieldValues>
@@ -41,9 +36,9 @@ export function Input({
       name={name}
       control={control}
       render={({ field: { onChange, value } }) => (
-        <SInputWrapper>
-          <SLabel htmlFor={name}>{label}</SLabel>
-          <SInput
+        <S.InputWrapper>
+          <S.Label htmlFor={name}>{label}</S.Label>
+          <S.Input
             autoComplete="off"
             id={name}
             type="text"
@@ -54,8 +49,8 @@ export function Input({
               debounceChange?.(e.target.value)
             }}
           />
-          <SErrorMessage>{error?.message as string}</SErrorMessage>
-        </SInputWrapper>
+          <S.ErrorMessage>{error?.message as string}</S.ErrorMessage>
+        </S.InputWrapper>
       )}
     />
   )

@@ -1,4 +1,4 @@
-import { SStepper, SStepperContainer } from './styled'
+import * as S from './styled'
 
 interface props {
   steps: { label: string; icon: JSX.Element }[]
@@ -7,10 +7,10 @@ interface props {
 
 export function Stepper({ steps, activeStep }: props) {
   return (
-    <SStepperContainer>
+    <S.StepperContainer>
       {steps.map((step, index) => {
         return (
-          <SStepper key={index}>
+          <S.Stepper key={index}>
             <div
               style={{
                 top: 19,
@@ -88,9 +88,9 @@ export function Stepper({ steps, activeStep }: props) {
             >
               {step.label}
             </p>
-          </SStepper>
+          </S.Stepper>
         )
       })}
-    </SStepperContainer>
+    </S.StepperContainer>
   )
 }

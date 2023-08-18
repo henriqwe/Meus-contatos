@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const SInput = styled.input`
+export const Input = styled.input`
   outline: none;
   border: 1px solid rgba(51, 51, 51, 0.3);
   width: 100%;
@@ -8,14 +8,14 @@ export const SInput = styled.input`
   font-size: 14px;
   border-radius: 4px;
 `
-export const SLabel = styled.label`
+export const Label = styled.label`
   display: block;
   font-size: 14px;
   font-weight: 600;
   margin-left: 4px;
   margin-bottom: calc(8px / 4);
 `
-export const SErrorMessage = styled.label`
+export const ErrorMessage = styled.label`
   display: block;
   font-size: 14px;
   height: 14px;
@@ -23,7 +23,7 @@ export const SErrorMessage = styled.label`
   color: red;
   margin-top: 3px;
 `
-export const SInputWrapper = styled.div`
+export const InputWrapper = styled.div`
   display: block;
   flex: 1;
 `

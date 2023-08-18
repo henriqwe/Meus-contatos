@@ -1,10 +1,6 @@
 import { DreamerIllustration } from '&components/Illustrations/DreamerIllustration'
 import { PeopleSearchIllustration } from '&components/Illustrations/PeopleSearchIllustration'
-import {
-  SIllustrationContainer,
-  SIllustrationMessage,
-  SIllustrationWrapper
-} from '&domains/Contact/List/style'
+import * as S from '&domains/Contact/List/style'
 
 export function IllustrationCard({
   isEmpty,
@@ -27,9 +23,9 @@ export function IllustrationCard({
     : 'Contato não encontrado'
 
   return (
-    <SIllustrationContainer>
-      <SIllustrationWrapper>{illustration}</SIllustrationWrapper>
-      <SIllustrationMessage>{message}</SIllustrationMessage>
-    </SIllustrationContainer>
+    <S.IllustrationContainer>
+      <S.IllustrationWrapper>{illustration}</S.IllustrationWrapper>
+      <S.IllustrationMessage>{message}</S.IllustrationMessage>
+    </S.IllustrationContainer>
   )
 }

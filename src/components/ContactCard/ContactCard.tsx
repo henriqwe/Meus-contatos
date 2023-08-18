@@ -1,14 +1,5 @@
 import { Avatar } from '&components/Avatar/Avatar'
-import {
-  SIconWrapper,
-  SAvatarContainer,
-  SContactCard,
-  SContactCardWrapper,
-  SDetailsWrapper,
-  SPrimaryDetail,
-  SSecondaryDetail,
-  SChevronRightIcon
-} from '&components/ContactCard/style'
+import * as S from '&components/ContactCard/style'
 
 interface props {
   phone: string
@@ -20,20 +11,20 @@ interface props {
 }
 export function ContactCard({ id, email, name, phone, navigateAction }: props) {
   return (
-    <SContactCard onClick={() => navigateAction(id)}>
-      <SContactCardWrapper>
-        <SAvatarContainer>
+    <S.ContactCard onClick={() => navigateAction(id)}>
+      <S.ContactCardWrapper>
+        <S.AvatarContainer>
           <Avatar name={name} variant="sm" />
-        </SAvatarContainer>
-        <SDetailsWrapper>
-          <SPrimaryDetail>{name}</SPrimaryDetail>
-          <SSecondaryDetail>{phone}</SSecondaryDetail>
-          <SSecondaryDetail>{email}</SSecondaryDetail>
-        </SDetailsWrapper>
-      </SContactCardWrapper>
-      <SIconWrapper>
-        <SChevronRightIcon />
-      </SIconWrapper>
-    </SContactCard>
+        </S.AvatarContainer>
+        <S.DetailsWrapper>
+          <S.PrimaryDetail>{name}</S.PrimaryDetail>
+          <S.SecondaryDetail>{phone}</S.SecondaryDetail>
+          <S.SecondaryDetail>{email}</S.SecondaryDetail>
+        </S.DetailsWrapper>
+      </S.ContactCardWrapper>
+      <S.IconWrapper>
+        <S.ChevronRightIcon />
+      </S.IconWrapper>
+    </S.ContactCard>
   )
 }

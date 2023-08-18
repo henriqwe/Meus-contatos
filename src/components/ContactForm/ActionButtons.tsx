@@ -5,7 +5,7 @@ import {
   ChevronRightIcon,
   XMarkIcon
 } from '@heroicons/react/24/outline'
-import { SActionsButtons } from './style'
+import * as S from './style'
 
 interface props {
   isLoading: boolean
@@ -18,7 +18,7 @@ export function ActionButtons({
   handlePreviusStep
 }: props) {
   return (
-    <SActionsButtons>
+    <S.ActionsButtons>
       <Button
         disabled={isLoading}
         variant="secondary"
@@ -40,6 +40,6 @@ export function ActionButtons({
           <CheckIcon style={{ height: '1rem' }} />
         )}
       </Button>
-    </SActionsButtons>
+    </S.ActionsButtons>
   )
 }

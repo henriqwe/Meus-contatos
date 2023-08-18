@@ -8,19 +8,7 @@ import { useNavigate } from 'react-router-dom'
 import { Loading } from '&components/Loading/Loading'
 import { routes } from '&utils/routes'
 import { ContactCard } from '&components/ContactCard/ContactCard'
-import {
-  SActionsContainer,
-  SBarsArrowDownIcon,
-  SBarsArrowUpIcon,
-  SButtonText,
-  SCardList,
-  SContainer,
-  SListHeading,
-  SLoadingContainer,
-  SOrderByNameContent,
-  SSeparator,
-  SUserPlusIcon
-} from '&domains/Contact/List/style'
+import * as S from '&domains/Contact/List/style'
 import { Button } from '&components/Button/Button'
 import { IllustrationCard } from '&domains/Contact/List/IllustrationCard'
 
@@ -32,6 +20,12 @@ export function ContactList() {
   const [ascendentName, setAscendentName] = useState(true)
 
   const { control } = useForm()
+
+  const showIllustration =
+    (contacts?.length === 0 ||
+      contactsQuery?.data?.length === 0 ||
+      contactsQuery?.data === undefined) &&
+    !contactsQuery?.isLoading
 
   function handleData(data: IContact[], asc: boolean) {
     setContacts(sortArrayByKey({ data, asc, key: 'name' }))
@@ -50,20 +44,21 @@ export function ContactList() {
     setAscendentName(!ascendentName)
   }
 
+  function handleNavigate(id: number) {
+    navigate(routes.viewContact.path(id.toString()))
+  }
+
   useEffect(() => {
     if (contactsQuery?.data) {
       handleData(contactsQuery?.data, ascendentName)
     }
   }, [contactsQuery?.data])
 
-  function handleNavigate(id: number) {
-    navigate(routes.viewContact.path(id.toString()))
-  }
   return (
-    <SContainer>
+    <S.Container>
       <h1>Home</h1>
 
-      <SActionsContainer>
+      <S.ActionsContainer>
         <Input
           control={control}
           name="name"
@@ -76,53 +71,51 @@ export function ContactList() {
             onClick={() => navigate(routes.createContact.path)}
             variant="success"
           >
-            <SButtonText>Novo</SButtonText> <SUserPlusIcon />
+            <S.ButtonText>Novo</S.ButtonText> <S.UserPlusIcon />
           </Button>
         </div>
-      </SActionsContainer>
-      <SListHeading>
+      </S.ActionsContainer>
+      <S.ListHeading>
         <h3>Contatos</h3>
         {contacts?.length !== 0 && !contactsQuery?.isLoading && (
-          <SOrderByNameContent
+          <S.OrderByNameContent
             onClick={() => toggleAscendentName(contacts as IContact[])}
           >
             <span>Nome</span>
-            {ascendentName ? <SBarsArrowUpIcon /> : <SBarsArrowDownIcon />}
-          </SOrderByNameContent>
+            {ascendentName ? <S.BarsArrowUpIcon /> : <S.BarsArrowDownIcon />}
+          </S.OrderByNameContent>
         )}
-      </SListHeading>
-      <SSeparator />
+      </S.ListHeading>
+      <S.Separator />
 
-      <SCardList>
+      <S.CardList>
         {contactsQuery?.isLoading && (
-          <SLoadingContainer>
+          <S.LoadingContainer>
             <Loading />
-          </SLoadingContainer>
+          </S.LoadingContainer>
         )}
-        {(contacts?.length === 0 ||
-          contactsQuery?.data?.length === 0 ||
-          contactsQuery?.data === undefined) &&
-          !contactsQuery?.isLoading && (
-            <IllustrationCard
-              notFound={contacts?.length === 0}
-              isEmpty={
-                contactsQuery?.data?.length === 0 ||
-                contactsQuery?.data === undefined
-              }
-            />
-          )}
-        {contacts?.map((contact) => (
-          <ContactCard
-            key={contact.id}
-            id={contact.id}
-            phone={contact.phone}
-            name={contact.name}
-            email={contact.email}
-            removeAction={removeContact}
-            navigateAction={handleNavigate}
+        {showIllustration && (
+          <IllustrationCard
+            notFound={contacts?.length === 0}
+            isEmpty={
+              contactsQuery?.data?.length === 0 ||
+              contactsQuery?.data === undefined
+            }
           />
-        ))}
-      </SCardList>
-    </SContainer>
+        )}
+        {!showIllustration &&
+          contacts?.map((contact) => (
+            <ContactCard
+              key={contact.id}
+              id={contact.id}
+              phone={contact.phone}
+              name={contact.name}
+              email={contact.email}
+              removeAction={removeContact}
+              navigateAction={handleNavigate}
+            />
+          ))}
+      </S.CardList>
+    </S.Container>
   )
 }

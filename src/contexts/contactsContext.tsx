@@ -1,4 +1,5 @@
 import { fetchContacts, IContact } from '&operations/queries/fetchContacts'
+import { fakePromise } from '&utils/fakePromise'
 import { useQuery, useQueryClient, UseQueryResult } from '@tanstack/react-query'
 import { createContext, ReactNode, useContext, useState } from 'react'
 import * as Yup from 'yup'
@@ -10,10 +11,10 @@ interface props {
 interface ContactsContextProps {
   contactsQuery: UseQueryResult<IContact[], unknown>
   removeContact(id: number): void
-  getContactById(id: number | string): IContact | undefined
   contactSchema: Yup.AnyObjectSchema
   nextId: number
   setNextId: React.Dispatch<React.SetStateAction<number>>
+  fetchContact(id: string): Promise<IContact>
 }
 export const ContactsContext = createContext<ContactsContextProps>(
   {} as ContactsContextProps
@@ -34,12 +35,19 @@ export const ContactsProvider = ({ children }: props) => {
     )
   }
 
-  function getContactById(id: number | string) {
-    const contact = contactsQuery.data?.find(
-      (contact) => contact.id.toString() === id.toString()
+  async function fetchContact(id: string) {
+    await fakePromise()
+
+    const contacts = contactsQuery.data || (await fetchContacts())
+
+    const contact = contacts?.find(
+      (contact) => contact.id.toString() === id?.toString()
     )
 
-    return contact
+    if (contact) {
+      return contact
+    }
+    throw new Error('Contato não econtrado')
   }
 
   const contactSchema = Yup.object().shape({
@@ -66,10 +74,10 @@ export const ContactsProvider = ({ children }: props) => {
       value={{
         contactsQuery,
         removeContact,
-        getContactById,
         contactSchema,
         nextId,
-        setNextId
+        setNextId,
+        fetchContact
       }}
     >
       {children}
