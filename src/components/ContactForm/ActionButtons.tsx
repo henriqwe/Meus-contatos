@@ -1,10 +1,4 @@
 import { Button } from '&components/Button/Button'
-import {
-  CheckIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  XMarkIcon
-} from '@heroicons/react/24/outline'
 import * as S from './style'
 
 interface props {
@@ -26,18 +20,18 @@ export function ActionButtons({
         type={'button'}
       >
         {activeStep === 0 ? (
-          <XMarkIcon style={{ height: '1rem' }} />
+          <S.XMarkIcon style={{ height: '1rem' }} />
         ) : (
-          <ChevronLeftIcon style={{ height: '1rem' }} />
+          <S.ChevronLeftIcon style={{ height: '1rem' }} />
         )}
         <span>{activeStep === 0 ? 'Cancelar' : 'Voltar'}</span>
       </Button>
       <Button disabled={isLoading} variant="primary" type={'submit'}>
         <span>{activeStep < 2 ? 'Avançar' : 'Finalizar'}</span>
         {activeStep < 2 ? (
-          <ChevronRightIcon style={{ height: '1rem' }} />
+          <S.ChevronRightIcon style={{ height: '1rem' }} />
         ) : (
-          <CheckIcon style={{ height: '1rem' }} />
+          <S.CheckIcon style={{ height: '1rem' }} />
         )}
       </Button>
     </S.ActionsButtons>

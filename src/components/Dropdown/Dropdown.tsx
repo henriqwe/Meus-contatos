@@ -4,7 +4,7 @@ import { EllipsisVerticalIcon } from '@heroicons/react/24/outline'
 import { ReactNode } from 'react'
 
 interface props {
-  options: { fn: () => void; content: ReactNode }[]
+  options: { fn?: () => void; content: ReactNode }[]
 }
 export function Dropdown({ options }: props) {
   return (
@@ -20,7 +20,7 @@ export function Dropdown({ options }: props) {
           {options.map((option) => (
             <DropdownMenu.Item
               className="DropdownMenuItem"
-              onClick={() => option.fn()}
+              onClick={() => option.fn?.()}
             >
               {option.content}
             </DropdownMenu.Item>

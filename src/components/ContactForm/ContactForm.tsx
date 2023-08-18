@@ -18,6 +18,7 @@ import { IContact } from '&operations/queries/fetchContacts'
 import { IFormData } from './type'
 import * as S from './style'
 import { ActionButtons } from './ActionButtons'
+import { Modal } from '&components/Modal/Modal'
 
 interface props {
   contact?: IContact
@@ -27,6 +28,8 @@ export function ContactForm({ contact }: props) {
   const navigate = useNavigate()
   const { contactSchema, nextId, setNextId } = useContacts()
   const [activeStep, setActiveStep] = useState(0)
+  const [openModal, setOpenModal] = useState(false)
+  const [formData, setFormData] = useState<IFormData>()
 
   const queryClient = useQueryClient()
 
@@ -71,7 +74,7 @@ export function ContactForm({ contact }: props) {
     reset()
   }
 
-  async function onSubmit(formData: IFormData) {
+  async function onSubmit() {
     let newContact = {
       id: typeForm === 'newContact' ? nextId : (contact?.id as number),
       email: formData.email,
@@ -111,7 +114,10 @@ export function ContactForm({ contact }: props) {
     }
     setActiveStep((old) => old + 1)
   }
-
+  function handleConcludeForm(_formData: IFormData) {
+    setOpenModal(true)
+    setFormData(_formData)
+  }
   function handlePreviusStep() {
     if (activeStep === 0) {
       if (typeForm === 'newContact') {
@@ -274,7 +280,7 @@ export function ContactForm({ contact }: props) {
           </S.Form>
         )}
         {activeStep === 2 && (
-          <S.Form onSubmit={handleSubmit(onSubmit)}>
+          <S.Form onSubmit={handleSubmit(handleConcludeForm)}>
             <Input
               control={control}
               name="companyName"
@@ -304,6 +310,18 @@ export function ContactForm({ contact }: props) {
           </S.Form>
         )}
       </div>
+      <Modal
+        action={() => onSubmit()}
+        title={
+          typeForm === 'newContact'
+            ? 'Finalizar o cadastro?'
+            : 'Finalizar a edição?'
+        }
+        actionsText="Sim"
+        cancelText="Não"
+        open={openModal}
+        onOpenChange={setOpenModal}
+      />
     </S.Container>
   )
 }

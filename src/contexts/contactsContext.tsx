@@ -1,6 +1,6 @@
 import { fetchContacts, IContact } from '&operations/queries/fetchContacts'
 import { fakePromise } from '&utils/fakePromise'
-import { useQuery, useQueryClient, UseQueryResult } from '@tanstack/react-query'
+import { useQuery, UseQueryResult } from '@tanstack/react-query'
 import { createContext, ReactNode, useContext, useState } from 'react'
 import * as Yup from 'yup'
 
@@ -10,7 +10,6 @@ interface props {
 
 interface ContactsContextProps {
   contactsQuery: UseQueryResult<IContact[], unknown>
-  removeContact(id: number): void
   contactSchema: Yup.AnyObjectSchema
   nextId: number
   setNextId: React.Dispatch<React.SetStateAction<number>>
@@ -21,19 +20,13 @@ export const ContactsContext = createContext<ContactsContextProps>(
 )
 
 export const ContactsProvider = ({ children }: props) => {
-  const queryClient = useQueryClient()
   const [nextId, setNextId] = useState<number>(1000)
+
   const contactsQuery = useQuery({
     queryKey: ['contacts'],
     queryFn: () => fetchContacts(),
     refetchOnWindowFocus: false
   })
-
-  function removeContact(id: number) {
-    queryClient.setQueryData(['contacts'], (old: any) =>
-      old.filter((contact: any) => contact.id !== id)
-    )
-  }
 
   async function fetchContact(id: string) {
     await fakePromise()
@@ -73,7 +66,6 @@ export const ContactsProvider = ({ children }: props) => {
     <ContactsContext.Provider
       value={{
         contactsQuery,
-        removeContact,
         contactSchema,
         nextId,
         setNextId,

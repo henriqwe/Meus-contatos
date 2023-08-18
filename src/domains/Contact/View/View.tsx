@@ -2,7 +2,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { Loading } from '&components/Loading/Loading'
 import { routes } from '&utils/routes'
 import { Avatar } from '&components/Avatar/Avatar'
-import { useQuery } from '@tanstack/react-query'
+import { useQueryClient, useQuery, useMutation } from '@tanstack/react-query'
 import { notification } from '&utils/notification'
 import { useContacts } from '&contexts/contactsContext'
 import * as S from './style'
@@ -12,6 +12,8 @@ import { ContactData } from './ContactData'
 import { ContactAddrees } from './ContactAddrees'
 import { ContactCompany } from './ContactCompany'
 import { Dropdown } from '&components/Dropdown/Dropdown'
+import { Modal } from '&components/Modal/Modal'
+import { fakePromise } from '&utils/fakePromise'
 
 type TSelectedTab = 0 | 1 | 2
 
@@ -24,6 +26,8 @@ export function ViewContact() {
   const [selectedTab, setSelectedTab] = useState<TSelectedTab>(0)
   const navigate = useNavigate()
   const { fetchContact, contactsQuery } = useContacts()
+  const [openModal, setOpenModal] = useState(false)
+  const queryClient = useQueryClient()
 
   const { data: contact, isLoading } = useQuery({
     queryKey: ['contact'],
@@ -36,7 +40,25 @@ export function ViewContact() {
     retry: false
   })
 
-  if (isLoading || !contact || contactsQuery.isLoading) {
+  const removeContact = useMutation({
+    mutationFn: (id: number) => fakePromise(),
+    onSuccess: (result, id) => {
+      queryClient.setQueryData(['contacts'], (old: any) =>
+        old.filter((contact: any) => contact.id !== id)
+      )
+
+      navigate(routes.home.path)
+      notification('Contato removido com sucesso', 'success')
+    },
+    onError: (error: Error) => notification(error.message, 'error')
+  })
+
+  if (
+    isLoading ||
+    !contact ||
+    contactsQuery.isLoading ||
+    removeContact.isLoading
+  ) {
     return <Loading />
   }
 
@@ -58,11 +80,11 @@ export function ViewContact() {
     {
       content: (
         <S.DropdownOptionContent>
-          Excluir
+          Remover
           <S.TrashIcon />
         </S.DropdownOptionContent>
       ),
-      fn: () => navigate(routes.editContact.path(contact?.id!))
+      fn: () => setOpenModal(true)
     }
   ]
   return (
@@ -76,6 +98,15 @@ export function ViewContact() {
 
           <Dropdown options={dropdownOption} />
         </S.ContactHeader>
+
+        <Modal
+          action={() => removeContact.mutate(contact.id)}
+          title="Deseja realmente remover esse contato?"
+          actionsText="Sim"
+          cancelText="Não"
+          open={openModal}
+          onOpenChange={setOpenModal}
+        />
         <S.AvatarWrapper>
           <Avatar name={contact?.name} variant="md" />
           <S.AvatarName>{contact?.name}</S.AvatarName>

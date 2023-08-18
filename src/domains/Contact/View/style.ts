@@ -91,6 +91,8 @@ export const DropdownOptionContent = styled.div`
   display: flex;
   gap: 0.5rem;
   align-items: end;
+  justify-content: space-between;
+  width: 100%;
 `
 export const PencilIcon = styled(Icons.PencilIcon)`
   width: 1.3rem;
