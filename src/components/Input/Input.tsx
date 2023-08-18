@@ -36,21 +36,24 @@ export function Input({
       name={name}
       control={control}
       render={({ field: { onChange, value } }) => (
-        <S.InputWrapper>
-          <S.Label htmlFor={name}>{label}</S.Label>
-          <S.Input
-            autoComplete="off"
-            id={name}
-            type="text"
-            disabled={disabled}
-            value={value || ''}
-            onChange={(e) => {
-              onChange(e.target.value)
-              debounceChange?.(e.target.value)
-            }}
-          />
+        <div>
+          <S.Container>
+            <S.Input
+              autoComplete="off"
+              id={name}
+              type="text"
+              placeholder=""
+              disabled={disabled}
+              value={value || ''}
+              onChange={(e) => {
+                onChange(e.target.value)
+                debounceChange?.(e.target.value)
+              }}
+            />
+            <S.Label>{label}</S.Label>
+          </S.Container>
           <S.ErrorMessage>{error?.message as string}</S.ErrorMessage>
-        </S.InputWrapper>
+        </div>
       )}
     />
   )
