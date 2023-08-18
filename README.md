@@ -4,7 +4,7 @@
   interface gráfica SPA responsiva utilizando a biblioteca React.
 
 > :warning: **Atenção** \
-> Essa aplicação utiliza o google maps api, para o carregamento correto do mapa por gentileza utilize uma **googleMapsApiKey**, para saber como criar [ clique aqui ]('https://maplink.global/blog/como-obter-chave-api-google-maps/'), insira a mesma no _.env_ utilizando a chave **VITE_GOOGLE_MAPS_API_KEY**
+> Essa aplicação utiliza o google maps api, para o carregamento correto do mapa por gentileza utilize uma **googleMapsApiKey**, para saber como criar [clique aqui](https://maplink.global/blog/como-obter-chave-api-google-maps/), insira a mesma no _.env_ utilizando a chave **VITE_GOOGLE_MAPS_API_KEY**
 
 ## Comandos do projeto
 
