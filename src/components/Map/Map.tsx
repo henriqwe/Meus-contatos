@@ -17,7 +17,7 @@ interface props {
 function MapComponent({ contacts }: props) {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: 'AIzaSyCeSmJ6EpNkfWYaEb4X51KBrCwQ_FJ60DE'
+    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY
   })
 
   const [map, setMap] = React.useState(null)
