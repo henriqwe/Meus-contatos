@@ -6,7 +6,6 @@ interface props {
   name: string
   email: string
   id: number
-  removeAction: (id: number) => void
   navigateAction(id: number): void
 }
 export function ContactCard({ id, email, name, phone, navigateAction }: props) {

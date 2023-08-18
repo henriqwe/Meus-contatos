@@ -14,7 +14,7 @@ import { IllustrationCard } from '&domains/Contact/List/IllustrationCard'
 
 export function ContactList() {
   const navigate = useNavigate()
-  const { contactsQuery, removeContact } = useContacts()
+  const { contactsQuery } = useContacts()
 
   const [contacts, setContacts] = useState<IContact[]>()
   const [ascendentName, setAscendentName] = useState(true)
@@ -111,7 +111,6 @@ export function ContactList() {
               phone={contact.phone}
               name={contact.name}
               email={contact.email}
-              removeAction={removeContact}
               navigateAction={handleNavigate}
             />
           ))}
