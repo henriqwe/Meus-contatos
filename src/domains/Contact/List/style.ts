@@ -50,9 +50,9 @@ export const UserPlusIcon = styled(Icons.UserPlusIcon)`
 export const ActionsContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
   margin-top: 1rem;
-  flex: 1;
   width: 100%;
 `
 export const ButtonText = styled.span`

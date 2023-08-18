@@ -36,14 +36,13 @@ export type TVariant = keyof typeof variantOptions
 export const Button = styled.button<{ variant: TVariant }>`
   border: none;
   display: inline-flex;
-  padding: 0.8rem;
+  padding: 1rem;
   justify-content: space-between;
   align-items: center;
   border-radius: 0.375rem;
   font-weight: 500;
   transition: all 0.5s;
   cursor: pointer;
-  outline: none;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
   ${({ variant }) => variantOptions[variant]}
 `

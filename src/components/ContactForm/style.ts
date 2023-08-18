@@ -23,7 +23,7 @@ export const ActionsButtons = styled.div`
 `
 export const Form = styled.form`
   display: flex;
-  gap: 0.3rem;
+  gap: 0.8rem;
   flex: 1;
   flex-direction: column;
   width: 100vw;
