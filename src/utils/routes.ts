@@ -6,10 +6,12 @@ export const routes = {
     path: '/cadastrar'
   },
   viewContact: {
-    path: (id: string | number) => `/contato/${id}`
+    path: (id: string | number) => `/contato/${id}`,
+    pathWithParam: `/contato/:id`
   },
   editContact: {
-    path: (id: string | number) => `/editar/${id}`
+    path: (id: string | number) => `/editar/${id}`,
+    pathWithParam: `/editar/:id`
   },
   map: {
     path: `/mapa`

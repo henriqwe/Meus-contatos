@@ -1,36 +1,41 @@
-import { Routes, Route, LoaderFunction, ActionFunction } from 'react-router-dom'
-import { IRoute, Pages } from '../types/routes'
+import { Routes, Route } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
-
-const pages: Pages = import.meta.glob('../pages/**/*.tsx', { eager: true })
-
-const _routes: IRoute[] = []
-for (const path of Object.keys(pages)) {
-  const fileName = path.match(/\.\/pages\/(.*)\.tsx$/)?.[1]
-  if (!fileName) {
-    continue
-  }
-
-  const normalizedPathName = fileName.includes('$')
-    ? fileName.replace('$', ':')
-    : fileName.replace(/\/index/, '')
-
-  _routes.push({
-    path: fileName === 'index' ? '/' : `/${normalizedPathName.toLowerCase()}`,
-    Element: pages[path].default,
-    loader: pages[path]?.loader as LoaderFunction | undefined,
-    action: pages[path]?.action as ActionFunction | undefined,
-    ErrorBoundary: pages[path]?.ErrorBoundary
-  })
-}
+import { routes } from './routes'
+import Home from '&pages/index'
+import Mapa from '&pages/mapa'
+import Cadatrar from '&pages/cadastrar'
+import Editar from '&pages/editar/$id'
+import Contato from '&pages/contato/$id'
 
 export function AnimationRoutes() {
   return (
     <AnimatePresence>
       <Routes>
-        {_routes.map(({ Element, path, ...rest }) => (
-          <Route element={<Element />} path={path} key={path} {...rest}></Route>
-        ))}
+        <Route
+          element={<Home />}
+          path={routes.home.path}
+          key={routes.home.path}
+        />
+        <Route
+          element={<Mapa />}
+          path={routes.map.path}
+          key={routes.map.path}
+        />
+        <Route
+          element={<Cadatrar />}
+          path={routes.createContact.path}
+          key={routes.createContact.path}
+        />
+        <Route
+          element={<Editar />}
+          path={routes.editContact.pathWithParam}
+          key={routes.editContact.pathWithParam}
+        />
+        <Route
+          element={<Contato />}
+          path={routes.viewContact.pathWithParam}
+          key={routes.viewContact.pathWithParam}
+        />
       </Routes>
     </AnimatePresence>
   )
