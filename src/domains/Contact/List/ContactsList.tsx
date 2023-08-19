@@ -1,4 +1,6 @@
-import { IContact, fetchContacts } from '&operations/queries/fetchContacts'
+import type { IContact } from '&services/queries/fetchContacts'
+import { fetchContacts } from '&services/queries/fetchContacts'
+
 import { useEffect, useState } from 'react'
 import { sortArrayByKey } from '&utils/handles/sortArrayByKey'
 import { useNavigate } from 'react-router-dom'

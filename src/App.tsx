@@ -1,7 +1,7 @@
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { IdProvider } from '&contexts/useId'
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+// import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { AnimationRoutes } from '&utils/AnimationRoutes'
 
 export default function App() {

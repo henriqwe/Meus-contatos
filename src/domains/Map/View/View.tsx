@@ -1,7 +1,8 @@
 import { FloatingActionButton } from '&components/FloatingActionButton/FloatingActionButton'
 import { Loading } from '&components/Loading/Loading'
 import { Map } from '&components/Map/Map'
-import { IContact, fetchContacts } from '&operations/queries/fetchContacts'
+import type { IContact } from '&services/queries/fetchContacts'
+import { fetchContacts } from '&services/queries/fetchContacts'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 
 export function MapView() {

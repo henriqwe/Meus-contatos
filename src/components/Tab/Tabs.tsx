@@ -1,13 +1,9 @@
-import React, { ReactNode, memo, useEffect, useState } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import * as S from './styles'
 
 interface Props {
   children: JSX.Element | JSX.Element[]
   onTabSelected: (item: number) => void
-}
-
-interface TabItemProps {
-  children: ReactNode
 }
 
 export function Tab({ children, onTabSelected }: Props) {

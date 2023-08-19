@@ -1,11 +1,13 @@
-import { IContact, fetchContacts } from '&operations/queries/fetchContacts'
+import type { IContact } from '&services/queries/fetchContacts'
+import { fetchContacts } from '&services/queries/fetchContacts'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { useState } from 'react'
 
 export function useContact(id: string) {
   const [error, setError] = useState<Error>()
   const queryClient = useQueryClient()
-  let contacts = queryClient.getQueryData(['contacts']) as IContact[]
+
+  const contacts = queryClient.getQueryData(['contacts']) as IContact[]
 
   const { data, isLoading } = useQuery({
     queryKey: ['contacts'],

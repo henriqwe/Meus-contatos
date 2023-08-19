@@ -1,7 +1,7 @@
 import { Marker } from '@react-google-maps/api'
 import { useState } from 'react'
 import { ContactInfoWindow } from './ContactInfoWindow'
-import { IContact } from '&operations/queries/fetchContacts'
+import type { IContact } from '&services/queries/fetchContacts'
 
 type props = {
   contact: IContact

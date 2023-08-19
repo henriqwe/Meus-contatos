@@ -33,8 +33,8 @@ export function ViewContact() {
   const queryClient = useQueryClient()
 
   const removeContact = useMutation({
-    mutationFn: (id: number) => fakePromise(),
-    onSuccess: (result, id) => {
+    mutationFn: (_: number) => fakePromise(),
+    onSuccess: (_, id) => {
       navigate(routes.home.path)
       queryClient.setQueryData(['contacts'], (old: any) =>
         old.filter((contact: any) => contact.id !== id)

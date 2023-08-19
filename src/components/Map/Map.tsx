@@ -1,6 +1,6 @@
 import { memo, useCallback, useEffect, useState } from 'react'
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api'
-import { IContact } from '&operations/queries/fetchContacts'
+import type { IContact } from '&services/queries/fetchContacts'
 import { MarkerDrop } from './MarkerDrop'
 import { FomMarker } from './FomMarker'
 
@@ -18,7 +18,7 @@ function MapComponent({
 }: props) {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY
+    googleMapsApiKey: process.env.VITE_GOOGLE_MAPS_API_KEY || ''
   })
 
   const contactsWithLocation = contacts?.filter(
@@ -30,7 +30,7 @@ function MapComponent({
     { lat: number; lng: number } | undefined
   >()
 
-  const [map, setMap] = useState<google.maps.Map | null>(null)
+  const [_, setMap] = useState<google.maps.Map | null>(null)
 
   const onLoad = useCallback(function callback(map: google.maps.Map) {
     const bounds = new window.google.maps.LatLngBounds()
@@ -53,7 +53,7 @@ function MapComponent({
     setMap(map)
   }, [])
 
-  const onUnmount = useCallback(function callback(map: any) {
+  const onUnmount = useCallback(function callback(_: any) {
     setMap(null)
   }, [])
 

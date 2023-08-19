@@ -1,4 +1,3 @@
-import { Input } from '&components/Input/Input'
 import { useForm } from 'react-hook-form'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -13,7 +12,7 @@ import {
 } from '@heroicons/react/24/outline'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { fakePromise } from '&utils/fakePromise'
-import { IContact } from '&operations/queries/fetchContacts'
+import type { IContact } from '&services/queries/fetchContacts'
 import { IFormData } from './type'
 import * as S from './style'
 import { Modal } from '&components/Modal/Modal'
@@ -28,7 +27,7 @@ interface props {
   contact?: IContact
 }
 export function ContactForm({ contact }: props) {
-  const typeForm = !!contact ? 'editContact' : 'newContact'
+  const typeForm = contact ? 'editContact' : 'newContact'
   const navigate = useNavigate()
   const [activeStep, setActiveStep] = useState<TActiveStep>(0)
   const [openModal, setOpenModal] = useState(false)
@@ -41,11 +40,14 @@ export function ContactForm({ contact }: props) {
   }>()
 
   const createContact = useMutation({
-    mutationFn: (newContact: IContact) => fakePromise(),
-    onSuccess: (result, newContact) => {
-      queryClient.setQueryData(['contacts'], (old: any) => [
-        ...old,
-        { ...newContact }
+    mutationFn: (newContact: IContact) => {
+      console.log({ newContact })
+      return fakePromise()
+    },
+    onSuccess: (_, newContact) => {
+      queryClient.setQueryData(['contacts'], (old: IContact[] | undefined) => [
+        ...(old ?? []),
+        newContact
       ])
 
       Id.nextId()
@@ -55,8 +57,8 @@ export function ContactForm({ contact }: props) {
   })
 
   const editContact = useMutation({
-    mutationFn: (newContact: IContact) => fakePromise(),
-    onSuccess: (result, newContact) => {
+    mutationFn: (_: IContact) => fakePromise(),
+    onSuccess: (_, newContact) => {
       queryClient.setQueryData(['contacts'], (old: any) =>
         old.map((oldContact: IContact) =>
           oldContact.id === newContact.id ? newContact : oldContact

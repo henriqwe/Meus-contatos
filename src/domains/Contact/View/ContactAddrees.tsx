@@ -1,5 +1,5 @@
 import * as S from './style'
-import { IContact } from '&operations/queries/fetchContacts'
+import type { IContact } from '&services/queries/fetchContacts'
 import { Map } from '&components/Map/Map'
 
 export function ContactAddrees({ contact }: { contact: IContact }) {

@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable", "ES2021.String"],
-    "module": "ESNext",
+    "module": "esnext",
     "skipLibCheck": true,
-
+    "types": ["node", "jest"],
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -23,10 +23,11 @@
       "&components/*": ["./src/components/*"],
       "&utils/*": ["./src/utils/*"],
       "&hooks/*": ["./src/hooks/*"],
-      "&operations/*": ["./src/operations/*"],
+      "&services/*": ["./src/services/*"],
       "&contexts/*": ["./src/contexts/*"],
       "&domains/*": ["./src/domains/*"],
-      "&schemas/*": ["./src/schemas/*"]
+      "&schemas/*": ["./src/schemas/*"],
+      "&pages/*": ["./src/pages/*"]
     }
   },
   "include": ["src"],

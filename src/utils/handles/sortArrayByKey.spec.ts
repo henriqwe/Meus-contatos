@@ -16,16 +16,22 @@ describe('sortArrayByKey test', () => {
         phone: '010-692-6593 x09125'
       },
       {
-        id: 3,
-        name: 'Clementine Bauch',
-        email: 'Nathan@yesenia.net',
-        phone: '1-463-123-4447'
-      },
-      {
         id: 4,
         name: 'abraao silva',
         email: 'abraao@yesenia.net',
         phone: '1-263-123-4447'
+      },
+      {
+        id: 7,
+        name: 'abraao silva',
+        email: '123abraao@yesenia.net',
+        phone: '11-263-123-4447'
+      },
+      {
+        id: 3,
+        name: 'Clementine Bauch',
+        email: 'Nathan@yesenia.net',
+        phone: '1-463-123-4447'
       }
     ]
     const newArray = sortArrayByKey({ data: array, key: 'name' })
@@ -35,6 +41,12 @@ describe('sortArrayByKey test', () => {
         name: 'abraao silva',
         email: 'abraao@yesenia.net',
         phone: '1-263-123-4447'
+      },
+      {
+        id: 7,
+        name: 'abraao silva',
+        email: '123abraao@yesenia.net',
+        phone: '11-263-123-4447'
       },
       {
         id: 3,
@@ -55,5 +67,74 @@ describe('sortArrayByKey test', () => {
         phone: '1-770-736-8031 x56442'
       }
     ])
+    expect(array).toEqual(array)
+  })
+  it('should return a new array in desscending order by name', () => {
+    const array = [
+      {
+        id: 1,
+        name: 'Leanne Graham',
+        email: 'Sincere@april.biz',
+        phone: '1-770-736-8031 x56442'
+      },
+      {
+        id: 2,
+        name: 'Ervin Howell',
+        email: 'Shanna@melissa.tv',
+        phone: '010-692-6593 x09125'
+      },
+      {
+        id: 4,
+        name: 'abraao silva',
+        email: 'abraao@yesenia.net',
+        phone: '1-263-123-4447'
+      },
+      {
+        id: 7,
+        name: 'abraao silva',
+        email: '123abraao@yesenia.net',
+        phone: '11-263-123-4447'
+      },
+      {
+        id: 3,
+        name: 'Clementine Bauch',
+        email: 'Nathan@yesenia.net',
+        phone: '1-463-123-4447'
+      }
+    ]
+    const newArray = sortArrayByKey({ data: array, key: 'name', asc: false })
+    expect(newArray).toEqual([
+      {
+        id: 1,
+        name: 'Leanne Graham',
+        email: 'Sincere@april.biz',
+        phone: '1-770-736-8031 x56442'
+      },
+      {
+        id: 2,
+        name: 'Ervin Howell',
+        email: 'Shanna@melissa.tv',
+        phone: '010-692-6593 x09125'
+      },
+      {
+        id: 3,
+        name: 'Clementine Bauch',
+        email: 'Nathan@yesenia.net',
+        phone: '1-463-123-4447'
+      },
+      {
+        id: 4,
+        name: 'abraao silva',
+        email: 'abraao@yesenia.net',
+        phone: '1-263-123-4447'
+      },
+      {
+        id: 7,
+        name: 'abraao silva',
+        email: '123abraao@yesenia.net',
+        phone: '11-263-123-4447'
+      }
+    ])
+    expect(array).toEqual(array)
   })
 })
