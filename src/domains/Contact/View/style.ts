@@ -14,6 +14,7 @@ export const Container = styled.section`
 export const ChevronLeftIcon = styled(Icons.ChevronLeftIcon)`
   width: 2rem;
   height: 2rem;
+  cursor: pointer;
 `
 
 export const EllipsisVerticalIcon = styled(Icons.EllipsisVerticalIcon)`
