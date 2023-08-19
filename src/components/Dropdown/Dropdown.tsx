@@ -17,10 +17,11 @@ export function Dropdown({ options }: props) {
 
       <DropdownMenu.Portal>
         <DropdownMenu.Content className="DropdownMenuContent" sideOffset={5}>
-          {options.map((option) => (
+          {options.map((option, idx) => (
             <DropdownMenu.Item
               className="DropdownMenuItem"
               onClick={() => option.fn?.()}
+              key={'DropdownMenuItem' + idx}
             >
               {option.content}
             </DropdownMenu.Item>

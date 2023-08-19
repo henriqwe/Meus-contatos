@@ -1,31 +1,35 @@
 import React from 'react'
-import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api'
+import { GoogleMap, useJsApiLoader } from '@react-google-maps/api'
 import { IContact } from '&operations/queries/fetchContacts'
+import { MarkerDrop } from './MarkerDrop'
 
-const containerStyle = {
-  width: '100vw',
-  height: '100vh'
-}
-
-const center = {
-  lat: -3.745,
-  lng: -38.523
-}
 interface props {
   contacts: IContact[]
+  showInfoWindow?: boolean
 }
-function MapComponent({ contacts }: props) {
+function MapComponent({ contacts, showInfoWindow = true }: props) {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY
   })
 
+  const contactsWithLocation = contacts?.filter(
+    (contact) => contact.address.geo.lat && contact.address.geo.lng
+  )
   const [map, setMap] = React.useState(null)
 
   const onLoad = React.useCallback(function callback(map: any) {
-    // This is just an example of getting and using the map instance!!! don't just blindly copy!
-    // const bounds = new window.google.maps.LatLngBounds(center)
-    // map.fitBounds(bounds)
+    if (contactsWithLocation.length > 0) {
+      const bounds = new window.google.maps.LatLngBounds()
+      for (const contact of contactsWithLocation) {
+        bounds.extend({
+          lat: Number(contact.address.geo.lat),
+          lng: Number(contact.address.geo.lng)
+        })
+      }
+
+      map.fitBounds(bounds)
+    }
 
     setMap(map)
   }, [])
@@ -36,25 +40,38 @@ function MapComponent({ contacts }: props) {
 
   return isLoaded ? (
     <GoogleMap
-      mapContainerStyle={containerStyle}
-      center={center}
-      zoom={1}
+      mapContainerStyle={{
+        width: '100%',
+        height: '100%'
+      }}
       onLoad={onLoad}
       onUnmount={onUnmount}
+      center={{
+        lat: -12.100100128939063,
+        lng: -49.24919742233473
+      }}
+      zoom={3}
+      options={{
+        styles: [
+          {
+            featureType: 'poi',
+            stylers: [{ visibility: 'off' }]
+          },
+          {
+            featureType: 'transit',
+            elementType: 'labels.icon',
+            stylers: [{ visibility: 'off' }]
+          }
+        ]
+      }}
     >
-      {contacts
-        ?.filter(
-          (contact) => contact.address.geo.lat && contact.address.geo.lng
-        )
-        .map((contact) => (
-          <Marker
-            key={contact.id}
-            position={{
-              lat: Number(contact.address.geo.lat),
-              lng: Number(contact.address.geo.lng)
-            }}
-          />
-        ))}
+      {contactsWithLocation.map((contact) => (
+        <MarkerDrop
+          key={'MarkerDrop' + contact.id}
+          contact={contact}
+          showInfoWindow={showInfoWindow}
+        />
+      ))}
     </GoogleMap>
   ) : (
     <></>

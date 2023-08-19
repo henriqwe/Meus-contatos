@@ -49,8 +49,10 @@ export function Input({
                 onChange(e.target.value)
                 debounceChange?.(e.target.value)
               }}
+              onError={!!error}
+              label={label}
             />
-            <S.Label>{label}</S.Label>
+            <S.Label> </S.Label>
           </S.Container>
           <S.ErrorMessage>{error?.message as string}</S.ErrorMessage>
         </div>

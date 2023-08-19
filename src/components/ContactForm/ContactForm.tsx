@@ -1,7 +1,6 @@
 import { Input } from '&components/Input/Input'
 import { useForm } from 'react-hook-form'
 import { useEffect, useState } from 'react'
-import { useContacts } from '&contexts/contactsContext'
 import { useNavigate } from 'react-router-dom'
 import { routes } from '&utils/routes'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -19,6 +18,9 @@ import { IFormData } from './type'
 import * as S from './style'
 import { ActionButtons } from './ActionButtons'
 import { Modal } from '&components/Modal/Modal'
+import { Map } from '&components/Map/Map'
+import { useContacts } from '&contexts/contactsContext'
+import { contactSchema } from '&schemas/contact'
 
 interface props {
   contact?: IContact
@@ -26,11 +28,10 @@ interface props {
 export function ContactForm({ contact }: props) {
   const typeForm = !!contact ? 'editContact' : 'newContact'
   const navigate = useNavigate()
-  const { contactSchema, nextId, setNextId } = useContacts()
   const [activeStep, setActiveStep] = useState(0)
   const [openModal, setOpenModal] = useState(false)
   const [formData, setFormData] = useState<IFormData>()
-
+  const { nextId, setNextId } = useContacts()
   const queryClient = useQueryClient()
 
   const createContact = useMutation({
@@ -46,6 +47,7 @@ export function ContactForm({ contact }: props) {
     },
     onError: onError
   })
+
   const editContact = useMutation({
     mutationFn: (newContact: IContact) => fakePromise(),
     onSuccess: (result, newContact) => {
@@ -77,25 +79,25 @@ export function ContactForm({ contact }: props) {
   async function onSubmit() {
     let newContact = {
       id: typeForm === 'newContact' ? nextId : (contact?.id as number),
-      email: formData.email,
-      name: formData.name,
-      phone: formData.phone,
-      username: formData.username,
-      website: formData.website,
+      email: formData!.email,
+      name: formData!.name,
+      phone: formData!.phone,
+      username: formData!.username,
+      website: formData!.website,
       address: {
-        city: formData.city,
+        city: formData!.city,
         geo: {
-          lat: formData.lat,
-          lng: formData.lng
+          lat: formData!.lat,
+          lng: formData!.lng
         },
-        street: formData.street,
-        suite: formData.suite,
-        zipcode: formData.zipcode
+        street: formData!.street,
+        suite: formData!.suite,
+        zipcode: formData!.zipcode
       },
       company: {
-        bs: formData.bs,
-        catchPhrase: formData.catchPhrase,
-        name: formData.companyName
+        bs: formData!.bs,
+        catchPhrase: formData!.catchPhrase,
+        name: formData!.companyName
       }
     }
     if (typeForm === 'newContact') {
@@ -118,12 +120,12 @@ export function ContactForm({ contact }: props) {
     setOpenModal(true)
     setFormData(_formData)
   }
-  function handlePreviusStep() {
-    if (activeStep === 0) {
-      if (typeForm === 'newContact') {
-        navigate(routes.home.path)
-        return
-      }
+  function handlePreviousStep() {
+    if (activeStep === 0 && typeForm === 'newContact') {
+      navigate(routes.home.path)
+      return
+    }
+    if (activeStep === 0 && typeForm === 'editContact') {
       navigate(routes.viewContact.path(contact?.id!))
       return
     }
@@ -223,7 +225,7 @@ export function ContactForm({ contact }: props) {
             />
             <ActionButtons
               activeStep={activeStep}
-              handlePreviusStep={handlePreviusStep}
+              handlePreviousStep={handlePreviousStep}
               isLoading={createContact.isLoading || editContact.isLoading}
             />
           </S.Form>
@@ -258,23 +260,12 @@ export function ContactForm({ contact }: props) {
               error={errors['zipcode']}
               disabled={createContact.isLoading || editContact.isLoading}
             />
-            <Input
-              control={control}
-              name="lat"
-              label="Latitude"
-              error={errors['lat']}
-              disabled={createContact.isLoading || editContact.isLoading}
-            />
-            <Input
-              control={control}
-              name="lng"
-              label="Longitude"
-              error={errors['lng']}
-              disabled={createContact.isLoading || editContact.isLoading}
-            />
+            <S.MapContainer>
+              <Map contacts={contact ? [contact] : []} showInfoWindow={false} />
+            </S.MapContainer>
             <ActionButtons
               activeStep={activeStep}
-              handlePreviusStep={handlePreviusStep}
+              handlePreviousStep={handlePreviousStep}
               isLoading={createContact.isLoading || editContact.isLoading}
             />
           </S.Form>
@@ -304,7 +295,7 @@ export function ContactForm({ contact }: props) {
             />
             <ActionButtons
               activeStep={activeStep}
-              handlePreviusStep={handlePreviusStep}
+              handlePreviousStep={handlePreviousStep}
               isLoading={createContact.isLoading || editContact.isLoading}
             />
           </S.Form>

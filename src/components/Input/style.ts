@@ -5,7 +5,7 @@ export const ErrorMessage = styled.label`
   font-size: 14px;
   padding-left: 0.5rem;
   font-weight: 600;
-  color: red;
+  color: #c01e2e;
   padding-top: 0.1rem;
 `
 export const InputWrapper = styled.div`
@@ -20,37 +20,50 @@ export const Container = styled.div`
   align-items: center;
 `
 
-export const Input = styled.input`
+export const Input = styled.input<{ onError: boolean; label: string }>`
   width: 100%;
-  padding: 1rem 1.2rem;
-  border: 2px solid #dadce0;
+  padding: 7px;
+  padding-left: 18px;
+  border: 2px solid ${({ onError }) => (onError ? '#C01E2E' : '#dadce0')};
   border-radius: 4px;
   font-size: 1rem;
   outline-color: transparent;
   &:focus {
-    border: 2px solid #1e40af;
-    outline-color: #1e40af;
+    border: 2px solid ${({ onError }) => (onError ? '#C01E2E' : '#18a2f3')};
+    outline-color: ${({ onError }) => (onError ? '#C01E2E' : '#18a2f3')};
   }
-
+  + span::after {
+    content: '${({ label }) => label}';
+    display: flex;
+  }
+  &:not(:placeholder-shown) + span::after {
+    transform: translateY(-6px);
+  }
+  &:focus + span::after {
+    transform: translateY(-6px);
+  }
   &:not(:placeholder-shown) + span {
-    color: #1e40af;
-    transform: translateX(10px) translateY(-25px);
+    color: ${({ onError }) => (onError ? '#C01E2E' : '#18a2f3')};
+    transform: translateX(10px) translateY(-17px);
     font-size: 0.75rem;
     font-weight: 600;
     background-color: #fff;
+    height: 5px;
     padding: 0 6px;
   }
+
   &:focus + span {
-    color: #1e40af;
-    transform: translateX(10px) translateY(-25px);
+    color: ${({ onError }) => (onError ? '#C01E2E' : '#18a2f3')};
+    transform: translateX(10px) translateY(-17px);
     font-size: 0.75rem;
     font-weight: 600;
-    background-color: #fff;
+    background-color: white;
+    height: 5px;
     padding: 0 6px;
   }
 
   &:not(:focus) + span {
-    color: #808080;
+    color: ${({ onError }) => (onError ? '#C01E2E' : '#808080')};
   }
 `
 
@@ -61,5 +74,5 @@ export const Label = styled.span`
   font-size: 1rem;
   color: #7f8fa6;
   pointer-events: none;
-  transition: 0.6s;
+  transition: all 70ms ease-out;
 `

@@ -3,7 +3,7 @@ import * as Icons from '@heroicons/react/24/outline'
 
 export const Container = styled.section`
   position: relative;
-  padding: 0.5rem;
+  padding: 0.8rem;
   max-height: 100vh;
   min-height: 100vh;
   display: flex;
@@ -45,4 +45,8 @@ export const ChevronRightIcon = styled(Icons.ChevronRightIcon)`
 export const CheckIcon = styled(Icons.CheckIcon)`
   width: 1rem;
   height: 1rem;
+`
+export const MapContainer = styled.div`
+  width: 100%;
+  height: 20rem;
 `

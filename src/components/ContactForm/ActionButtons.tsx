@@ -4,19 +4,19 @@ import * as S from './style'
 interface props {
   isLoading: boolean
   activeStep: number
-  handlePreviusStep: () => void
+  handlePreviousStep: () => void
 }
 export function ActionButtons({
   isLoading,
   activeStep,
-  handlePreviusStep
+  handlePreviousStep
 }: props) {
   return (
     <S.ActionsButtons>
       <Button
         disabled={isLoading}
         variant="secondary"
-        onClick={handlePreviusStep}
+        onClick={handlePreviousStep}
         type={'button'}
       >
         {activeStep === 0 ? (

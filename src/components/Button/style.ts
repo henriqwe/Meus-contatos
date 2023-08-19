@@ -2,24 +2,24 @@ import styled from 'styled-components'
 
 const variantOptions = {
   primary: {
-    backgroundColor: '#1E40AF',
+    backgroundColor: '#18a2f3',
     color: 'white',
     '&:hover': {
-      backgroundColor: '#1a3691'
+      backgroundColor: '#2496d8'
     }
   },
   danger: {
-    backgroundColor: '#dc2626',
+    backgroundColor: '#C01E2E',
     color: 'white',
     '&:hover': {
-      backgroundColor: '#bf2121'
+      backgroundColor: '#ad202c'
     }
   },
   success: {
-    backgroundColor: '#84cc16',
-    color: 'black',
+    backgroundColor: '#0A9444',
+    color: 'white',
     '&:hover': {
-      backgroundColor: '#6fad10'
+      backgroundColor: '#0b823d'
     }
   },
   secondary: {
@@ -35,11 +35,13 @@ export type TVariant = keyof typeof variantOptions
 
 export const Button = styled.button<{ variant: TVariant }>`
   border: none;
-  display: inline-flex;
-  padding: 1rem;
+  display: flex;
+  height: 35px;
+  padding-left: 15px;
+  padding-right: 15px;
   justify-content: space-between;
   align-items: center;
-  border-radius: 0.375rem;
+  border-radius: 6px;
   font-weight: 500;
   transition: all 0.5s;
   cursor: pointer;
@@ -48,9 +50,13 @@ export const Button = styled.button<{ variant: TVariant }>`
 `
 export const ButtonContainer = styled.div`
   display: flex;
-  gap: 0.5rem;
+  gap: 8px;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   white-space: nowrap;
+  height: 18px;
+  /* @media (min-width: 768px) {
+    width: 13rem;
+  } */
 `

@@ -3,14 +3,13 @@ import styled from 'styled-components'
 export const TabContainer = styled.div`
   display: flex;
   width: 100%;
-  background: red;
   align-items: stretch;
 `
 
 const tabItemVariants = {
   active: {
-    borderBottom: '4px solid rgb(30 64 175)',
-    color: 'rgb(30 64 175)',
+    borderBottom: '4px solid #18a2f3',
+    color: '#18a2f3',
     fontWeight: 800
   },
   inacitve: {

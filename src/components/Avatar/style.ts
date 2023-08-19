@@ -2,14 +2,14 @@ import styled from 'styled-components'
 
 const variantOptions = {
   sm: {
-    width: '4.5rem',
-    height: '4.5rem',
-    fontSize: '2rem'
+    width: '3rem',
+    height: '3rem',
+    fontSize: '1.3rem'
   },
   md: {
-    width: '6.5rem',
-    height: '6.5rem',
-    fontSize: '4rem'
+    width: '5rem',
+    height: '5rem',
+    fontSize: '3rem'
   }
 }
 
@@ -19,7 +19,7 @@ export const Avatar = styled.div<{ variant: TVariant }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(30 64 175);
+  background-color: #18a2f3;
   color: white;
   border-radius: 100%;
   width: 4.5rem;

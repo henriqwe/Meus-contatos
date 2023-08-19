@@ -28,7 +28,7 @@ export function Stepper({ steps, activeStep }: props) {
                   width: index <= activeStep ? '100%' : 0,
                   display: index === 0 ? 'none' : 'block',
                   borderColor:
-                    index <= activeStep ? '#1E40AF' : 'rgb(212, 211, 209)'
+                    index <= activeStep ? '#18a2f3' : 'rgb(212, 211, 209)'
                 }}
               />
             </div>
@@ -40,7 +40,7 @@ export function Stepper({ steps, activeStep }: props) {
                 justifyContent: 'center',
                 backgroundColor:
                   index === activeStep || index < activeStep
-                    ? '#1E40AF'
+                    ? '#18a2f3'
                     : '#D4D3D1',
                 width: '2.5rem',
                 height: '2.5rem',
@@ -60,14 +60,14 @@ export function Stepper({ steps, activeStep }: props) {
                       ? '#FFF'
                       : index > activeStep
                       ? '#4b4b4b'
-                      : '#1E40AF'
+                      : '#18a2f3'
                 }}
               >
                 {step.icon}
               </div>
               <div
                 style={{
-                  backgroundColor: index < activeStep ? '#1E40AF' : '#FFF',
+                  backgroundColor: index < activeStep ? '#18a2f3' : '#FFF',
                   borderRadius: '50%',
                   transition: 'all 0.2s linear',
                   transitionDelay: '0.2s',
@@ -83,7 +83,7 @@ export function Stepper({ steps, activeStep }: props) {
                 fontSize: 12,
                 transition: 'all 0.2s linear',
                 transitionDelay: '0.2s',
-                color: index === activeStep ? '#1E40AF' : '#B0B0B0'
+                color: index === activeStep ? '#18a2f3' : '#B0B0B0'
               }}
             >
               {step.label}
