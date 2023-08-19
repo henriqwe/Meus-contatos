@@ -1,5 +1,6 @@
 import * as S from './style'
 import { IContact } from '&operations/queries/fetchContacts'
+import { Map } from '&components/Map/Map'
 
 export function ContactAddrees({ contact }: { contact: IContact }) {
   return (
@@ -20,14 +21,11 @@ export function ContactAddrees({ contact }: { contact: IContact }) {
         <S.InfoTitle>CEP</S.InfoTitle>
         <S.InfoDescription>{contact.address.zipcode || '-'}</S.InfoDescription>
       </S.InfoWrapper>
-      <S.InfoWrapper variant="white">
-        <S.InfoTitle>Latitude</S.InfoTitle>
-        <S.InfoDescription>{contact.address.geo.lat || '-'}</S.InfoDescription>
-      </S.InfoWrapper>
-      <S.InfoWrapper variant="gray">
-        <S.InfoTitle>Longitude</S.InfoTitle>
-        <S.InfoDescription>{contact.address.geo.lng || '-'}</S.InfoDescription>
-      </S.InfoWrapper>
+      {contact.address.geo.lat && contact.address.geo.lng && (
+        <S.MapContainer>
+          <Map contacts={[contact]} showInfoWindow={false} />
+        </S.MapContainer>
+      )}
     </S.TabItemContainer>
   )
 }

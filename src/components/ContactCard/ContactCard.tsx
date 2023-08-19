@@ -1,6 +1,5 @@
 import { Avatar } from '&components/Avatar/Avatar'
 import * as S from '&components/ContactCard/style'
-import { styled } from 'styled-components'
 
 interface props {
   phone: string
@@ -17,15 +16,15 @@ export function ContactCard({ id, email, name, phone, navigateAction }: props) {
           <Avatar name={name} variant="sm" />
         </S.AvatarContainer>
         <S.DetailsWrapper>
-          <Teste>
+          <S.DeatilContainer>
             <S.PrimaryDetail>{name}</S.PrimaryDetail>
-          </Teste>
-          <Teste>
+          </S.DeatilContainer>
+          <S.DeatilContainer>
             <S.SecondaryDetail>{phone}</S.SecondaryDetail>
-          </Teste>
-          <Teste>
+          </S.DeatilContainer>
+          <S.DeatilContainer>
             <S.SecondaryDetail>{email}</S.SecondaryDetail>
-          </Teste>
+          </S.DeatilContainer>
         </S.DetailsWrapper>
       </S.ContactCardWrapper>
       <S.IconWrapper>
@@ -34,8 +33,3 @@ export function ContactCard({ id, email, name, phone, navigateAction }: props) {
     </S.ContactCard>
   )
 }
-const Teste = styled.div`
-  @media (min-width: 768px) {
-    width: 13rem;
-  }
-`

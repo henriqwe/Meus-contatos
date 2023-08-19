@@ -10,5 +10,8 @@ export const routes = {
   },
   editContact: {
     path: (id: string | number) => `/editar/${id}`
+  },
+  map: {
+    path: `/mapa`
   }
 }

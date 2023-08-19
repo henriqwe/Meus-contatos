@@ -19,8 +19,8 @@ import * as S from './style'
 import { ActionButtons } from './ActionButtons'
 import { Modal } from '&components/Modal/Modal'
 import { Map } from '&components/Map/Map'
-import { useContacts } from '&contexts/contactsContext'
 import { contactSchema } from '&schemas/contact'
+import { useId } from '&contexts/useId'
 
 interface props {
   contact?: IContact
@@ -31,7 +31,7 @@ export function ContactForm({ contact }: props) {
   const [activeStep, setActiveStep] = useState(0)
   const [openModal, setOpenModal] = useState(false)
   const [formData, setFormData] = useState<IFormData>()
-  const { nextId, setNextId } = useContacts()
+  const Id = useId()
   const queryClient = useQueryClient()
 
   const createContact = useMutation({
@@ -42,7 +42,7 @@ export function ContactForm({ contact }: props) {
         { ...newContact }
       ])
 
-      setNextId((old) => old + 1)
+      Id.nextId()
       onFinish(newContact.id)
     },
     onError: onError
@@ -78,7 +78,7 @@ export function ContactForm({ contact }: props) {
 
   async function onSubmit() {
     let newContact = {
-      id: typeForm === 'newContact' ? nextId : (contact?.id as number),
+      id: typeForm === 'newContact' ? Id.data : (contact?.id as number),
       email: formData!.email,
       name: formData!.name,
       phone: formData!.phone,

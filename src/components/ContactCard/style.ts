@@ -4,7 +4,7 @@ import * as Icons from '@heroicons/react/24/outline'
 export const ContactCard = styled.div`
   background-color: #fff;
   border-radius: 0.5rem;
-  height: 6rem;
+  height: 4rem;
   display: flex;
   flex-direction: row;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -68,4 +68,9 @@ export const ChevronRightIcon = styled(Icons.ChevronRightIcon)`
   width: 1.5rem;
   height: 1.5rem;
   color: rgb(15 23 42);
+`
+export const DeatilContainer = styled.div`
+  @media (min-width: 768px) {
+    width: 13rem;
+  }
 `

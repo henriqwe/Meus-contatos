@@ -10,7 +10,7 @@ export function Dropdown({ options }: props) {
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
-        <button className="IconButton" aria-label="Customise options">
+        <button className="IconButton">
           <EllipsisVerticalIcon />
         </button>
       </DropdownMenu.Trigger>

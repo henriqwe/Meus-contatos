@@ -20,17 +20,17 @@ export const Container = styled.div`
   align-items: center;
 `
 
-export const Input = styled.input<{ onError: boolean; label: string }>`
+export const Input = styled.input<{ isinvalid: 1 | 0; label: string }>`
   width: 100%;
   padding: 7px;
   padding-left: 18px;
-  border: 2px solid ${({ onError }) => (onError ? '#C01E2E' : '#dadce0')};
+  border: 2px solid ${({ isinvalid }) => (isinvalid ? '#C01E2E' : '#dadce0')};
   border-radius: 4px;
   font-size: 1rem;
   outline-color: transparent;
   &:focus {
-    border: 2px solid ${({ onError }) => (onError ? '#C01E2E' : '#18a2f3')};
-    outline-color: ${({ onError }) => (onError ? '#C01E2E' : '#18a2f3')};
+    border: 2px solid ${({ isinvalid }) => (isinvalid ? '#C01E2E' : '#18a2f3')};
+    outline-color: ${({ isinvalid }) => (isinvalid ? '#C01E2E' : '#18a2f3')};
   }
   + span::after {
     content: '${({ label }) => label}';
@@ -43,7 +43,7 @@ export const Input = styled.input<{ onError: boolean; label: string }>`
     transform: translateY(-6px);
   }
   &:not(:placeholder-shown) + span {
-    color: ${({ onError }) => (onError ? '#C01E2E' : '#18a2f3')};
+    color: ${({ isinvalid }) => (isinvalid ? '#C01E2E' : '#18a2f3')};
     transform: translateX(10px) translateY(-17px);
     font-size: 0.75rem;
     font-weight: 600;
@@ -53,7 +53,7 @@ export const Input = styled.input<{ onError: boolean; label: string }>`
   }
 
   &:focus + span {
-    color: ${({ onError }) => (onError ? '#C01E2E' : '#18a2f3')};
+    color: ${({ isinvalid }) => (isinvalid ? '#C01E2E' : '#18a2f3')};
     transform: translateX(10px) translateY(-17px);
     font-size: 0.75rem;
     font-weight: 600;
@@ -63,7 +63,7 @@ export const Input = styled.input<{ onError: boolean; label: string }>`
   }
 
   &:not(:focus) + span {
-    color: ${({ onError }) => (onError ? '#C01E2E' : '#808080')};
+    color: ${({ isinvalid }) => (isinvalid ? '#C01E2E' : '#808080')};
   }
 `
 

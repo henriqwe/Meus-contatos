@@ -25,7 +25,8 @@
       "&hooks/*": ["./src/hooks/*"],
       "&operations/*": ["./src/operations/*"],
       "&contexts/*": ["./src/contexts/*"],
-      "&domains/*": ["./src/domains/*"]
+      "&domains/*": ["./src/domains/*"],
+      "&schemas/*": ["./src/schemas/*"]
     }
   },
   "include": ["src"],

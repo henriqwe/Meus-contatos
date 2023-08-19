@@ -6,7 +6,7 @@ import {
   LoaderFunction,
   ActionFunction
 } from 'react-router-dom'
-import { ContactsProvider } from '&contexts/contactsContext'
+import { IdProvider } from '&contexts/useId'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
 interface RouteCommon {
@@ -60,7 +60,7 @@ const App = () => {
 
 export default function WrapperApp() {
   return (
-    <ContactsProvider>
+    <IdProvider>
       <App />
       <ToastContainer
         position="bottom-right"
@@ -75,6 +75,6 @@ export default function WrapperApp() {
         theme="light"
       />
       <ReactQueryDevtools initialIsOpen={false} />
-    </ContactsProvider>
+    </IdProvider>
   )
 }

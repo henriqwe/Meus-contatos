@@ -49,7 +49,7 @@ export function Input({
                 onChange(e.target.value)
                 debounceChange?.(e.target.value)
               }}
-              onError={!!error}
+              isinvalid={error?.message ? 1 : 0}
               label={label}
             />
             <S.Label> </S.Label>

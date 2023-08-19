@@ -45,7 +45,8 @@ export const AvatarPhone = styled.p`
 `
 export const ContactHeaderWrapper = styled.div`
   background-color: rgba(100, 116, 139, 0.1);
-  padding: 0.5rem;
+  padding: 0.8rem;
+  padding-top: 1rem;
 `
 export const UserIcon = styled(Icons.UserIcon)`
   width: 1.5rem;
@@ -74,8 +75,7 @@ export const TabItemContainer = styled.section`
   display: flex;
   flex: 1;
   flex-direction: column;
-  background-color: red;
-  margin: 1rem;
+  margin: 0.8rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 `
 export const InfoWrapper = styled.div<{ variant: 'white' | 'gray' }>`
@@ -102,4 +102,8 @@ export const TrashIcon = styled(Icons.TrashIcon)`
   width: 1.3rem;
   height: 1.3rem;
   color: red;
+`
+export const MapContainer = styled.div`
+  width: 100%;
+  height: 20rem;
 `

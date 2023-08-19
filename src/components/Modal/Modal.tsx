@@ -28,7 +28,7 @@ export function Modal({
     <AlertDialog.Root open={open} onOpenChange={onOpenChange}>
       {triggerContent && (
         <AlertDialog.Trigger asChild>
-          <button className="Button violet">{triggerContent}</button>
+          <button>{triggerContent}</button>
         </AlertDialog.Trigger>
       )}
       <AlertDialog.Portal>
@@ -40,18 +40,20 @@ export function Modal({
           <AlertDialog.Description className="AlertDialogDescription">
             {content}
           </AlertDialog.Description>
-          <div style={{ display: 'flex', gap: 25, justifyContent: 'flex-end' }}>
+          <S.AlertWrapper>
             <AlertDialog.Cancel asChild>
-              <Button variant="danger">
-                <span>{cancelText}</span> <S.XMarkIcon />
-              </Button>
+              <div>
+                <Button variant="danger">
+                  <span>{cancelText}</span> <S.XMarkIcon />
+                </Button>
+              </div>
             </AlertDialog.Cancel>
-            <AlertDialog.Action asChild onClick={() => action()}>
-              <Button variant="primary">
+            <AlertDialog.Action asChild>
+              <Button variant="primary" onClick={() => action()}>
                 <span>{actionsText}</span> <S.CheckIcon />
               </Button>
             </AlertDialog.Action>
-          </div>
+          </S.AlertWrapper>
         </AlertDialog.Content>
       </AlertDialog.Portal>
     </AlertDialog.Root>

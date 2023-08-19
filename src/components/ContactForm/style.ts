@@ -4,6 +4,7 @@ import * as Icons from '@heroicons/react/24/outline'
 export const Container = styled.section`
   position: relative;
   padding: 0.8rem;
+  padding-top: 1rem;
   max-height: 100vh;
   min-height: 100vh;
   display: flex;
@@ -19,7 +20,7 @@ export const ActionsButtons = styled.div`
   width: calc(100vw - 0.5rem);
   justify-content: space-between;
   align-items: center;
-  bottom: 0;
+  bottom: 2rem;
   padding: 0.5rem;
 `
 export const Form = styled.form`
