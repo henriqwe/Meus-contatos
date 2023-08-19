@@ -12,7 +12,9 @@ export function MarkerDrop({ contact, showInfoWindow }: props) {
   const [openInfoWindow, setopenInfoWindow] = useState(false)
 
   function handleInfoWindow() {
-    setopenInfoWindow(!openInfoWindow)
+    if (showInfoWindow) {
+      setopenInfoWindow(!openInfoWindow)
+    }
   }
 
   return (
@@ -25,7 +27,7 @@ export function MarkerDrop({ contact, showInfoWindow }: props) {
       zIndex={99}
       onClick={handleInfoWindow}
     >
-      {openInfoWindow && showInfoWindow && (
+      {openInfoWindow && (
         <ContactInfoWindow contact={contact} onCloseClick={handleInfoWindow} />
       )}
     </Marker>

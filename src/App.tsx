@@ -20,7 +20,7 @@ export default function App() {
         pauseOnHover
         theme="light"
       />
-      <ReactQueryDevtools initialIsOpen={false} />
+      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
     </IdProvider>
   )
 }

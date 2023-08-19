@@ -16,23 +16,29 @@ import { fakePromise } from '&utils/fakePromise'
 import { IContact } from '&operations/queries/fetchContacts'
 import { IFormData } from './type'
 import * as S from './style'
-import { ActionButtons } from './ActionButtons'
 import { Modal } from '&components/Modal/Modal'
-import { Map } from '&components/Map/Map'
 import { contactSchema } from '&schemas/contact'
 import { useId } from '&contexts/useId'
+import { PersonalInfoFormStep } from './Steps/PersonalInfoFormStep'
+import { AddressFromStep } from './Steps/AddressFromStep'
+import { CompanyFromStep } from './Steps/CompanyFromStep'
 
+type TActiveStep = 0 | 1 | 2
 interface props {
   contact?: IContact
 }
 export function ContactForm({ contact }: props) {
   const typeForm = !!contact ? 'editContact' : 'newContact'
   const navigate = useNavigate()
-  const [activeStep, setActiveStep] = useState(0)
+  const [activeStep, setActiveStep] = useState<TActiveStep>(0)
   const [openModal, setOpenModal] = useState(false)
   const [formData, setFormData] = useState<IFormData>()
   const Id = useId()
   const queryClient = useQueryClient()
+  const [contactMapLocalition, setContactMapLocalition] = useState<{
+    lat: number
+    lng: number
+  }>()
 
   const createContact = useMutation({
     mutationFn: (newContact: IContact) => fakePromise(),
@@ -87,8 +93,8 @@ export function ContactForm({ contact }: props) {
       address: {
         city: formData!.city,
         geo: {
-          lat: formData!.lat,
-          lng: formData!.lng
+          lat: contactMapLocalition?.lat.toString(),
+          lng: contactMapLocalition?.lng.toString()
         },
         street: formData!.street,
         suite: formData!.suite,
@@ -114,7 +120,7 @@ export function ContactForm({ contact }: props) {
     if (activeStep >= 2) {
       return
     }
-    setActiveStep((old) => old + 1)
+    setActiveStep((old) => (old + 1) as TActiveStep)
   }
   function handleConcludeForm(_formData: IFormData) {
     setOpenModal(true)
@@ -129,7 +135,7 @@ export function ContactForm({ contact }: props) {
       navigate(routes.viewContact.path(contact?.id!))
       return
     }
-    setActiveStep((old) => old - 1)
+    setActiveStep((old) => (old - 1) as TActiveStep)
   }
   const {
     handleSubmit,
@@ -155,6 +161,44 @@ export function ContactForm({ contact }: props) {
     }
   ]
 
+  const FormSteps = {
+    0: (
+      <PersonalInfoFormStep
+        activeStep={activeStep}
+        control={control}
+        errors={errors}
+        handlePreviousStep={handlePreviousStep}
+        handleSubmit={handleSubmit}
+        isLoading={createContact.isLoading || editContact.isLoading}
+        onSubmit={handleNextStep}
+      />
+    ),
+    1: (
+      <AddressFromStep
+        activeStep={activeStep}
+        control={control}
+        errors={errors}
+        handlePreviousStep={handlePreviousStep}
+        handleSubmit={handleSubmit}
+        isLoading={createContact.isLoading || editContact.isLoading}
+        onSubmit={handleNextStep}
+        contactMapLocalition={contactMapLocalition}
+        setContactMapLocalition={setContactMapLocalition}
+      />
+    ),
+    2: (
+      <CompanyFromStep
+        activeStep={activeStep}
+        control={control}
+        errors={errors}
+        handlePreviousStep={handlePreviousStep}
+        handleSubmit={handleSubmit}
+        isLoading={createContact.isLoading || editContact.isLoading}
+        onSubmit={handleConcludeForm}
+      />
+    )
+  }
+
   useEffect(() => {
     if (contact) {
       reset({
@@ -166,13 +210,18 @@ export function ContactForm({ contact }: props) {
         suite: contact.address.suite,
         city: contact.address.city,
         zipcode: contact.address.zipcode,
-        lat: contact.address.geo.lat,
-        lng: contact.address.geo.lng,
+
         website: contact.website,
         companyName: contact.company.name,
         catchPhrase: contact.company.catchPhrase,
         bs: contact.company.bs
       })
+      if (contact.address.geo.lat && contact.address.geo.lng) {
+        setContactMapLocalition({
+          lat: Number(contact.address.geo.lat),
+          lng: Number(contact.address.geo.lng)
+        })
+      }
     }
   }, [contact])
 
@@ -185,122 +234,7 @@ export function ContactForm({ contact }: props) {
       )}
       {typeForm === 'editContact' && <p>{contact?.name}</p>}
       <Stepper steps={steps} activeStep={activeStep} />
-      <div>
-        {activeStep === 0 && (
-          <S.Form onSubmit={handleSubmit(handleNextStep)}>
-            <Input
-              control={control}
-              name="name"
-              label="Nome *"
-              error={errors['name']}
-              disabled={createContact.isLoading || editContact.isLoading}
-            />
-            <Input
-              control={control}
-              name="email"
-              label="Email *"
-              error={errors['email']}
-              disabled={createContact.isLoading || editContact.isLoading}
-            />
-            <Input
-              control={control}
-              name="phone"
-              label="Telefone *"
-              error={errors['phone']}
-              disabled={createContact.isLoading || editContact.isLoading}
-            />
-            <Input
-              control={control}
-              name="username"
-              label="Nome de usuário"
-              error={errors['username']}
-              disabled={createContact.isLoading || editContact.isLoading}
-            />
-            <Input
-              control={control}
-              name="website"
-              label="Website"
-              error={errors['website']}
-              disabled={createContact.isLoading || editContact.isLoading}
-            />
-            <ActionButtons
-              activeStep={activeStep}
-              handlePreviousStep={handlePreviousStep}
-              isLoading={createContact.isLoading || editContact.isLoading}
-            />
-          </S.Form>
-        )}
-        {activeStep === 1 && (
-          <S.Form onSubmit={handleSubmit(handleNextStep)}>
-            <Input
-              control={control}
-              name="street"
-              label="Rua"
-              error={errors['street']}
-              disabled={createContact.isLoading || editContact.isLoading}
-            />
-            <Input
-              control={control}
-              name="suite"
-              label="Número"
-              error={errors['suite']}
-              disabled={createContact.isLoading || editContact.isLoading}
-            />
-            <Input
-              control={control}
-              name="city"
-              label="Cidade"
-              error={errors['city']}
-              disabled={createContact.isLoading || editContact.isLoading}
-            />
-            <Input
-              control={control}
-              name="zipcode"
-              label="CEP"
-              error={errors['zipcode']}
-              disabled={createContact.isLoading || editContact.isLoading}
-            />
-            <S.MapContainer>
-              <Map contacts={contact ? [contact] : []} showInfoWindow={false} />
-            </S.MapContainer>
-            <ActionButtons
-              activeStep={activeStep}
-              handlePreviousStep={handlePreviousStep}
-              isLoading={createContact.isLoading || editContact.isLoading}
-            />
-          </S.Form>
-        )}
-        {activeStep === 2 && (
-          <S.Form onSubmit={handleSubmit(handleConcludeForm)}>
-            <Input
-              control={control}
-              name="companyName"
-              label="Nome"
-              error={errors['companyName']}
-              disabled={createContact.isLoading || editContact.isLoading}
-            />
-            <Input
-              control={control}
-              name="catchPhrase"
-              label="Frase de efeito"
-              error={errors['catchPhrase']}
-              disabled={createContact.isLoading || editContact.isLoading}
-            />
-            <Input
-              control={control}
-              name="bs"
-              label="Estratégia de negócio"
-              error={errors['bs']}
-              disabled={createContact.isLoading || editContact.isLoading}
-            />
-            <ActionButtons
-              activeStep={activeStep}
-              handlePreviousStep={handlePreviousStep}
-              isLoading={createContact.isLoading || editContact.isLoading}
-            />
-          </S.Form>
-        )}
-      </div>
+      <div>{FormSteps[activeStep]}</div>
       <Modal
         action={() => onSubmit()}
         title={

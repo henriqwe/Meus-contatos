@@ -49,14 +49,11 @@ export function ViewContact() {
     notification(contact.error.message, 'error')
     return <></>
   }
-  if (contact.isLoading || !contact.data) {
-    return <Loading />
-  }
 
   const TabsContent = {
-    0: <ContactData contact={contact.data} />,
-    1: <ContactAddrees contact={contact.data} />,
-    2: <ContactCompany contact={contact.data} />
+    0: <ContactData contact={contact.data!} />,
+    1: <ContactAddrees contact={contact.data!} />,
+    2: <ContactCompany contact={contact.data!} />
   }
   const dropdownOption = [
     {
@@ -80,47 +77,55 @@ export function ViewContact() {
   ]
   return (
     <S.Container>
-      <S.ContactHeaderWrapper>
-        <S.ContactHeader>
-          <div onClick={() => navigate(routes.home.path)}>
-            <S.ChevronLeftIcon />
+      {contact.isLoading || !contact.data ? (
+        <S.LoadingContainer>
+          <Loading />
+        </S.LoadingContainer>
+      ) : (
+        <>
+          <S.ContactHeaderWrapper>
+            <S.ContactHeader>
+              <div onClick={() => navigate(routes.home.path)}>
+                <S.ChevronLeftIcon />
+              </div>
+              <h1>Contato</h1>
+
+              <Dropdown options={dropdownOption} />
+            </S.ContactHeader>
+
+            <Modal
+              action={() => removeContact.mutate(contact.data?.id!)}
+              title="Deseja realmente remover esse contato?"
+              actionsText="Sim"
+              cancelText="Não"
+              open={openModal}
+              onOpenChange={setOpenModal}
+            />
+            <S.AvatarWrapper>
+              <Avatar name={contact.data.name} variant="md" />
+              <S.AvatarName>{contact.data.name}</S.AvatarName>
+              <S.AvatarPhone>{contact.data.phone}</S.AvatarPhone>
+            </S.AvatarWrapper>
+          </S.ContactHeaderWrapper>
+          <div>
+            <Tab onTabSelected={onTabSelected}>
+              <TabItem>
+                <S.UserIcon />
+                Dados
+              </TabItem>
+              <TabItem>
+                <S.MapPinIcon />
+                Endereço
+              </TabItem>
+              <TabItem>
+                <S.BuildingStorefrontIcon />
+                Empresa
+              </TabItem>
+            </Tab>
+            <div>{TabsContent[selectedTab]}</div>
           </div>
-          <h1>Contato</h1>
-
-          <Dropdown options={dropdownOption} />
-        </S.ContactHeader>
-
-        <Modal
-          action={() => removeContact.mutate(contact.data?.id!)}
-          title="Deseja realmente remover esse contato?"
-          actionsText="Sim"
-          cancelText="Não"
-          open={openModal}
-          onOpenChange={setOpenModal}
-        />
-        <S.AvatarWrapper>
-          <Avatar name={contact.data.name} variant="md" />
-          <S.AvatarName>{contact.data.name}</S.AvatarName>
-          <S.AvatarPhone>{contact.data.phone}</S.AvatarPhone>
-        </S.AvatarWrapper>
-      </S.ContactHeaderWrapper>
-      <div>
-        <Tab onTabSelected={onTabSelected}>
-          <TabItem>
-            <S.UserIcon />
-            Dados
-          </TabItem>
-          <TabItem>
-            <S.MapPinIcon />
-            Endereço
-          </TabItem>
-          <TabItem>
-            <S.BuildingStorefrontIcon />
-            Empresa
-          </TabItem>
-        </Tab>
-        <div>{TabsContent[selectedTab]}</div>
-      </div>
+        </>
+      )}
     </S.Container>
   )
 }

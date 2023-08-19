@@ -28,8 +28,8 @@ export function AnimationRoutes() {
   return (
     <AnimatePresence>
       <Routes>
-        {_routes.map(({ Element, ...rest }) => (
-          <Route {...rest} element={<Element />}></Route>
+        {_routes.map(({ Element, path, ...rest }) => (
+          <Route element={<Element />} path={path} key={path} {...rest}></Route>
         ))}
       </Routes>
     </AnimatePresence>
