@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render correctly snapshot 1`] = `
+<div>
+  <button
+    class="sc-bcPKhP fTDSWF"
+    data-testid="button"
+    variant="danger"
+  >
+    <div
+      class="sc-grXZZQ jsbKLm"
+    >
+      teste
+    </div>
+  </button>
+</div>
+`;

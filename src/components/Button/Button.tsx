@@ -1,8 +1,8 @@
-import React from 'react'
 import * as S from '&components/Button/style'
 import type { TVariant } from '&components/Button/style'
+import { ButtonHTMLAttributes } from 'react'
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant: TVariant
 }
 
