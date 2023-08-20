@@ -33,24 +33,41 @@ function MapComponent({
 
   const [_, setMap] = useState<google.maps.Map | null>(null)
 
-  const onLoad = useCallback(function callback(map: google.maps.Map) {
+  function handleFitBounds(map: google.maps.Map) {
     const bounds = new window.google.maps.LatLngBounds()
-    if (formMarkerPosition) {
+    for (const contact of contactsWithLocation) {
       bounds.extend({
-        lat: Number(formMarkerPosition.lat),
-        lng: Number(formMarkerPosition.lng)
+        lat: Number(contact.address.geo.lat),
+        lng: Number(contact.address.geo.lng)
       })
     }
-    if (contactsWithLocation.length > 0) {
-      for (const contact of contactsWithLocation) {
-        bounds.extend({
-          lat: Number(contact.address.geo.lat),
-          lng: Number(contact.address.geo.lng)
-        })
+    map.fitBounds(bounds)
+  }
+  const onLoad = useCallback(function callback(map: google.maps.Map) {
+    let generateFitBounds = true
+
+    if (formMarkerPosition || contactsWithLocation.length === 1) {
+      generateFitBounds = false
+
+      const location = {
+        lat:
+          formMarkerPosition?.lat !== undefined
+            ? formMarkerPosition?.lat
+            : Number(contactsWithLocation[0].address.geo.lat),
+        lng:
+          formMarkerPosition?.lng !== undefined
+            ? formMarkerPosition?.lng
+            : Number(contactsWithLocation[0].address.geo.lng)
       }
+      map.setCenter(location)
+    }
+    if (contactsWithLocation.length > 0) {
       setMarkers(contactsWithLocation)
     }
-    map.fitBounds(bounds)
+
+    if (generateFitBounds) {
+      handleFitBounds(map)
+    }
     setMap(map)
   }, [])
 
@@ -82,10 +99,10 @@ function MapComponent({
       }}
       onLoad={onLoad}
       onUnmount={onUnmount}
-      center={{
-        lat: -12.100100128939063,
-        lng: -49.24919742233473
-      }}
+      // center={{
+      //   lat: -12.100100128939063,
+      //   lng: -49.24919742233473
+      // }}
       data-testeid={'map'}
       zoom={3}
       options={{

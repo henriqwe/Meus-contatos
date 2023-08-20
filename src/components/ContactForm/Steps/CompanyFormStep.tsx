@@ -30,30 +30,32 @@ export function CompanyFormStep({
 }: props) {
   return (
     <S.Form onSubmit={handleSubmit(onSubmit)}>
-      <Input
-        control={control}
-        name="companyName"
-        label="Nome"
-        error={errors['companyName']}
-        disabled={isLoading}
-        data-testid={'input-companyName'}
-      />
-      <Input
-        control={control}
-        name="catchPhrase"
-        label="Frase de efeito"
-        error={errors['catchPhrase']}
-        disabled={isLoading}
-        data-testid={'input-catchPhrase'}
-      />
-      <Input
-        control={control}
-        name="bs"
-        label="Estratégia de negócio"
-        error={errors['bs']}
-        disabled={isLoading}
-        data-testid={'input-bs'}
-      />
+      <S.InputsSection>
+        <Input
+          control={control}
+          name="companyName"
+          label="Nome"
+          error={errors['companyName']}
+          disabled={isLoading}
+          data-testid={'input-companyName'}
+        />
+        <Input
+          control={control}
+          name="catchPhrase"
+          label="Frase de efeito"
+          error={errors['catchPhrase']}
+          disabled={isLoading}
+          data-testid={'input-catchPhrase'}
+        />
+        <Input
+          control={control}
+          name="bs"
+          label="Estratégia de negócio"
+          error={errors['bs']}
+          disabled={isLoading}
+          data-testid={'input-bs'}
+        />
+      </S.InputsSection>
       <ActionButtons
         activeStep={activeStep}
         handlePreviousStep={handlePreviousStep}

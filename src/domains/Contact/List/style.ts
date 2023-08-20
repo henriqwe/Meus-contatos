@@ -14,9 +14,9 @@ export const CardList = styled.div`
 `
 
 export const Container = styled.section`
-  position: relative;
-  max-height: 100vh;
-  min-height: 100vh;
+  background-color: ${({ theme }) => theme.colors.secondary[400]};
+  max-height: 100%;
+  min-height: 100%;
   display: flex;
   flex: 1;
   flex-direction: column;

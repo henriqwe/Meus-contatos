@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/8</span>
+                <span class='fraction'>7/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/4</span>
+                <span class='fraction'>2/4</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/8</span>
+                <span class='fraction'>7/8</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -100,32 +100,30 @@
 <a name='L35'></a><a href='#L35'>35</a>
 <a name='L36'></a><a href='#L36'>36</a>
 <a name='L37'></a><a href='#L37'>37</a>
-<a name='L38'></a><a href='#L38'>38</a>
-<a name='L39'></a><a href='#L39'>39</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L38'></a><a href='#L38'>38</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -144,37 +142,36 @@ import { Map } from '&amp;components/Map/Map'
 import type { IContact } from '&amp;types/contact'
 import { fetchContacts } from '&amp;services/queries/fetchContacts'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
+import * as S from './styles'
 &nbsp;
 export function MapView() {
   const queryClient = useQueryClient()
+&nbsp;
   async function handleFetch() {
     const contacts = queryClient.getQueryData(['contacts']) as IContact[]
-&nbsp;
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (contacts) {
-      return contacts
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (contacts) {
+<span class="cstat-no" title="statement not covered" >      return contacts</span>
     }
-<span class="cstat-no" title="statement not covered" >    return fetchContacts()</span>
+    return fetchContacts()
   }
   const contactsQuery = useQuery({
     queryKey: ['contacts'],
     queryFn: () =&gt; handleFetch(),
     refetchOnWindowFocus: false,
-    retry: false,
-    suspense: true
+    retry: false
   })
-&nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
-    &lt;div style={{ width: '100vw', height: '100vh' }}&gt;
+  return (
+    &lt;S.MapViewContainer data-testid={'mapview-container'}&gt;
       {!contactsQuery.data ? (
         &lt;div&gt;&lt;/div&gt;
       ) : (
         // &lt;Loading /&gt;
-        &lt;&gt;
+<span class="branch-1 cbranch-no" title="branch not covered" >        &lt;&gt;</span>
           &lt;Map contacts={contactsQuery.data} /&gt;
           &lt;FloatingActionButton /&gt;
         &lt;/&gt;
       )}
-    &lt;/div&gt;
+    &lt;/S.MapViewContainer&gt;
   )
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -184,7 +181,7 @@ export function MapView() {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-08-20T13:48:26.348Z
+                at 2023-08-20T21:24:57.016Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

@@ -56,38 +56,41 @@ export function AddressFormStep({
 
   return (
     <S.Form onSubmit={handleSubmit(onSubmit)}>
-      <Input
-        control={control}
-        name="street"
-        label="Rua"
-        error={errors['street']}
-        disabled={isLoading}
-        data-testid={'input-street'}
-      />
-      <Input
-        control={control}
-        name="suite"
-        label="Número"
-        error={errors['suite']}
-        disabled={isLoading}
-        data-testid={'input-suite'}
-      />
-      <Input
-        control={control}
-        name="city"
-        label="Cidade"
-        error={errors['city']}
-        disabled={isLoading}
-        data-testid={'input-city'}
-      />
-      <Input
-        control={control}
-        name="zipcode"
-        label="CEP"
-        error={errors['zipcode']}
-        disabled={isLoading}
-        data-testid={'input-zipcode'}
-      />
+      <S.InputsSection>
+        <Input
+          control={control}
+          name="street"
+          label="Rua"
+          error={errors['street']}
+          disabled={isLoading}
+          data-testid={'input-street'}
+        />
+        <Input
+          control={control}
+          name="suite"
+          label="Número"
+          error={errors['suite']}
+          disabled={isLoading}
+          data-testid={'input-suite'}
+        />
+        <Input
+          control={control}
+          name="city"
+          label="Cidade"
+          error={errors['city']}
+          disabled={isLoading}
+          data-testid={'input-city'}
+        />
+        <Input
+          control={control}
+          name="zipcode"
+          label="CEP"
+          error={errors['zipcode']}
+          disabled={isLoading}
+          data-testid={'input-zipcode'}
+        />
+      </S.InputsSection>
+
       <S.MapContainer>
         <Map
           contacts={[]}
@@ -96,6 +99,7 @@ export function AddressFormStep({
           formMarkerPosition={contactMapLocalition}
         />
       </S.MapContainer>
+
       <ActionButtons
         activeStep={activeStep}
         handlePreviousStep={handlePreviousStep}

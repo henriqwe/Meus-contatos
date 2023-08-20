@@ -3,7 +3,7 @@
 exports[`Avatar should render correctly snapshot 1`] = `
 <div>
   <div
-    class="sc-bcPKhP kipEEd"
+    class="sc-bcPKhP jpoYQi"
     data-testid="avatar-container"
     variant="sm"
   >

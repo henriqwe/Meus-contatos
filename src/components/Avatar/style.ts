@@ -19,8 +19,8 @@ export const Avatar = styled.div<{ variant: TVariant }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #18a2f3;
-  color: white;
+  background-color: ${({ theme }) => theme.colors?.primary[700]};
+  color: ${({ theme }) => theme.colors?.white};
   border-radius: 100%;
   width: 4.5rem;
   height: 4.5rem;

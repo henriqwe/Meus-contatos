@@ -3,76 +3,88 @@
 exports[`ContactAddrees should render the contact list correctly 1`] = `
 <div>
   <section
-    class="sc-csmVar gKMVod"
+    class="sc-csmVar kBNagx"
     data-testid="tab-container"
   >
     <div
-      class="sc-eLSjS gLXBOl"
-      variant="white"
+      style="width: 100%; display: flex; opacity: 0.10726171185101019; transform: translateX(-266.4064791788583px) translateZ(0);"
     >
-      <p
-        class="sc-kDnyCx iVwbOt"
+      <div
+        class="sc-bjEwCx cdROzo"
       >
-        Rua
-      </p>
-      <p
-        class="sc-ipMvLY fVVflE"
-        data-testid="info-street"
-      >
-        Douglas Extension
-      </p>
+        <div
+          class="sc-eLSjS gLXBOl"
+          variant="white"
+        >
+          <p
+            class="sc-kDnyCx iVwbOt"
+          >
+            Rua
+          </p>
+          <p
+            class="sc-ipMvLY fVVflE"
+            data-testid="info-street"
+          >
+            Douglas Extension
+          </p>
+        </div>
+        <div
+          class="sc-eLSjS cJvzVk"
+          variant="gray"
+        >
+          <p
+            class="sc-kDnyCx iVwbOt"
+          >
+            Número
+          </p>
+          <p
+            class="sc-ipMvLY fVVflE"
+            data-testid="info-suite"
+          >
+            Suite 847
+          </p>
+        </div>
+        <div
+          class="sc-eLSjS gLXBOl"
+          variant="white"
+        >
+          <p
+            class="sc-kDnyCx iVwbOt"
+          >
+            Cidade
+          </p>
+          <p
+            class="sc-ipMvLY fVVflE"
+            data-testid="info-city"
+          >
+            McKenziehaven
+          </p>
+        </div>
+        <div
+          class="sc-eLSjS cJvzVk"
+          variant="gray"
+        >
+          <p
+            class="sc-kDnyCx iVwbOt"
+          >
+            CEP
+          </p>
+          <p
+            class="sc-ipMvLY fVVflE"
+            data-testid="info-zipcode"
+          >
+            59590-4157
+          </p>
+        </div>
+      </div>
     </div>
     <div
-      class="sc-eLSjS cJvzVk"
-      variant="gray"
+      style="width: 100%; height: 100%; display: flex; background-color: red; opacity: 0.09796433754719946; transform: translateX(270.61069873584023px) translateZ(0);"
     >
-      <p
-        class="sc-kDnyCx iVwbOt"
-      >
-        Número
-      </p>
-      <p
-        class="sc-ipMvLY fVVflE"
-        data-testid="info-suite"
-      >
-        Suite 847
-      </p>
+      <div
+        class="sc-fnOeiS bqivNc"
+      />
     </div>
-    <div
-      class="sc-eLSjS gLXBOl"
-      variant="white"
-    >
-      <p
-        class="sc-kDnyCx iVwbOt"
-      >
-        Cidade
-      </p>
-      <p
-        class="sc-ipMvLY fVVflE"
-        data-testid="info-city"
-      >
-        McKenziehaven
-      </p>
-    </div>
-    <div
-      class="sc-eLSjS cJvzVk"
-      variant="gray"
-    >
-      <p
-        class="sc-kDnyCx iVwbOt"
-      >
-        CEP
-      </p>
-      <p
-        class="sc-ipMvLY fVVflE"
-        data-testid="info-zipcode"
-      >
-        59590-4157
-      </p>
-    </div>
-    <div
-      class="sc-fnOeiS gimljQ"
-    />
   </section>
 </div>
 `;

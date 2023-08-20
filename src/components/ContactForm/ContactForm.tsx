@@ -241,7 +241,7 @@ export function ContactForm({ contact }: props) {
       )}
       {typeForm === 'editContact' && <p>{contact?.name}</p>}
       <Stepper steps={steps} activeStep={activeStep} />
-      <div>{FormSteps[activeStep]}</div>
+      {FormSteps[activeStep]}
       <Modal
         action={() => onSubmit()}
         title={

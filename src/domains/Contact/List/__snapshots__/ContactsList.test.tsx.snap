@@ -6,7 +6,7 @@ exports[`ContactList should render the contact list correctly 1`] = `
     class="sc-jrkPcm efXjYQ"
   >
     <div
-      class="sc-grXZZQ koicEm"
+      class="sc-grXZZQ gZllkS"
       data-testid="contactcard-container"
     >
       <div
@@ -16,7 +16,7 @@ exports[`ContactList should render the contact list correctly 1`] = `
           class="sc-hLclGa kwlGWp"
         >
           <div
-            class="sc-bcPKhP kipEEd"
+            class="sc-bcPKhP LlyrL"
             data-testid="avatar-container"
             variant="sm"
           >
@@ -80,7 +80,7 @@ exports[`ContactList should render the contact list correctly 1`] = `
       </div>
     </div>
     <div
-      class="sc-grXZZQ koicEm"
+      class="sc-grXZZQ gZllkS"
       data-testid="contactcard-container"
     >
       <div
@@ -90,7 +90,7 @@ exports[`ContactList should render the contact list correctly 1`] = `
           class="sc-hLclGa kwlGWp"
         >
           <div
-            class="sc-bcPKhP kipEEd"
+            class="sc-bcPKhP LlyrL"
             data-testid="avatar-container"
             variant="sm"
           >
@@ -154,7 +154,7 @@ exports[`ContactList should render the contact list correctly 1`] = `
       </div>
     </div>
     <div
-      class="sc-grXZZQ koicEm"
+      class="sc-grXZZQ gZllkS"
       data-testid="contactcard-container"
     >
       <div
@@ -164,7 +164,7 @@ exports[`ContactList should render the contact list correctly 1`] = `
           class="sc-hLclGa kwlGWp"
         >
           <div
-            class="sc-bcPKhP kipEEd"
+            class="sc-bcPKhP LlyrL"
             data-testid="avatar-container"
             variant="sm"
           >
@@ -228,7 +228,7 @@ exports[`ContactList should render the contact list correctly 1`] = `
       </div>
     </div>
     <div
-      class="sc-grXZZQ koicEm"
+      class="sc-grXZZQ gZllkS"
       data-testid="contactcard-container"
     >
       <div
@@ -238,7 +238,7 @@ exports[`ContactList should render the contact list correctly 1`] = `
           class="sc-hLclGa kwlGWp"
         >
           <div
-            class="sc-bcPKhP kipEEd"
+            class="sc-bcPKhP LlyrL"
             data-testid="avatar-container"
             variant="sm"
           >
@@ -302,7 +302,7 @@ exports[`ContactList should render the contact list correctly 1`] = `
       </div>
     </div>
     <div
-      class="sc-grXZZQ koicEm"
+      class="sc-grXZZQ gZllkS"
       data-testid="contactcard-container"
     >
       <div
@@ -312,7 +312,7 @@ exports[`ContactList should render the contact list correctly 1`] = `
           class="sc-hLclGa kwlGWp"
         >
           <div
-            class="sc-bcPKhP kipEEd"
+            class="sc-bcPKhP LlyrL"
             data-testid="avatar-container"
             variant="sm"
           >
@@ -376,7 +376,7 @@ exports[`ContactList should render the contact list correctly 1`] = `
       </div>
     </div>
     <div
-      class="sc-grXZZQ koicEm"
+      class="sc-grXZZQ gZllkS"
       data-testid="contactcard-container"
     >
       <div
@@ -386,7 +386,7 @@ exports[`ContactList should render the contact list correctly 1`] = `
           class="sc-hLclGa kwlGWp"
         >
           <div
-            class="sc-bcPKhP kipEEd"
+            class="sc-bcPKhP LlyrL"
             data-testid="avatar-container"
             variant="sm"
           >
@@ -450,7 +450,7 @@ exports[`ContactList should render the contact list correctly 1`] = `
       </div>
     </div>
     <div
-      class="sc-grXZZQ koicEm"
+      class="sc-grXZZQ gZllkS"
       data-testid="contactcard-container"
     >
       <div
@@ -460,7 +460,7 @@ exports[`ContactList should render the contact list correctly 1`] = `
           class="sc-hLclGa kwlGWp"
         >
           <div
-            class="sc-bcPKhP kipEEd"
+            class="sc-bcPKhP LlyrL"
             data-testid="avatar-container"
             variant="sm"
           >
@@ -524,7 +524,7 @@ exports[`ContactList should render the contact list correctly 1`] = `
       </div>
     </div>
     <div
-      class="sc-grXZZQ koicEm"
+      class="sc-grXZZQ gZllkS"
       data-testid="contactcard-container"
     >
       <div
@@ -534,7 +534,7 @@ exports[`ContactList should render the contact list correctly 1`] = `
           class="sc-hLclGa kwlGWp"
         >
           <div
-            class="sc-bcPKhP kipEEd"
+            class="sc-bcPKhP LlyrL"
             data-testid="avatar-container"
             variant="sm"
           >
@@ -598,7 +598,7 @@ exports[`ContactList should render the contact list correctly 1`] = `
       </div>
     </div>
     <div
-      class="sc-grXZZQ koicEm"
+      class="sc-grXZZQ gZllkS"
       data-testid="contactcard-container"
     >
       <div
@@ -608,7 +608,7 @@ exports[`ContactList should render the contact list correctly 1`] = `
           class="sc-hLclGa kwlGWp"
         >
           <div
-            class="sc-bcPKhP kipEEd"
+            class="sc-bcPKhP LlyrL"
             data-testid="avatar-container"
             variant="sm"
           >
@@ -672,7 +672,7 @@ exports[`ContactList should render the contact list correctly 1`] = `
       </div>
     </div>
     <div
-      class="sc-grXZZQ koicEm"
+      class="sc-grXZZQ gZllkS"
       data-testid="contactcard-container"
     >
       <div
@@ -682,7 +682,7 @@ exports[`ContactList should render the contact list correctly 1`] = `
           class="sc-hLclGa kwlGWp"
         >
           <div
-            class="sc-bcPKhP kipEEd"
+            class="sc-bcPKhP LlyrL"
             data-testid="avatar-container"
             variant="sm"
           >
@@ -746,7 +746,7 @@ exports[`ContactList should render the contact list correctly 1`] = `
       </div>
     </div>
     <div
-      class="sc-bBbNsw hBiFTf"
+      class="sc-bBbNsw kdRksC"
       data-testid="floatingactionbutton-container"
       position="right"
       title="Ir para mapa"
@@ -755,7 +755,7 @@ exports[`ContactList should render the contact list correctly 1`] = `
         class="sc-ivDvhZ kSzkOs"
       >
         <div
-          class="sc-cwKisF eXvlIa"
+          class="sc-cwKisF eXRRak"
         >
           <svg
             viewBox="0 0 24 24"

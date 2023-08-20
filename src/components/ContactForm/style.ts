@@ -2,34 +2,42 @@ import styled from 'styled-components'
 import * as Icons from '@heroicons/react/24/outline'
 
 export const Container = styled.section`
-  position: relative;
+  background-color: ${({ theme }) => theme.colors.secondary[400]};
   padding: 0.8rem;
   padding-top: 1rem;
-  max-height: 100vh;
-  min-height: 100vh;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  overflow-x: none;
   align-items: center;
-  gap: 2rem;
+  overflow-x: none;
+  gap: 0.5rem;
 `
 
 export const ActionsButtons = styled.div`
   display: flex;
-  position: absolute;
-  width: calc(100vw - 0.5rem);
+  width: 100%;
   justify-content: space-between;
-  align-items: center;
-  bottom: 2rem;
-  padding: 0.5rem;
+  padding-bottom: 2rem;
 `
 export const Form = styled.form`
+  overflow: auto;
   display: flex;
   gap: 0.8rem;
   flex: 1;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
   padding: 0.5rem;
+  justify-content: space-between;
+`
+
+export const InputsSection = styled.div`
+  flex: 1;
+  display: flex;
+  gap: 0.8rem;
+  flex-direction: column;
+  width: 100%;
 `
 export const XMarkIcon = styled(Icons.XMarkIcon)`
   width: 1rem;
@@ -49,5 +57,5 @@ export const CheckIcon = styled(Icons.CheckIcon)`
 `
 export const MapContainer = styled.div`
   width: 100%;
-  height: 20rem;
+  height: 100%;
 `

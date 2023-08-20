@@ -3,7 +3,7 @@
 exports[`FloatingActionButton should render correctly snapshot 1`] = `
 <div>
   <div
-    class="sc-bcPKhP gltPbp"
+    class="sc-bcPKhP huUlhs"
     data-testid="floatingactionbutton-container"
     position="right"
     title="Ir para mapa"
@@ -12,7 +12,7 @@ exports[`FloatingActionButton should render correctly snapshot 1`] = `
       class="sc-grXZZQ dzrPzn"
     >
       <div
-        class="sc-dkjKgF gKrFzq"
+        class="sc-dkjKgF dEavTc"
       >
         <svg
           viewBox="0 0 24 24"

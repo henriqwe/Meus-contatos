@@ -27,7 +27,6 @@ export const FloatingActionButtonContainer = styled.div<{
     background-color: #e5993b;
     cursor: pointer;
   }
-  transition: all 0.5s;
 
   @media (min-width: 768px) {
     height: 3rem;
@@ -49,7 +48,7 @@ export const WrapperIcon = styled.div`
 export const IconWrapper = styled.div`
   width: 3rem;
   height: 3rem;
-  color: white;
+  color: ${({ theme }) => theme.colors.white};
   @media (min-width: 768px) {
     width: 2rem;
     height: 2rem;

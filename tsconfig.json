@@ -28,7 +28,8 @@
       "&domains/*": ["./src/domains/*"],
       "&schemas/*": ["./src/schemas/*"],
       "&pages/*": ["./src/pages/*"],
-      "&types/*": ["./src/types/*"]
+      "&types/*": ["./src/types/*"],
+      "&styles/*": ["./src/styles/*"]
     }
   },
   "include": ["src", "src/handlers", ".jest/__mocks__/styleMock.ts"],

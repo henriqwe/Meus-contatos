@@ -2,7 +2,7 @@ import { styled } from 'styled-components'
 import * as Icons from '@heroicons/react/24/outline'
 
 export const ContactCard = styled.div`
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors?.white};
   border-radius: 0.5rem;
   height: 4rem;
   display: flex;

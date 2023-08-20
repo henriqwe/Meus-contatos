@@ -7,24 +7,45 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         margin: 0;
         padding: 0; 
+
 } 
 
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
 body{
-        background-color: #F1F5F9;
+        background-color: #d1d6de;
+    scroll-behavior: smooth;
+
 }
 ::-webkit-scrollbar {
-  width: 2px;
+  width: 3px;
   height: 4px;
 }
 
-/* aqui é para personalizar o fundo da barra, neste caso estou colocando um fundo cinza escuro*/
 ::-webkit-scrollbar-track {
   background: #cacaca ;
 }
 
-/* aqui é a alça da barra, que demonstra a altura que você está na página
-estou colocando uma cor azul clara nela*/
 ::-webkit-scrollbar-thumb {
   background: rgba(68, 67, 90, 0.7);
 }
+a {
+    text-decoration:none;
+  }
+ 
+
+
+
 `
+
+export const GlobalStyles = createGlobalStyle`
+ 
+
+
+ 
+
+ 
+
+  `

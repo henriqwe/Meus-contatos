@@ -3,7 +3,7 @@
 exports[`List should render the contact list correctly 1`] = `
 <div>
   <section
-    class="sc-gKHVLF fNzheI"
+    class="sc-gKHVLF frQkfL"
   >
     <div
       class="sc-fEyylQ btrSVL"
@@ -24,7 +24,7 @@ exports[`List should render the contact list correctly 1`] = `
           >
             <input
               autocomplete="off"
-              class="sc-hLclGa kPqvnN"
+              class="sc-hLclGa gWrBgX"
               data-testid="search-input"
               id="name"
               isinvalid="0"
@@ -40,13 +40,13 @@ exports[`List should render the contact list correctly 1`] = `
             </span>
           </div>
           <label
-            class="sc-bcPKhP ldwnQE"
+            class="sc-bcPKhP hSXdPs"
           />
         </div>
       </div>
       <div>
         <button
-          class="sc-dIEoRj eLQyzJ"
+          class="sc-dIEoRj djA-dzB"
           data-testid="button-new-contact"
           variant="success"
         >

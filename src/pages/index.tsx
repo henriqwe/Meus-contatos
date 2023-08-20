@@ -12,6 +12,7 @@ export default function Home() {
         stiffness: 260,
         damping: 20
       }}
+      style={{ width: '100%', height: '100%' }}
     >
       <List />
     </motion.div>

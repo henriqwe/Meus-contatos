@@ -29,46 +29,48 @@ export function PersonalInfoFormStep({
 }: props) {
   return (
     <S.Form onSubmit={handleSubmit(onSubmit)}>
-      <Input
-        control={control}
-        name="name"
-        label="Nome *"
-        error={errors['name']}
-        disabled={isLoading}
-        data-testid={'input-name'}
-      />
-      <Input
-        control={control}
-        name="email"
-        label="Email *"
-        error={errors['email']}
-        disabled={isLoading}
-        data-testid={'input-email'}
-      />
-      <Input
-        control={control}
-        name="phone"
-        label="Telefone *"
-        error={errors['phone']}
-        disabled={isLoading}
-        data-testid={'input-phone'}
-      />
-      <Input
-        control={control}
-        name="username"
-        label="Nome de usuário"
-        error={errors['username']}
-        disabled={isLoading}
-        data-testid={'input-username'}
-      />
-      <Input
-        control={control}
-        name="website"
-        label="Website"
-        error={errors['website']}
-        disabled={isLoading}
-        data-testid={'input-website'}
-      />
+      <S.InputsSection>
+        <Input
+          control={control}
+          name="name"
+          label="Nome *"
+          error={errors['name']}
+          disabled={isLoading}
+          data-testid={'input-name'}
+        />
+        <Input
+          control={control}
+          name="email"
+          label="Email *"
+          error={errors['email']}
+          disabled={isLoading}
+          data-testid={'input-email'}
+        />
+        <Input
+          control={control}
+          name="phone"
+          label="Telefone *"
+          error={errors['phone']}
+          disabled={isLoading}
+          data-testid={'input-phone'}
+        />
+        <Input
+          control={control}
+          name="username"
+          label="Nome de usuário"
+          error={errors['username']}
+          disabled={isLoading}
+          data-testid={'input-username'}
+        />
+        <Input
+          control={control}
+          name="website"
+          label="Website"
+          error={errors['website']}
+          disabled={isLoading}
+          data-testid={'input-website'}
+        />
+      </S.InputsSection>
       <ActionButtons
         activeStep={activeStep}
         handlePreviousStep={handlePreviousStep}

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout should render the contact list correctly 1`] = `
+<div>
+  <main
+    class="sc-bcPKhP eYcKWU"
+  >
+    <div
+      data-testid="div-teste"
+    >
+      teste
+    </div>
+  </main>
+</div>
+`;

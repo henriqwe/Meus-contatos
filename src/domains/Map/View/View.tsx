@@ -7,9 +7,9 @@ import * as S from './styles'
 
 export function MapView() {
   const queryClient = useQueryClient()
+
   async function handleFetch() {
     const contacts = queryClient.getQueryData(['contacts']) as IContact[]
-
     if (contacts) {
       return contacts
     }
@@ -19,12 +19,10 @@ export function MapView() {
     queryKey: ['contacts'],
     queryFn: () => handleFetch(),
     refetchOnWindowFocus: false,
-    retry: false,
-    suspense: true
+    retry: false
   })
-
   return (
-    <S.MapViewContainer>
+    <S.MapViewContainer data-testid={'mapview-container'}>
       {!contactsQuery.data ? (
         <div></div>
       ) : (

@@ -3,8 +3,8 @@ import * as Icons from '@heroicons/react/24/outline'
 
 export const Container = styled.section`
   position: relative;
-  max-height: 100vh;
-  min-height: 100vh;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -45,7 +45,7 @@ export const AvatarPhone = styled.p`
   font-weight: 400;
 `
 export const ContactHeaderWrapper = styled.div`
-  background-color: rgba(100, 116, 139, 0.1);
+  background-color: ${({ theme }) => theme.colors.secondary[400]};
   padding: 0.8rem;
   padding-top: 1rem;
 `
@@ -77,7 +77,13 @@ export const TabItemContainer = styled.section`
   flex: 1;
   flex-direction: column;
   margin: 0.8rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  gap: 0.8rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 0.8rem;
+  }
 `
 export const InfoWrapper = styled.div<{ variant: 'white' | 'gray' }>`
   display: flex;
@@ -85,8 +91,8 @@ export const InfoWrapper = styled.div<{ variant: 'white' | 'gray' }>`
   gap: 0.2rem;
   padding: 0.7rem;
   flex-direction: column;
-  background-color: ${({ variant }) =>
-    variant === 'white' ? '#fff' : '#F1F5F9'};
+  background-color: ${({ variant, theme }) =>
+    variant === 'white' ? theme.colors.white : '#F1F5F9'};
 `
 export const DropdownOptionContent = styled.div`
   display: flex;
@@ -107,6 +113,7 @@ export const TrashIcon = styled(Icons.TrashIcon)`
 export const MapContainer = styled.div`
   width: 100%;
   height: 20rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 `
 export const LoadingContainer = styled.div`
   display: flex;
@@ -115,4 +122,12 @@ export const LoadingContainer = styled.div`
   gap: 3rem;
   align-items: center;
   justify-content: center;
+`
+export const InfonContainer = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  flex-direction: column;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 `

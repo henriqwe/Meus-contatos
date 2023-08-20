@@ -3,7 +3,7 @@
 exports[`PageNotFound should render the contact PageNotFound correctly 1`] = `
 <div>
   <div
-    class="sc-dkjKgF dboTva"
+    class="sc-dkjKgF jychpp"
     data-testid="container-page-not-found"
   >
     <h3>
@@ -334,7 +334,7 @@ exports[`PageNotFound should render the contact PageNotFound correctly 1`] = `
       </svg>
     </div>
     <button
-      class="sc-bcPKhP EzVzF"
+      class="sc-bcPKhP gvJOCB"
       data-testid="button-page-not-found"
       variant="primary"
     >

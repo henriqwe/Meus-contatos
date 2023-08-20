@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { theme } from '../../styles'
 
 export const TabContainer = styled.div`
   display: flex;
@@ -8,8 +9,8 @@ export const TabContainer = styled.div`
 
 const tabItemVariants = {
   active: {
-    borderBottom: '4px solid #18a2f3',
-    color: '#18a2f3',
+    borderBottom: `4px solid ${theme.colors.primary[700]}`,
+    color: theme.colors.primary[700],
     fontWeight: 800
   },
   inacitve: {
@@ -23,7 +24,7 @@ export const TabItem = styled.div<{ selected: boolean }>`
   justify-content: center;
   align-items: end;
   gap: 0.5rem;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors?.white};
   width: 100%;
   padding: 0.625rem;
   cursor: pointer;

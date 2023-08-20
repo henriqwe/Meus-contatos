@@ -1,3 +1,4 @@
+import { theme } from '../../styles'
 import * as S from './styled'
 
 interface props {
@@ -28,7 +29,9 @@ export function Stepper({ steps, activeStep }: props) {
                   width: index <= activeStep ? '100%' : 0,
                   display: index === 0 ? 'none' : 'block',
                   borderColor:
-                    index <= activeStep ? '#18a2f3' : 'rgb(212, 211, 209)'
+                    index <= activeStep
+                      ? theme.colors.primary[700]
+                      : 'rgb(212, 211, 209)'
                 }}
               />
             </div>
@@ -40,7 +43,7 @@ export function Stepper({ steps, activeStep }: props) {
                 justifyContent: 'center',
                 backgroundColor:
                   index === activeStep || index < activeStep
-                    ? '#18a2f3'
+                    ? theme.colors.primary[700]
                     : '#D4D3D1',
                 width: '2.5rem',
                 height: '2.5rem',
@@ -60,14 +63,15 @@ export function Stepper({ steps, activeStep }: props) {
                       ? '#FFF'
                       : index > activeStep
                       ? '#4b4b4b'
-                      : '#18a2f3'
+                      : theme.colors.primary[700]
                 }}
               >
                 {step.icon}
               </div>
               <div
                 style={{
-                  backgroundColor: index < activeStep ? '#18a2f3' : '#FFF',
+                  backgroundColor:
+                    index < activeStep ? theme.colors.primary[700] : '#FFF',
                   borderRadius: '50%',
                   transition: 'all 0.2s linear',
                   transitionDelay: '0.2s',
@@ -83,7 +87,8 @@ export function Stepper({ steps, activeStep }: props) {
                 fontSize: 12,
                 transition: 'all 0.2s linear',
                 transitionDelay: '0.2s',
-                color: index === activeStep ? '#18a2f3' : '#B0B0B0'
+                color:
+                  index === activeStep ? theme.colors.primary[700] : '#B0B0B0'
               }}
             >
               {step.label}

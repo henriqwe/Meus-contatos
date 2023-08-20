@@ -19,6 +19,8 @@ module.exports = {
         "&contexts/(.*)": ["<rootDir>/src/contexts/$1"],
         "&domains/(.*)": ["<rootDir>/src/domains/$1"],
         "&schemas/(.*)": ["<rootDir>/src/schemas/$1"],
+        "&types/(.*)": ["<rootDir>/src/types/$1"],
+        "&styles/(.*)": ["<rootDir>/src/styles/$1"],
         "\\.(css|less|scss|sass)$": "identity-obj-proxy"
     },
     setupFiles: ["<rootDir>/.jest/globalSetup.ts"]

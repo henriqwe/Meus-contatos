@@ -1,37 +1,6 @@
 import styled from 'styled-components'
 
-const variantOptions = {
-  primary: {
-    backgroundColor: '#18a2f3',
-    color: 'white',
-    '&:hover': {
-      backgroundColor: '#2496d8'
-    }
-  },
-  danger: {
-    backgroundColor: '#C01E2E',
-    color: 'white',
-    '&:hover': {
-      backgroundColor: '#ad202c'
-    }
-  },
-  success: {
-    backgroundColor: '#0A9444',
-    color: 'white',
-    '&:hover': {
-      backgroundColor: '#0b823d'
-    }
-  },
-  secondary: {
-    backgroundColor: '#e2e8f0',
-    color: 'black',
-    '&:hover': {
-      backgroundColor: '#d1d6de'
-    }
-  }
-}
-
-export type TVariant = keyof typeof variantOptions
+export type TVariant = 'primary' | 'danger' | 'success' | 'secondary'
 
 export const Button = styled.button<{ variant: TVariant }>`
   border: none;
@@ -46,7 +15,13 @@ export const Button = styled.button<{ variant: TVariant }>`
   transition: all 0.5s;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
-  ${({ variant }) => variantOptions[variant]}
+  background-color: ${({ variant, theme }) => theme.colors?.[variant][700]};
+  color: ${({ variant, theme }) =>
+    variant === 'secondary' ? theme.colors.slate : theme.colors?.white};
+
+  &:hover {
+    background-color: ${({ variant, theme }) => theme.colors?.[variant][800]};
+  }
 `
 export const ButtonContainer = styled.div`
   display: flex;

@@ -3,7 +3,7 @@
 exports[`EditContact should render the contact list correctly 1`] = `
 <div>
   <section
-    class="sc-dkjKgF ihugHM"
+    class="sc-dkjKgF hyIkKF"
   >
     <h1>
       Edição de contato
@@ -143,17 +143,19 @@ exports[`EditContact should render the contact list correctly 1`] = `
         </p>
       </div>
     </div>
-    <div>
-      <form
-        class="sc-eDnVMP cndeDv"
+    <form
+      class="sc-eDnVMP jYoMzt"
+    >
+      <div
+        class="sc-jSwlEQ bUSzpO"
       >
         <div>
           <div
-            class="sc-hBpgZr fJgEjM"
+            class="sc-fnOeiS ccaUeN"
           >
             <input
               autocomplete="off"
-              class="sc-fnOeiS fNMKXf"
+              class="sc-fEyylQ gdwRnj"
               data-testid="input-name"
               id="name"
               isinvalid="0"
@@ -163,22 +165,22 @@ exports[`EditContact should render the contact list correctly 1`] = `
               value="Clementine Bauch"
             />
             <span
-              class="sc-fEyylQ ebQcGW"
+              class="sc-bjEwCx hbtnzl"
             >
                
             </span>
           </div>
           <label
-            class="sc-bqOBKd hwqNNP"
+            class="sc-ksJisA cxqOvz"
           />
         </div>
         <div>
           <div
-            class="sc-hBpgZr fJgEjM"
+            class="sc-fnOeiS ccaUeN"
           >
             <input
               autocomplete="off"
-              class="sc-fnOeiS egfMHO"
+              class="sc-fEyylQ bAtXRS"
               data-testid="input-email"
               id="email"
               isinvalid="0"
@@ -188,22 +190,22 @@ exports[`EditContact should render the contact list correctly 1`] = `
               value="Nathan@yesenia.net"
             />
             <span
-              class="sc-fEyylQ ebQcGW"
+              class="sc-bjEwCx hbtnzl"
             >
                
             </span>
           </div>
           <label
-            class="sc-bqOBKd hwqNNP"
+            class="sc-ksJisA cxqOvz"
           />
         </div>
         <div>
           <div
-            class="sc-hBpgZr fJgEjM"
+            class="sc-fnOeiS ccaUeN"
           >
             <input
               autocomplete="off"
-              class="sc-fnOeiS jkTljM"
+              class="sc-fEyylQ hCaZTA"
               data-testid="input-phone"
               id="phone"
               isinvalid="0"
@@ -213,22 +215,22 @@ exports[`EditContact should render the contact list correctly 1`] = `
               value="1-463-123-4447"
             />
             <span
-              class="sc-fEyylQ ebQcGW"
+              class="sc-bjEwCx hbtnzl"
             >
                
             </span>
           </div>
           <label
-            class="sc-bqOBKd hwqNNP"
+            class="sc-ksJisA cxqOvz"
           />
         </div>
         <div>
           <div
-            class="sc-hBpgZr fJgEjM"
+            class="sc-fnOeiS ccaUeN"
           >
             <input
               autocomplete="off"
-              class="sc-fnOeiS jakkuK"
+              class="sc-fEyylQ bXrllK"
               data-testid="input-username"
               id="username"
               isinvalid="0"
@@ -238,22 +240,22 @@ exports[`EditContact should render the contact list correctly 1`] = `
               value="Samantha"
             />
             <span
-              class="sc-fEyylQ ebQcGW"
+              class="sc-bjEwCx hbtnzl"
             >
                
             </span>
           </div>
           <label
-            class="sc-bqOBKd hwqNNP"
+            class="sc-ksJisA cxqOvz"
           />
         </div>
         <div>
           <div
-            class="sc-hBpgZr fJgEjM"
+            class="sc-fnOeiS ccaUeN"
           >
             <input
               autocomplete="off"
-              class="sc-fnOeiS kBa-DrD"
+              class="sc-fEyylQ ZCCvb"
               data-testid="input-website"
               id="website"
               isinvalid="0"
@@ -263,79 +265,79 @@ exports[`EditContact should render the contact list correctly 1`] = `
               value="ramiro.info"
             />
             <span
-              class="sc-fEyylQ ebQcGW"
+              class="sc-bjEwCx hbtnzl"
             >
                
             </span>
           </div>
           <label
-            class="sc-bqOBKd hwqNNP"
+            class="sc-ksJisA cxqOvz"
           />
         </div>
-        <div
-          class="sc-hLclGa hfswbp"
+      </div>
+      <div
+        class="sc-hLclGa gqGEjV"
+      >
+        <button
+          class="sc-eLSjS icvQtD"
+          data-testid="button-cancel"
+          type="button"
+          variant="secondary"
         >
-          <button
-            class="sc-csmVar iRWazf"
-            data-testid="button-cancel"
-            type="button"
-            variant="secondary"
+          <div
+            class="sc-bqOBKd jmLTaX"
           >
-            <div
-              class="sc-eLSjS gnOQxh"
+            <svg
+              aria-hidden="true"
+              class="sc-gKHVLF hhjIlM"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                aria-hidden="true"
-                class="sc-jSwlEQ jEYtRa"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6 18L18 6M6 6l12 12"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <span>
-                Cancelar
-              </span>
-            </div>
-          </button>
-          <button
-            class="sc-csmVar dNDtGP"
-            data-testid="button-ok"
-            type="submit"
-            variant="primary"
+              <path
+                d="M6 18L18 6M6 6l12 12"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>
+              Cancelar
+            </span>
+          </div>
+        </button>
+        <button
+          class="sc-eLSjS eWAJfw"
+          data-testid="button-ok"
+          type="submit"
+          variant="primary"
+        >
+          <div
+            class="sc-bqOBKd jmLTaX"
           >
-            <div
-              class="sc-eLSjS gnOQxh"
+            <span>
+              Avançar
+            </span>
+            <svg
+              aria-hidden="true"
+              class="sc-ftLKQv hNvWEW"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <span>
-                Avançar
-              </span>
-              <svg
-                aria-hidden="true"
-                class="sc-iBAaJG eqgita"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-          </button>
-        </div>
-      </form>
-    </div>
+              <path
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+    </form>
   </section>
 </div>
 `;
