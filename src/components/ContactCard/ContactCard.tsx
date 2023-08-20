@@ -10,20 +10,23 @@ interface props {
 }
 export function ContactCard({ id, email, name, phone, navigateAction }: props) {
   return (
-    <S.ContactCard onClick={() => navigateAction(id)}>
+    <S.ContactCard
+      onClick={() => navigateAction(id)}
+      data-testid={'contactcard-container'}
+    >
       <S.ContactCardWrapper>
         <S.AvatarContainer>
           <Avatar name={name} variant="sm" />
         </S.AvatarContainer>
         <S.DetailsWrapper>
           <S.DeatilContainer>
-            <S.PrimaryDetail>{name}</S.PrimaryDetail>
+            <S.PrimaryDetail data-testid={'name'}>{name}</S.PrimaryDetail>
           </S.DeatilContainer>
           <S.DeatilContainer>
-            <S.SecondaryDetail>{phone}</S.SecondaryDetail>
+            <S.SecondaryDetail data-testid={'phone'}>{phone}</S.SecondaryDetail>
           </S.DeatilContainer>
           <S.DeatilContainer>
-            <S.SecondaryDetail>{email}</S.SecondaryDetail>
+            <S.SecondaryDetail data-testid={'email'}>{email}</S.SecondaryDetail>
           </S.DeatilContainer>
         </S.DetailsWrapper>
       </S.ContactCardWrapper>
