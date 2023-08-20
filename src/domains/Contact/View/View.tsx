@@ -1,5 +1,4 @@
 import { useNavigate, useParams } from 'react-router-dom'
-import { Loading } from '&components/Loading/Loading'
 import { routes } from '&utils/routes'
 import { Avatar } from '&components/Avatar/Avatar'
 import { useQueryClient, useMutation } from '@tanstack/react-query'
@@ -12,14 +11,14 @@ import { ContactAddrees } from './ContactAddrees'
 import { ContactCompany } from './ContactCompany'
 import { Dropdown } from '&components/Dropdown/Dropdown'
 import { Modal } from '&components/Modal/Modal'
-import { fakePromise } from '&utils/fakePromise'
 import { useContact } from '&hooks/useContact'
+import { deleteContact } from '&services/mutations/deleteContact'
+import { IContact } from '&types/contact'
 
 type TSelectedTab = 0 | 1 | 2
 
 export function ViewContact() {
   const { id } = useParams()
-
   const contact = useContact(id as string)
 
   const navigate = useNavigate()
@@ -33,11 +32,13 @@ export function ViewContact() {
   const queryClient = useQueryClient()
 
   const removeContact = useMutation({
-    mutationFn: (_: number) => fakePromise(),
-    onSuccess: (_, id) => {
+    mutationFn: (id: number) => deleteContact(id),
+    onSuccess: (data) => {
       navigate(routes.home.path)
-      queryClient.setQueryData(['contacts'], (old: any) =>
-        old.filter((contact: any) => contact.id !== id)
+      queryClient.setQueryData(
+        ['contacts'],
+        (old: IContact[] | undefined) =>
+          old?.filter((contact: IContact) => contact.id !== data) || []
       )
 
       notification('Contato removido com sucesso', 'success')
@@ -63,11 +64,11 @@ export function ViewContact() {
           <S.PencilIcon />
         </S.DropdownOptionContent>
       ),
-      fn: () => navigate(routes.editContact.path(contact.data?.id!))
+      fn: () => navigate(routes.editContact.path(contact.data?.id as number))
     },
     {
       content: (
-        <S.DropdownOptionContent>
+        <S.DropdownOptionContent data-testid={'remove-buttom'}>
           Remover
           <S.TrashIcon />
         </S.DropdownOptionContent>
@@ -78,9 +79,7 @@ export function ViewContact() {
   return (
     <S.Container>
       {contact.isLoading || !contact.data ? (
-        <S.LoadingContainer>
-          <Loading />
-        </S.LoadingContainer>
+        <S.LoadingContainer>{/* <Loading /> */}</S.LoadingContainer>
       ) : (
         <>
           <S.ContactHeaderWrapper>
@@ -94,7 +93,7 @@ export function ViewContact() {
             </S.ContactHeader>
 
             <Modal
-              action={() => removeContact.mutate(contact.data?.id!)}
+              action={() => removeContact.mutate(contact.data?.id as number)}
               title="Deseja realmente remover esse contato?"
               actionsText="Sim"
               cancelText="Não"

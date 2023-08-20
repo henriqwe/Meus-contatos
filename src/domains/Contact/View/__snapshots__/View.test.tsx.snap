@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewContact should render the contact list correctly 1`] = `
+<div>
+  <section
+    class="sc-grXZZQ hYESfc"
+  >
+    <div
+      class="sc-bjEwCx eeuhqJ"
+    />
+  </section>
+</div>
+`;
