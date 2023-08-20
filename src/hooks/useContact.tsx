@@ -1,4 +1,4 @@
-import type { IContact } from '&services/queries/fetchContacts'
+import type { IContact } from '&types/contact'
 import { fetchContacts } from '&services/queries/fetchContacts'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { useState } from 'react'
