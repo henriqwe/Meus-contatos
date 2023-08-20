@@ -29,7 +29,7 @@ export function List() {
       </S.Header>
 
       <S.ActionsContainer>
-        <div style={{ width: '100%' }}>
+        <S.InputWrapper>
           <Input
             control={control}
             name="name"
@@ -38,7 +38,7 @@ export function List() {
             debounceDelay={1000}
             data-testid={'search-input'}
           />
-        </div>
+        </S.InputWrapper>
         <div>
           <Button
             onClick={() => navigate(routes.createContact.path)}
@@ -50,7 +50,7 @@ export function List() {
         </div>
       </S.ActionsContainer>
       <S.ListHeading>
-        <h3 style={{ color: '#334155' }}>Contatos</h3>
+        <S.Title>Contatos</S.Title>
 
         <S.OrderByNameContent
           onClick={() => toggleAscendentName()}

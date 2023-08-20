@@ -3,6 +3,7 @@ import { Map } from '&components/Map/Map'
 import type { IContact } from '&types/contact'
 import { fetchContacts } from '&services/queries/fetchContacts'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
+import * as S from './styles'
 
 export function MapView() {
   const queryClient = useQueryClient()
@@ -23,7 +24,7 @@ export function MapView() {
   })
 
   return (
-    <div style={{ width: '100vw', height: '100vh' }}>
+    <S.MapViewContainer>
       {!contactsQuery.data ? (
         <div></div>
       ) : (
@@ -33,6 +34,6 @@ export function MapView() {
           <FloatingActionButton />
         </>
       )}
-    </div>
+    </S.MapViewContainer>
   )
 }

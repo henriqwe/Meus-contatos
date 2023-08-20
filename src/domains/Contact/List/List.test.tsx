@@ -2,7 +2,6 @@ import { fireEvent, render, waitFor } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import { List } from './List'
 import { TestProviders } from '&utils/tests/TestProviders'
-import { fakePromise } from '&utils/fakePromise'
 
 const mockedUsedNavigate = jest.fn()
 

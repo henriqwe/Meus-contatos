@@ -31,7 +31,7 @@ function MapComponent({
     { lat: number; lng: number } | undefined
   >()
 
-  const [map, setMap] = useState<google.maps.Map | null>(null)
+  const [_, setMap] = useState<google.maps.Map | null>(null)
 
   const onLoad = useCallback(function callback(map: google.maps.Map) {
     const bounds = new window.google.maps.LatLngBounds()
@@ -54,7 +54,7 @@ function MapComponent({
     setMap(map)
   }, [])
 
-  const onUnmount = useCallback(function callback(map: google.maps.Map) {
+  const onUnmount = useCallback(function callback() {
     setMap(null)
   }, [])
 

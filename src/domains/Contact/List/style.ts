@@ -101,3 +101,9 @@ export const Header = styled.div`
   padding-right: 0.8rem;
   padding-top: 1rem;
 `
+export const Title = styled.h3`
+  color: #334155;
+`
+export const InputWrapper = styled.div`
+  width: 100%;
+`

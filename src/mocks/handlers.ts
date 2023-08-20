@@ -1,7 +1,7 @@
 // src/mocks/handlers.js
 import { rest } from 'msw'
 export const handlers = [
-  rest.get(`${process.env.VITE_API_URL}/user`, (req, res, ctx) => {
+  rest.get(`https://jsonplaceholder.typicode.com/user`, (_, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json([
