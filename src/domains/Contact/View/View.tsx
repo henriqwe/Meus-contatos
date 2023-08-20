@@ -60,7 +60,7 @@ export function ViewContact() {
   const dropdownOption = [
     {
       content: (
-        <S.DropdownOptionContent>
+        <S.DropdownOptionContent data-testid={'edit-buttom'}>
           Editar
           <S.PencilIcon />
         </S.DropdownOptionContent>
@@ -85,7 +85,10 @@ export function ViewContact() {
         <>
           <S.ContactHeaderWrapper>
             <S.ContactHeader>
-              <div onClick={() => navigate(routes.home.path)}>
+              <div
+                onClick={() => navigate(routes.home.path)}
+                data-testid={'back-home-button'}
+              >
                 <S.ChevronLeftIcon />
               </div>
               <h1>Contato</h1>
@@ -109,15 +112,15 @@ export function ViewContact() {
           </S.ContactHeaderWrapper>
           <div>
             <Tab onTabSelected={onTabSelected}>
-              <TabItem>
+              <TabItem data-testid="tab-dados">
                 <S.UserIcon />
                 Dados
               </TabItem>
-              <TabItem>
+              <TabItem data-testid="tab-endereco">
                 <S.MapPinIcon />
                 Endereço
               </TabItem>
-              <TabItem>
+              <TabItem data-testid={'tab-empresa'}>
                 <S.BuildingStorefrontIcon />
                 Empresa
               </TabItem>

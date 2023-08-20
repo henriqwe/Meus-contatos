@@ -6,8 +6,245 @@ exports[`ViewContact should render the contact list correctly 1`] = `
     class="sc-grXZZQ jCULEz"
   >
     <div
-      class="sc-bjEwCx eeuhqJ"
-    />
+      class="sc-ftLKQv dNHBDz"
+    >
+      <div
+        class="sc-eDnVMP cJcoqf"
+      >
+        <div
+          data-testid="back-home-button"
+        >
+          <svg
+            aria-hidden="true"
+            class="sc-dkjKgF bvwYPB"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.75 19.5L8.25 12l7.5-7.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <h1>
+          Contato
+        </h1>
+        <button
+          aria-expanded="false"
+          aria-haspopup="menu"
+          class="IconButton"
+          data-state="closed"
+          data-testid="dropdown-menu-trigger"
+          id="radix-:r0:"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="sc-jSwlEQ gcFKqT"
+      >
+        <div
+          class="sc-bcPKhP fAwpSg"
+          data-testid="avatar-container"
+          variant="md"
+        >
+          L
+          G
+        </div>
+        <p
+          class="sc-gKHVLF eNoZjn"
+        >
+          Leanne Graham
+        </p>
+        <p
+          class="sc-iBAaJG iPRJaf"
+        >
+          1-770-736-8031 x56442
+        </p>
+      </div>
+    </div>
+    <div>
+      <div
+        class="sc-dIEoRj gozboz"
+      >
+        <div
+          class="sc-hHvkSs kdjjif"
+          data-testid="tab-dados"
+        >
+          <svg
+            aria-hidden="true"
+            class="sc-pqitP ilFfvI"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Dados
+        </div>
+        <div
+          class="sc-hHvkSs kYgMLA"
+          data-testid="tab-endereco"
+        >
+          <svg
+            aria-hidden="true"
+            class="sc-jrkPcm caRRCx"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Endereço
+        </div>
+        <div
+          class="sc-hHvkSs kdjjif"
+          data-testid="tab-empresa"
+        >
+          <svg
+            aria-hidden="true"
+            class="sc-kDnyCx hAYOej"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Empresa
+        </div>
+      </div>
+      <div>
+        <div
+          style="width: 100%; height: 100%; opacity: 0.18627757397036382; transform: translateY(244.11672780889091px) translateZ(0);"
+        >
+          <section
+            class="sc-eLSjS eXINBi"
+            data-testid="tab-container"
+          >
+            <div
+              style="width: 100%; display: flex; opacity: 0.004323708390024716; transform: translateX(-298.7028874829926px) translateZ(0);"
+            >
+              <div
+                class="sc-idyqAC hdVvoC"
+              >
+                <div
+                  class="sc-bqOBKd iqZEFD"
+                  variant="white"
+                >
+                  <p
+                    class="sc-ipMvLY fHeZYF"
+                  >
+                    Rua
+                  </p>
+                  <p
+                    class="sc-csmVar ghPXav"
+                    data-testid="info-street"
+                  >
+                    Kulas Light
+                  </p>
+                </div>
+                <div
+                  class="sc-bqOBKd gLNhPW"
+                  variant="gray"
+                >
+                  <p
+                    class="sc-ipMvLY fHeZYF"
+                  >
+                    Número
+                  </p>
+                  <p
+                    class="sc-csmVar ghPXav"
+                    data-testid="info-suite"
+                  >
+                    Apt. 556
+                  </p>
+                </div>
+                <div
+                  class="sc-bqOBKd iqZEFD"
+                  variant="white"
+                >
+                  <p
+                    class="sc-ipMvLY fHeZYF"
+                  >
+                    Cidade
+                  </p>
+                  <p
+                    class="sc-csmVar ghPXav"
+                    data-testid="info-city"
+                  >
+                    Gwenborough
+                  </p>
+                </div>
+                <div
+                  class="sc-bqOBKd gLNhPW"
+                  variant="gray"
+                >
+                  <p
+                    class="sc-ipMvLY fHeZYF"
+                  >
+                    CEP
+                  </p>
+                  <p
+                    class="sc-csmVar ghPXav"
+                    data-testid="info-zipcode"
+                  >
+                    92998-3874
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              style="width: 100%; height: 100%; display: flex; background-color: red; opacity: 0.0019726890909496086; transform: translateX(299.4081932727151px) translateZ(0);"
+            >
+              <div
+                class="sc-fEyylQ kZgmcW"
+              />
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
   </section>
 </div>
 `;
