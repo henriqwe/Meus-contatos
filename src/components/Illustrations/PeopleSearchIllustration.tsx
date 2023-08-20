@@ -4,6 +4,7 @@ export function PeopleSearchIllustration() {
       xmlns="http://www.w3.org/2000/svg"
       data-name="Layer 1"
       viewBox="0 0 590.72392 659.36199"
+      data-testid={'people-search-illustration'}
     >
       <path
         id="e846ef3a-3b5e-448c-8d47-a4173376229f-510"
