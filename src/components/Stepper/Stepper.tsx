@@ -8,7 +8,7 @@ interface props {
 
 export function Stepper({ steps, activeStep }: props) {
   return (
-    <S.StepperContainer>
+    <S.StepperContainer data-testid={'stepper-container'}>
       {steps.map((step, index) => {
         return (
           <S.Stepper key={index}>

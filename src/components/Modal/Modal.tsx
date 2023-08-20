@@ -27,7 +27,7 @@ export function Modal({
   return (
     <AlertDialog.Root open={open} onOpenChange={onOpenChange}>
       {triggerContent && (
-        <AlertDialog.Trigger asChild>
+        <AlertDialog.Trigger asChild data-testid={'modal-trigger'}>
           <button>{triggerContent}</button>
         </AlertDialog.Trigger>
       )}

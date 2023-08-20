@@ -10,6 +10,7 @@ exports[`EditContact should render the contact list correctly 1`] = `
     </h1>
     <div
       class="sc-bcPKhP kmvBoQ"
+      data-testid="stepper-container"
     >
       <div
         class="sc-grXZZQ cyEMIS"

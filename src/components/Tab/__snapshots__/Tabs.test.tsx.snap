@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs should render correctly snapshot 1`] = `
+<div>
+  <div
+    class="sc-bcPKhP cTRxBW"
+  >
+    <div
+      class="sc-grXZZQ dXkqDw"
+      data-testid="tab-dados"
+    >
+      Dados
+    </div>
+    <div
+      class="sc-grXZZQ kxbWsj"
+      data-testid="tab-endereco"
+    >
+      Endereço
+    </div>
+  </div>
+</div>
+`;
