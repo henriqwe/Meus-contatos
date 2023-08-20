@@ -1,6 +1,6 @@
 import { Avatar } from '&components/Avatar/Avatar'
 import { Button } from '&components/Button/Button'
-import type { IContact } from '&services/queries/fetchContacts'
+import type { IContact } from '&types/contact'
 import { routes } from '&utils/routes'
 import { InfoWindow } from '@react-google-maps/api'
 import { useNavigate } from 'react-router-dom'

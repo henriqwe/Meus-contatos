@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditContact should render the contact list correctly 1`] = `<div />`;

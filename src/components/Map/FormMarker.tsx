@@ -7,14 +7,14 @@ type props = {
   }
 }
 
-export function FomMarker({ position }: props) {
+export function FormMarker({ position }: props) {
   return (
     <Marker
       position={{
         lat: position.lat,
         lng: position.lng
       }}
-      animation={google.maps.Animation.DROP}
+      animation={google.maps.Animation?.DROP}
       zIndex={99}
     ></Marker>
   )

@@ -1,8 +1,8 @@
 import { memo, useCallback, useEffect, useState } from 'react'
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api'
-import type { IContact } from '&services/queries/fetchContacts'
+import type { IContact } from '&types/contact'
 import { MarkerDrop } from './MarkerDrop'
-import { FomMarker } from './FomMarker'
+import { FormMarker } from './FormMarker'
 
 interface props {
   contacts: IContact[]
@@ -10,6 +10,7 @@ interface props {
   onMapClick?: (e: google.maps.MapMouseEvent) => void
   formMarkerPosition?: { lat: number; lng: number }
 }
+
 function MapComponent({
   contacts,
   showInfoWindow = true,
@@ -30,7 +31,7 @@ function MapComponent({
     { lat: number; lng: number } | undefined
   >()
 
-  const [_, setMap] = useState<google.maps.Map | null>(null)
+  const [map, setMap] = useState<google.maps.Map | null>(null)
 
   const onLoad = useCallback(function callback(map: google.maps.Map) {
     const bounds = new window.google.maps.LatLngBounds()
@@ -53,7 +54,7 @@ function MapComponent({
     setMap(map)
   }, [])
 
-  const onUnmount = useCallback(function callback(_: any) {
+  const onUnmount = useCallback(function callback(map: google.maps.Map) {
     setMap(null)
   }, [])
 
@@ -85,6 +86,7 @@ function MapComponent({
         lat: -12.100100128939063,
         lng: -49.24919742233473
       }}
+      data-testeid={'map'}
       zoom={3}
       options={{
         styles: [
@@ -108,7 +110,7 @@ function MapComponent({
           showInfoWindow={showInfoWindow}
         />
       ))}
-      {formMarker && <FomMarker position={formMarker} />}
+      {formMarker && <FormMarker position={formMarker} />}
     </GoogleMap>
   ) : (
     <></>

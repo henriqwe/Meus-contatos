@@ -1,7 +1,7 @@
 import { Marker } from '@react-google-maps/api'
 import { useState } from 'react'
 import { ContactInfoWindow } from './ContactInfoWindow'
-import type { IContact } from '&services/queries/fetchContacts'
+import type { IContact } from '&types/contact'
 
 type props = {
   contact: IContact
@@ -23,8 +23,9 @@ export function MarkerDrop({ contact, showInfoWindow }: props) {
         lat: Number(contact.address.geo.lat),
         lng: Number(contact.address.geo.lng)
       }}
-      animation={google.maps.Animation.DROP}
+      animation={google.maps.Animation?.DROP}
       zIndex={99}
+      data-testid={'marker'}
       onClick={handleInfoWindow}
     >
       {openInfoWindow && (
