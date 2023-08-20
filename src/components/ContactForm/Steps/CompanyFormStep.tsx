@@ -19,7 +19,7 @@ interface props {
   handleSubmit: UseFormHandleSubmit<FieldValues, IFormData>
   onSubmit: (_formData: IFormData) => void
 }
-export function CompanyFromStep({
+export function CompanyFormStep({
   isLoading,
   activeStep,
   handlePreviousStep,
@@ -36,6 +36,7 @@ export function CompanyFromStep({
         label="Nome"
         error={errors['companyName']}
         disabled={isLoading}
+        data-testid={'input-companyName'}
       />
       <Input
         control={control}
@@ -43,6 +44,7 @@ export function CompanyFromStep({
         label="Frase de efeito"
         error={errors['catchPhrase']}
         disabled={isLoading}
+        data-testid={'input-catchPhrase'}
       />
       <Input
         control={control}
@@ -50,6 +52,7 @@ export function CompanyFromStep({
         label="Estratégia de negócio"
         error={errors['bs']}
         disabled={isLoading}
+        data-testid={'input-bs'}
       />
       <ActionButtons
         activeStep={activeStep}

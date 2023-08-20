@@ -34,7 +34,7 @@ interface props {
     >
   >
 }
-export function AddressFromStep({
+export function AddressFormStep({
   isLoading,
   activeStep,
   handlePreviousStep,
@@ -62,6 +62,7 @@ export function AddressFromStep({
         label="Rua"
         error={errors['street']}
         disabled={isLoading}
+        data-testid={'input-street'}
       />
       <Input
         control={control}
@@ -69,6 +70,7 @@ export function AddressFromStep({
         label="Número"
         error={errors['suite']}
         disabled={isLoading}
+        data-testid={'input-suite'}
       />
       <Input
         control={control}
@@ -76,6 +78,7 @@ export function AddressFromStep({
         label="Cidade"
         error={errors['city']}
         disabled={isLoading}
+        data-testid={'input-city'}
       />
       <Input
         control={control}
@@ -83,6 +86,7 @@ export function AddressFromStep({
         label="CEP"
         error={errors['zipcode']}
         disabled={isLoading}
+        data-testid={'input-zipcode'}
       />
       <S.MapContainer>
         <Map

@@ -11,16 +11,16 @@ import {
   UserIcon
 } from '@heroicons/react/24/outline'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
-import { fakePromise } from '&utils/fakePromise'
-import type { IContact } from '&services/queries/fetchContacts'
 import { IFormData } from './type'
 import * as S from './style'
 import { Modal } from '&components/Modal/Modal'
 import { contactSchema } from '&schemas/contact'
-import { useId } from '&contexts/useId'
 import { PersonalInfoFormStep } from './Steps/PersonalInfoFormStep'
-import { AddressFromStep } from './Steps/AddressFromStep'
-import { CompanyFromStep } from './Steps/CompanyFromStep'
+import { AddressFormStep } from './Steps/AddressFormStep'
+import { CompanyFormStep } from './Steps/CompanyFormStep'
+import type { IContact } from '&types/contact'
+import { createContact } from '&services/mutations/createContact'
+import { editContact } from '&services/mutations/editContact'
 
 type TActiveStep = 0 | 1 | 2
 interface props {
@@ -32,44 +32,43 @@ export function ContactForm({ contact }: props) {
   const [activeStep, setActiveStep] = useState<TActiveStep>(0)
   const [openModal, setOpenModal] = useState(false)
   const [formData, setFormData] = useState<IFormData>()
-  const Id = useId()
   const queryClient = useQueryClient()
   const [contactMapLocalition, setContactMapLocalition] = useState<{
     lat: number
     lng: number
   }>()
 
-  const createContact = useMutation({
-    mutationFn: (newContact: IContact) => {
-      console.log({ newContact })
-      return fakePromise()
-    },
-    onSuccess: (_, newContact) => {
+  const createContactMutation = useMutation({
+    mutationFn: (newContact: Omit<IContact, 'id'>) => createContact(newContact),
+    onSuccess: (data) => {
       queryClient.setQueryData(['contacts'], (old: IContact[] | undefined) => [
         ...(old ?? []),
-        newContact
+        data
       ])
 
-      Id.nextId()
-      onFinish(newContact.id)
+      onFinish(data.id)
     },
     onError: onError
   })
 
-  const editContact = useMutation({
-    mutationFn: (_: IContact) => fakePromise(),
-    onSuccess: (_, newContact) => {
-      queryClient.setQueryData(['contacts'], (old: any) =>
-        old.map((oldContact: IContact) =>
-          oldContact.id === newContact.id ? newContact : oldContact
+  const editContactMutation = useMutation({
+    mutationFn: (newContact: IContact) => editContact(newContact),
+    onSuccess: (data) => {
+      queryClient.setQueryData(['contacts'], (old: IContact[] | undefined) => {
+        if (!old) {
+          return [data]
+        }
+        return old.map((oldContact: IContact) =>
+          oldContact.id === data.id ? data : oldContact
         )
-      )
-      onFinish(newContact.id)
+      })
+
+      onFinish(data.id)
     },
     onError: onError
   })
 
-  function onError(error: any) {
+  function onError(error: Error) {
     console.error({ error })
     notification('Ops! algo deu errado.', 'error')
   }
@@ -85,8 +84,8 @@ export function ContactForm({ contact }: props) {
   }
 
   async function onSubmit() {
-    let newContact = {
-      id: typeForm === 'newContact' ? Id.data : (contact?.id as number),
+    const newContact = {
+      id: typeForm === 'newContact' ? undefined : (contact?.id as number),
       email: formData!.email,
       name: formData!.name,
       phone: formData!.phone,
@@ -109,11 +108,11 @@ export function ContactForm({ contact }: props) {
       }
     }
     if (typeForm === 'newContact') {
-      createContact.mutate(newContact)
+      createContactMutation.mutate(newContact)
       return
     }
     if (typeForm === 'editContact') {
-      editContact.mutate(newContact)
+      editContactMutation.mutate(newContact as IContact)
       return
     }
   }
@@ -134,7 +133,7 @@ export function ContactForm({ contact }: props) {
       return
     }
     if (activeStep === 0 && typeForm === 'editContact') {
-      navigate(routes.viewContact.path(contact?.id!))
+      navigate(routes.viewContact.path(contact?.id as number))
       return
     }
     setActiveStep((old) => (old - 1) as TActiveStep)
@@ -171,31 +170,37 @@ export function ContactForm({ contact }: props) {
         errors={errors}
         handlePreviousStep={handlePreviousStep}
         handleSubmit={handleSubmit}
-        isLoading={createContact.isLoading || editContact.isLoading}
+        isLoading={
+          createContactMutation.isLoading || editContactMutation.isLoading
+        }
         onSubmit={handleNextStep}
       />
     ),
     1: (
-      <AddressFromStep
+      <AddressFormStep
         activeStep={activeStep}
         control={control}
         errors={errors}
         handlePreviousStep={handlePreviousStep}
         handleSubmit={handleSubmit}
-        isLoading={createContact.isLoading || editContact.isLoading}
+        isLoading={
+          createContactMutation.isLoading || editContactMutation.isLoading
+        }
         onSubmit={handleNextStep}
         contactMapLocalition={contactMapLocalition}
         setContactMapLocalition={setContactMapLocalition}
       />
     ),
     2: (
-      <CompanyFromStep
+      <CompanyFormStep
         activeStep={activeStep}
         control={control}
         errors={errors}
         handlePreviousStep={handlePreviousStep}
         handleSubmit={handleSubmit}
-        isLoading={createContact.isLoading || editContact.isLoading}
+        isLoading={
+          createContactMutation.isLoading || editContactMutation.isLoading
+        }
         onSubmit={handleConcludeForm}
       />
     )

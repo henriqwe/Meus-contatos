@@ -35,6 +35,7 @@ export function PersonalInfoFormStep({
         label="Nome *"
         error={errors['name']}
         disabled={isLoading}
+        data-testid={'input-name'}
       />
       <Input
         control={control}
@@ -42,6 +43,7 @@ export function PersonalInfoFormStep({
         label="Email *"
         error={errors['email']}
         disabled={isLoading}
+        data-testid={'input-email'}
       />
       <Input
         control={control}
@@ -49,6 +51,7 @@ export function PersonalInfoFormStep({
         label="Telefone *"
         error={errors['phone']}
         disabled={isLoading}
+        data-testid={'input-phone'}
       />
       <Input
         control={control}
@@ -56,6 +59,7 @@ export function PersonalInfoFormStep({
         label="Nome de usuário"
         error={errors['username']}
         disabled={isLoading}
+        data-testid={'input-username'}
       />
       <Input
         control={control}
@@ -63,6 +67,7 @@ export function PersonalInfoFormStep({
         label="Website"
         error={errors['website']}
         disabled={isLoading}
+        data-testid={'input-website'}
       />
       <ActionButtons
         activeStep={activeStep}

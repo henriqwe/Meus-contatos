@@ -18,11 +18,17 @@ export function ActionButtons({
         variant="secondary"
         onClick={handlePreviousStep}
         type={'button'}
+        data-testid="button-cancel"
       >
         {activeStep === 0 ? <S.XMarkIcon /> : <S.ChevronLeftIcon />}
         <span>{activeStep === 0 ? 'Cancelar' : 'Voltar'}</span>
       </Button>
-      <Button disabled={isLoading} variant="primary" type={'submit'}>
+      <Button
+        disabled={isLoading}
+        variant="primary"
+        type={'submit'}
+        data-testid="button-ok"
+      >
         <span>{activeStep < 2 ? 'Avançar' : 'Finalizar'}</span>
         {activeStep < 2 ? <S.ChevronRightIcon /> : <S.CheckIcon />}
       </Button>
