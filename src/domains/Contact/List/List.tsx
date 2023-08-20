@@ -2,7 +2,6 @@ import { Input } from '&components/Input/Input'
 import { useForm } from 'react-hook-form'
 import { Suspense, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Loading } from '&components/Loading/Loading'
 import { routes } from '&utils/routes'
 import * as S from '&domains/Contact/List/style'
 import { Button } from '&components/Button/Button'
@@ -36,12 +35,15 @@ export function List() {
             name="name"
             handleChangeDebounce={handleOnChange}
             label="Buscar"
+            debounceDelay={1000}
+            data-testid={'search-input'}
           />
         </div>
         <div>
           <Button
             onClick={() => navigate(routes.createContact.path)}
             variant="success"
+            data-testid={'button-new-contact'}
           >
             <S.ButtonText>Novo</S.ButtonText> <S.UserPlusIcon />
           </Button>
@@ -50,7 +52,10 @@ export function List() {
       <S.ListHeading>
         <h3 style={{ color: '#334155' }}>Contatos</h3>
 
-        <S.OrderByNameContent onClick={() => toggleAscendentName()}>
+        <S.OrderByNameContent
+          onClick={() => toggleAscendentName()}
+          data-testid={'button-sort-name'}
+        >
           <span>Nome</span>
           {ascendentName ? <S.BarsArrowUpIcon /> : <S.BarsArrowDownIcon />}
         </S.OrderByNameContent>
@@ -60,9 +65,7 @@ export function List() {
       <S.CardList>
         <Suspense
           fallback={
-            <S.LoadingContainer>
-              <Loading />
-            </S.LoadingContainer>
+            <S.LoadingContainer>{/* <Loading /> */}</S.LoadingContainer>
           }
         >
           <ContactList ascendentName={ascendentName} nameValue={nameValue} />

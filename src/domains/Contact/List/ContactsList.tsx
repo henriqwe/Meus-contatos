@@ -1,4 +1,4 @@
-import type { IContact } from '&services/queries/fetchContacts'
+import type { IContact } from '&types/contact'
 import { fetchContacts } from '&services/queries/fetchContacts'
 
 import { useEffect, useState } from 'react'
@@ -22,7 +22,7 @@ export function ContactList({ ascendentName, nameValue }: props) {
   const queryClient = useQueryClient()
 
   async function handleFetch() {
-    let contacts = queryClient.getQueryData(['contacts']) as IContact[]
+    const contacts = queryClient.getQueryData(['contacts']) as IContact[]
 
     if (contacts) {
       return contacts
@@ -47,9 +47,8 @@ export function ContactList({ ascendentName, nameValue }: props) {
     if (!text) {
       return contactsQuery?.data as IContact[]
     }
-    const newDataList = contactsQuery?.data?.filter(
-      (contact) =>
-        contact.name.toLocaleLowerCase()?.includes(text.toLocaleLowerCase())
+    const newDataList = contactsQuery?.data?.filter((contact) =>
+      contact.name.toLocaleLowerCase()?.includes(text.toLocaleLowerCase())
     )
     return newDataList as IContact[]
   }

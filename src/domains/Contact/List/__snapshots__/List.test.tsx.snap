@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List should render the contact list correctly 1`] = `
+<div>
+  <section
+    class="sc-gKHVLF fNzheI"
+  >
+    <div
+      class="sc-fEyylQ btrSVL"
+    >
+      <h1>
+        Home
+      </h1>
+    </div>
+    <div
+      class="sc-kDnyCx fxaxYa"
+    >
+      <div
+        style="width: 100%;"
+      >
+        <div>
+          <div
+            class="sc-dkjKgF gJxtqW"
+          >
+            <input
+              autocomplete="off"
+              class="sc-hLclGa kPqvnN"
+              data-testid="search-input"
+              id="name"
+              isinvalid="0"
+              label="Buscar"
+              placeholder=""
+              type="text"
+              value=""
+            />
+            <span
+              class="sc-eDnVMP fkBieA"
+            >
+               
+            </span>
+          </div>
+          <label
+            class="sc-bcPKhP ldwnQE"
+          />
+        </div>
+      </div>
+      <div>
+        <button
+          class="sc-bjEwCx fHBYmz"
+          data-testid="button-new-contact"
+          variant="success"
+        >
+          <div
+            class="sc-idyqAC istoLh"
+          >
+            <span
+              class="sc-ipMvLY jfCAo"
+            >
+              Novo
+            </span>
+             
+            <svg
+              aria-hidden="true"
+              class="sc-jrkPcm hWpTG"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+    <div
+      class="sc-ftLKQv bhTMLu"
+    >
+      <h3
+        style="color: rgb(51, 65, 85);"
+      >
+        Contatos
+      </h3>
+      <div
+        class="sc-pqitP bGDaTT"
+        data-testid="button-sort-name"
+      >
+        <span>
+          Nome
+        </span>
+        <svg
+          aria-hidden="true"
+          class="sc-fnOeiS dEmuwk"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 4.5h14.25M3 9h9.75M3 13.5h5.25m5.25-.75L17.25 9m0 0L21 12.75M17.25 9v12"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      class="sc-iBAaJG fEItki"
+    />
+    <div
+      class="sc-jSwlEQ kKbemP"
+    >
+      <div
+        class="sc-eLSjS imMixF"
+      />
+    </div>
+  </section>
+</div>
+`;
