@@ -27,9 +27,10 @@
       "&contexts/*": ["./src/contexts/*"],
       "&domains/*": ["./src/domains/*"],
       "&schemas/*": ["./src/schemas/*"],
-      "&pages/*": ["./src/pages/*"]
+      "&pages/*": ["./src/pages/*"],
+      "&types/*": ["./src/types/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "src/handlers", ".jest/__mocks__/styleMock.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -1,5 +1,5 @@
-export function fakePromise() {
+export function fakePromise(ms = 0) {
   return new Promise(function (resolve) {
-    setTimeout(resolve, 0)
+    setTimeout(resolve, ms)
   })
 }
