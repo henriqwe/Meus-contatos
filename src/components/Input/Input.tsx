@@ -8,28 +8,33 @@ import {
 } from 'react-hook-form'
 import { useDebounce } from '&hooks/useDebounce'
 import * as S from '&components/Input/style'
+import { InputHTMLAttributes } from 'react'
 
-type InputType = {
+interface InputType
+  extends React.DetailedHTMLProps<
+    InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  > {
   name: Path<FieldValues>
   control: Control<any, any>
   label: string
-  handleChangeDebounce?: (value: string) => any
+  handleChangeDebounce?: (value: string) => void
   debounceDelay?: number
   error?: DeepMap<FieldValues, FieldError> & { message?: string }
   disabled?: boolean
 }
+
 export function Input({
   name,
   control,
-  handleChangeDebounce,
   error,
   label,
-  debounceDelay = 1000,
-  disabled = false
+  debounceDelay = 0,
+  handleChangeDebounce = () => null,
+  disabled = false,
+  ...rest
 }: InputType) {
-  const debounceChange = handleChangeDebounce
-    ? useDebounce(handleChangeDebounce, debounceDelay)
-    : undefined
+  const debounceChange = useDebounce(handleChangeDebounce, debounceDelay)
 
   return (
     <Controller
@@ -51,6 +56,7 @@ export function Input({
               }}
               isinvalid={error?.message ? 1 : 0}
               label={label}
+              {...rest}
             />
             <S.Label> </S.Label>
           </S.Container>

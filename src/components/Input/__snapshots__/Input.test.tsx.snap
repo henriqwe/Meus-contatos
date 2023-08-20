@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render correctly snapshot 1`] = `
+<div>
+  <div>
+    <div
+      class="sc-dkjKgF gJxtqW"
+    >
+      <input
+        autocomplete="off"
+        class="sc-hLclGa iyPMem"
+        id="john due"
+        isinvalid="0"
+        label="teste"
+        placeholder=""
+        type="text"
+        value=""
+      />
+      <span
+        class="sc-eDnVMP fkBieA"
+      >
+         
+      </span>
+    </div>
+    <label
+      class="sc-bcPKhP ldwnQE"
+    />
+  </div>
+</div>
+`;
