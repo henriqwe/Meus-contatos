@@ -746,16 +746,16 @@ exports[`ContactList should render the contact list correctly 1`] = `
       </div>
     </div>
     <div
-      class="sc-kgvdhe dtfpTU"
+      class="sc-bBbNsw hBiFTf"
       data-testid="floatingactionbutton-container"
       position="right"
       title="Ir para mapa"
     >
       <div
-        class="sc-fLBbxL encIR"
+        class="sc-ivDvhZ kSzkOs"
       >
         <div
-          class="sc-bBbNsw lirKUB"
+          class="sc-cwKisF eXvlIa"
         >
           <svg
             viewBox="0 0 24 24"

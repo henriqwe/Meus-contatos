@@ -16,7 +16,7 @@ exports[`List should render the contact list correctly 1`] = `
       class="sc-kDnyCx fxaxYa"
     >
       <div
-        style="width: 100%;"
+        class="sc-idyqAC hUsnuD"
       >
         <div>
           <div
@@ -46,12 +46,12 @@ exports[`List should render the contact list correctly 1`] = `
       </div>
       <div>
         <button
-          class="sc-bjEwCx fHBYmz"
+          class="sc-dIEoRj eLQyzJ"
           data-testid="button-new-contact"
           variant="success"
         >
           <div
-            class="sc-idyqAC istoLh"
+            class="sc-hHvkSs ikKKqn"
           >
             <span
               class="sc-ipMvLY jfCAo"
@@ -82,7 +82,7 @@ exports[`List should render the contact list correctly 1`] = `
       class="sc-ftLKQv bhTMLu"
     >
       <h3
-        style="color: rgb(51, 65, 85);"
+        class="sc-bjEwCx evvuaY"
       >
         Contatos
       </h3>

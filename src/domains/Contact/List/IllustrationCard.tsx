@@ -1,5 +1,5 @@
-import { DreamerIllustration } from '&components/Illustrations/DreamerIllustration'
-import { PeopleSearchIllustration } from '&components/Illustrations/PeopleSearchIllustration'
+import { DreamerIllustration } from '&components/Illustrations/DreamerIllustration/DreamerIllustration'
+import { PeopleSearchIllustration } from '&components/Illustrations/PeopleSearchIllustration/PeopleSearchIllustration'
 import * as S from '&domains/Contact/List/style'
 
 export function IllustrationCard({

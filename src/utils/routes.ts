@@ -15,5 +15,8 @@ export const routes = {
   },
   map: {
     path: `/mapa`
+  },
+  pageNotFound: {
+    path: `/*`
   }
 }

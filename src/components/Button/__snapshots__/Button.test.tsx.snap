@@ -8,7 +8,7 @@ exports[`Button should render correctly snapshot 1`] = `
     variant="danger"
   >
     <div
-      class="sc-grXZZQ jsbKLm"
+      class="sc-grXZZQ kWQMMu"
     >
       teste
     </div>

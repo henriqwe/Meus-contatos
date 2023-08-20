@@ -279,7 +279,7 @@ exports[`EditContact should render the contact list correctly 1`] = `
             variant="secondary"
           >
             <div
-              class="sc-eLSjS iBalnB"
+              class="sc-eLSjS gnOQxh"
             >
               <svg
                 aria-hidden="true"
@@ -308,7 +308,7 @@ exports[`EditContact should render the contact list correctly 1`] = `
             variant="primary"
           >
             <div
-              class="sc-eLSjS iBalnB"
+              class="sc-eLSjS gnOQxh"
             >
               <span>
                 Avançar

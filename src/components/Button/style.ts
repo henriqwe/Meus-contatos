@@ -56,7 +56,4 @@ export const ButtonContainer = styled.div`
   width: 100%;
   white-space: nowrap;
   height: 18px;
-  /* @media (min-width: 768px) {
-    width: 13rem;
-  } */
 `
