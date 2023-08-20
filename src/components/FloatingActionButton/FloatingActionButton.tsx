@@ -7,17 +7,17 @@ import { ChevronLeftIcon } from '@heroicons/react/24/outline'
 export function FloatingActionButton() {
   const navigate = useNavigate()
   const { pathname } = useLocation()
-
   const { icon, position, show, title, pathTo } = handlepath(pathname)
 
-  if (!show) {
+  if (!show || !pathTo || !position) {
     return <></>
   }
   return (
     <S.FloatingActionButtonContainer
       title={title}
-      onClick={() => navigate(pathTo!)}
-      position={position!}
+      onClick={() => navigate(pathTo)}
+      position={position}
+      data-testid={'floatingactionbutton-container'}
     >
       <S.WrapperIcon>{icon}</S.WrapperIcon>
     </S.FloatingActionButtonContainer>
@@ -51,7 +51,7 @@ function handlepath(pathname: string) {
       position: 'left',
       icon: (
         <S.IconWrapper>
-          <ChevronLeftIcon style={{ color: 'white' }} />
+          <ChevronLeftIcon />
         </S.IconWrapper>
       ),
       title: 'Ir para mapa',

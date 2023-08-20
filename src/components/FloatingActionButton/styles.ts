@@ -9,7 +9,7 @@ const variantOptions = {
   }
 }
 
-export const FloatingActionButtonContainer = styled.a<{
+export const FloatingActionButtonContainer = styled.div<{
   position: 'left' | 'right'
 }>`
   position: absolute;
@@ -49,6 +49,7 @@ export const WrapperIcon = styled.div`
 export const IconWrapper = styled.div`
   width: 3rem;
   height: 3rem;
+  color: white;
   @media (min-width: 768px) {
     width: 2rem;
     height: 2rem;
