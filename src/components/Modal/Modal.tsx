@@ -43,13 +43,17 @@ export function Modal({
           <S.AlertWrapper>
             <AlertDialog.Cancel asChild>
               <div>
-                <Button variant="danger">
+                <Button variant="danger" data-testid={'modal-buuton-cancel'}>
                   <span>{cancelText}</span> <S.XMarkIcon />
                 </Button>
               </div>
             </AlertDialog.Cancel>
             <AlertDialog.Action asChild>
-              <Button variant="primary" onClick={() => action()}>
+              <Button
+                variant="primary"
+                onClick={() => action()}
+                data-testid={'modal-button-ok'}
+              >
                 <span>{actionsText}</span> <S.CheckIcon />
               </Button>
             </AlertDialog.Action>
