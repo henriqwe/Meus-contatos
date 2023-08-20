@@ -9,7 +9,7 @@ interface props {
 export function Dropdown({ options }: props) {
   return (
     <DropdownMenu.Root>
-      <DropdownMenu.Trigger asChild>
+      <DropdownMenu.Trigger asChild data-testid={'dropdown-menu-trigger'}>
         <button className="IconButton">
           <EllipsisVerticalIcon />
         </button>
