@@ -8,8 +8,6 @@ import { Button } from '&components/Button/Button'
 import { ContactList } from './ContactsList'
 import { SkeletonTheme } from 'react-loading-skeleton'
 import { ContactCardSkelton } from '&components/ContactCard/ContactCardSkeleton'
-import { motion } from 'framer-motion'
-import { FloatingActionButton } from '&components/FloatingActionButton/FloatingActionButton'
 
 export function List() {
   const navigate = useNavigate()
