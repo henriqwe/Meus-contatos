@@ -3,6 +3,7 @@ import { MapPin } from '&components/Icons/MapPin'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { routes } from '&utils/routes'
 import { ChevronLeftIcon } from '@heroicons/react/24/outline'
+import { motion } from 'framer-motion'
 
 export function FloatingActionButton() {
   const navigate = useNavigate()
@@ -13,14 +14,26 @@ export function FloatingActionButton() {
     return <></>
   }
   return (
-    <S.FloatingActionButtonContainer
-      title={title}
-      onClick={() => navigate(pathTo)}
-      position={position}
-      data-testid={'floatingactionbutton-container'}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      style={{ width: '100%', height: '100%' }}
+      transition={{
+        type: 'spring',
+        stiffness: 260,
+        damping: 20
+      }}
     >
-      <S.WrapperIcon>{icon}</S.WrapperIcon>
-    </S.FloatingActionButtonContainer>
+      <S.FloatingActionButtonContainer
+        title={title}
+        onClick={() => navigate(pathTo)}
+        position={position}
+        data-testid={'floatingactionbutton-container'}
+      >
+        <S.WrapperIcon>{icon}</S.WrapperIcon>
+      </S.FloatingActionButtonContainer>
+    </motion.div>
   )
 }
 

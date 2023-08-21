@@ -156,14 +156,14 @@ exports[`ViewContact should render the contact list correctly 1`] = `
       </div>
       <div>
         <div
-          style="width: 100%; height: 100%; opacity: 0.32721323938491376; transform: translateY(201.83602818452584px) translateZ(0);"
+          style="width: 100%; height: 100%; opacity: 0.5719145576163727; transform: translateY(128.4256327150882px) translateZ(0);"
         >
           <section
             class="sc-eLSjS eXINBi"
             data-testid="tab-container"
           >
             <div
-              style="width: 100%; display: flex; opacity: 0.004323708390024716; transform: translateX(-298.7028874829926px) translateZ(0);"
+              style="width: 100%; display: flex; opacity: 0.004323708390024716; transform: translateX(-298.2573585470863px) translateZ(0);"
             >
               <div
                 class="sc-idyqAC hdVvoC"

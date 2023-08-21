@@ -3,7 +3,7 @@
 exports[`MapView should render the contact list correctly 1`] = `
 <div>
   <div
-    class="sc-jrkPcm gOcgPd"
+    class="sc-jrkPcm fTAJzT"
     data-testid="mapview-container"
   >
     <div />

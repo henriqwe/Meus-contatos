@@ -19,7 +19,9 @@ export const FloatingActionButtonContainer = styled.div<{
   align-items: center;
   justify-content: center;
   height: 5rem;
-  bottom: 1rem;
+  bottom: 2.5rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
   background-color: #ffaf49;
   transition: all 100ms ease-in-out;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
@@ -31,13 +33,13 @@ export const FloatingActionButtonContainer = styled.div<{
   }
 
   @media (min-width: 768px) {
-    height: 3rem;
-    width: 3rem;
+    height: 4rem;
+    width: 4rem;
     &:hover {
       background-color: #e5993b;
       cursor: pointer;
-      width: 3.5rem;
-      height: 3.5rem;
+      width: 4.5rem;
+      height: 4.5rem;
     }
   }
 

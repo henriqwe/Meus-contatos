@@ -21,6 +21,7 @@ export const Container = styled.section`
   flex: 1;
   flex-direction: column;
   overflow-x: none;
+  position: relative;
 `
 export const Separator = styled.div`
   width: 100%;

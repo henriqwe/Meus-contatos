@@ -90,19 +90,8 @@ export function ContactList({ ascendentName, nameValue }: props) {
           />
         ))
       )}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        style={{ width: '100%', height: '100%' }}
-        transition={{
-          type: 'spring',
-          stiffness: 260,
-          damping: 20
-        }}
-      >
-        <FloatingActionButton />
-      </motion.div>
+
+      <FloatingActionButton />
     </S.CardList>
   )
 }
