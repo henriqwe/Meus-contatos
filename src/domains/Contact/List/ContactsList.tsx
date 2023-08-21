@@ -9,7 +9,6 @@ import * as S from '&domains/Contact/List/style'
 import { IllustrationCard } from '&domains/Contact/List/IllustrationCard'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { FloatingActionButton } from '&components/FloatingActionButton/FloatingActionButton'
-import { motion } from 'framer-motion'
 
 interface props {
   ascendentName: boolean
