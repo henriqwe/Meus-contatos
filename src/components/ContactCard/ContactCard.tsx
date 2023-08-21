@@ -12,9 +12,9 @@ interface props {
 export function ContactCard({ id, email, name, phone, navigateAction }: props) {
   return (
     <motion.div
-      initial={{ y: 100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      exit={{ y: 100, opacity: 0 }}
+      initial={{ x: -100, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: -100, opacity: 0 }}
       style={{ width: '100%', height: '100%' }}
       transition={{
         type: 'spring',
