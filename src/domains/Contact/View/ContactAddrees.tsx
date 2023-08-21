@@ -61,8 +61,7 @@ export function ContactAddrees({ contact }: { contact: IContact }) {
           style={{
             width: '100%',
             height: '100%',
-            display: 'flex',
-            backgroundColor: 'red'
+            display: 'flex'
           }}
         >
           <S.MapContainer>

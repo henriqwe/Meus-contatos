@@ -45,7 +45,7 @@ export const AvatarPhone = styled.p`
   font-weight: 400;
 `
 export const ContactHeaderWrapper = styled.div`
-  background-color: ${({ theme }) => theme.colors.secondary[400]};
+  background-color: ${({ theme }) => theme.colors.secondary?.[400]};
   padding: 0.8rem;
   padding-top: 1rem;
 `

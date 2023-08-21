@@ -4,6 +4,7 @@ import { Input } from './Input'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as Yup from 'yup'
+import { TestProviders } from '&utils/tests/TestProviders'
 
 export const schema = Yup.object().shape({
   name: Yup.string().required('Campo obrigatório')
@@ -15,7 +16,9 @@ describe('Input', () => {
     const { result } = renderHook(() => useForm())
 
     const { container } = render(
-      <Input control={result.current.control} label="teste" name="john due" />
+      <TestProviders>
+        <Input control={result.current.control} label="teste" name="john due" />
+      </TestProviders>
     )
 
     expect(container).toMatchSnapshot()
@@ -31,19 +34,21 @@ describe('Input', () => {
     } = result.current
 
     const { findByTestId } = render(
-      <form onSubmit={handleSubmit(onSubmitForm)}>
-        <Input
-          control={control}
-          label="name"
-          name="name"
-          data-testid={'inputName'}
-          error={errors['name']}
-          value={undefined}
-        />
-        <button data-testid={'buttonOK'} type="submit">
-          ok
-        </button>
-      </form>
+      <TestProviders>
+        <form onSubmit={handleSubmit(onSubmitForm)}>
+          <Input
+            control={control}
+            label="name"
+            name="name"
+            data-testid={'inputName'}
+            error={errors['name']}
+            value={undefined}
+          />
+          <button data-testid={'buttonOK'} type="submit">
+            ok
+          </button>
+        </form>
+      </TestProviders>
     )
 
     const inputName = await findByTestId('inputName')

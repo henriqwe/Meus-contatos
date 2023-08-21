@@ -8,7 +8,7 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   gap: 30px;
-  background-color: ${({ theme }) => theme.colors.secondary[400]};
+  background-color: ${({ theme }) => theme.colors.secondary?.[400]};
 `
 export const IllustrationWrapper = styled.div`
   width: 15rem;

@@ -14,7 +14,7 @@ export const CardList = styled.div`
 `
 
 export const Container = styled.section`
-  background-color: ${({ theme }) => theme.colors.secondary[400]};
+  background-color: ${({ theme }) => theme.colors.secondary?.[400]};
   max-height: 100%;
   min-height: 100%;
   display: flex;

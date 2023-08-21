@@ -3,7 +3,7 @@
 exports[`Button should render correctly snapshot 1`] = `
 <div>
   <button
-    class="sc-bcPKhP bjmMbG"
+    class="sc-bcPKhP gOVBkF"
     data-testid="button"
     variant="danger"
   >

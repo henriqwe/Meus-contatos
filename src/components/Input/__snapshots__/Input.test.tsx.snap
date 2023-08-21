@@ -8,7 +8,7 @@ exports[`Input should render correctly snapshot 1`] = `
     >
       <input
         autocomplete="off"
-        class="sc-hLclGa iQqmVP"
+        class="sc-hLclGa gyuuaE"
         id="john due"
         isinvalid="0"
         label="teste"
@@ -23,7 +23,7 @@ exports[`Input should render correctly snapshot 1`] = `
       </span>
     </div>
     <label
-      class="sc-bcPKhP gAQhCL"
+      class="sc-bcPKhP hSXdPs"
     />
   </div>
 </div>

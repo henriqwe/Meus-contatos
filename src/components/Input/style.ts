@@ -5,7 +5,7 @@ export const ErrorMessage = styled.label`
   font-size: 14px;
   padding-left: 0.5rem;
   font-weight: 600;
-  color: ${({ theme }) => theme.colors?.danger[700]};
+  color: ${({ theme }) => theme.colors.danger[700]};
   padding-top: 0.1rem;
 `
 export const InputWrapper = styled.div`
@@ -33,9 +33,9 @@ export const Input = styled.input<{ isinvalid: 1 | 0; label: string }>`
   &:focus {
     border: 2px solid
       ${({ isinvalid, theme }) =>
-        isinvalid ? theme.colors.danger[700] : theme.colors?.primary[700]};
+        isinvalid ? theme.colors.danger[700] : theme.colors.primary[700]};
     outline-color: ${({ isinvalid, theme }) =>
-      isinvalid ? theme.colors.danger[700] : theme.colors?.primary[700]};
+      isinvalid ? theme.colors.danger[700] : theme.colors.primary[700]};
   }
   + span::after {
     content: '${({ label }) => label}';
@@ -49,29 +49,29 @@ export const Input = styled.input<{ isinvalid: 1 | 0; label: string }>`
   }
   &:not(:placeholder-shown) + span {
     color: ${({ isinvalid, theme }) =>
-      isinvalid ? theme.colors.danger[700] : theme.colors?.primary[700]};
+      isinvalid ? theme.colors.danger[700] : theme.colors.primary[700]};
     transform: translateX(10px) translateY(-17px);
     font-size: 0.75rem;
     font-weight: 600;
-    background-color: ${({ theme }) => theme.colors?.white};
+    background-color: ${({ theme }) => theme.colors.white};
     height: 5px;
     padding: 0 6px;
   }
 
   &:focus + span {
     color: ${({ isinvalid, theme }) =>
-      isinvalid ? theme.colors.danger[700] : theme.colors?.primary[700]};
+      isinvalid ? theme.colors.danger[700] : theme.colors.primary[700]};
     transform: translateX(10px) translateY(-17px);
     font-size: 0.75rem;
     font-weight: 600;
-    background-color: ${({ theme }) => theme.colors?.white};
+    background-color: ${({ theme }) => theme.colors.white};
     height: 5px;
     padding: 0 6px;
   }
 
   &:not(:focus) + span {
     color: ${({ isinvalid, theme }) =>
-      isinvalid ? theme.colors.danger[700] : theme.colors?.slate[600]};
+      isinvalid ? theme.colors.danger[700] : theme.colors.slate[600]};
   }
 `
 

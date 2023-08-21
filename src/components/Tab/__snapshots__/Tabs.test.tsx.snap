@@ -6,13 +6,13 @@ exports[`Tabs should render correctly snapshot 1`] = `
     class="sc-bcPKhP cTRxBW"
   >
     <div
-      class="sc-grXZZQ dXkqDw"
+      class="sc-grXZZQ giLQpt"
       data-testid="tab-dados"
     >
       Dados
     </div>
     <div
-      class="sc-grXZZQ kxbWsj"
+      class="sc-grXZZQ gbQVZO"
       data-testid="tab-endereco"
     >
       Endereço

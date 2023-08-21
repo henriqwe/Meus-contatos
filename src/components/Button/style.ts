@@ -15,12 +15,12 @@ export const Button = styled.button<{ variant: TVariant }>`
   transition: all 0.5s;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
-  background-color: ${({ variant, theme }) => theme.colors?.[variant][700]};
+  background-color: ${({ variant, theme }) => theme.colors[variant][700]};
   color: ${({ variant, theme }) =>
-    variant === 'secondary' ? theme.colors.slate : theme.colors?.white};
+    variant === 'secondary' ? theme.colors.slate : theme.colors.white};
 
   &:hover {
-    background-color: ${({ variant, theme }) => theme.colors?.[variant][800]};
+    background-color: ${({ variant, theme }) => theme.colors[variant][800]};
   }
 `
 export const ButtonContainer = styled.div`
