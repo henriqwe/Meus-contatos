@@ -21,12 +21,13 @@
 
 ## Informações
 
-- O desenvolvida aplicação foi propotor por um desafio técnico da empresa Pecege, o desafio com foco em front-end. O objetivo é a construção de
+- O desenvolvimento da aplicação foi proposto por um desafio técnico da empresa Pecege, o desafio com foco em front-end. O objetivo é a construção de
   interface gráfica SPA responsiva utilizando a biblioteca React. [Clique aqui](https://meus-contatos-henriqwe.vercel.app/) para ver a demo
 
 ## Screenshots
 
-![meus contatos gif](https://cdn.discordapp.com/attachments/1054807308326146070/1142994974342905917/meus_contatos.gif)
+![meus contatos gif](https://cdn.discordapp.com/attachments/1054807308326146070/1142994974342905917/meus_contatos.gif) &nbsp;
+
 ![meus contatos gif](https://cdn.discordapp.com/attachments/1054807308326146070/1143004182245290024/meus_contatos_responsivo.gif)
 
 ## Setup
