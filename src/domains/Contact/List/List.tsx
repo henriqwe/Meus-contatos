@@ -6,6 +6,10 @@ import { routes } from '&utils/routes'
 import * as S from '&domains/Contact/List/style'
 import { Button } from '&components/Button/Button'
 import { ContactList } from './ContactsList'
+import { SkeletonTheme } from 'react-loading-skeleton'
+import { ContactCardSkelton } from '&components/ContactCard/ContactCardSkeleton'
+import { motion } from 'framer-motion'
+import { FloatingActionButton } from '&components/FloatingActionButton/FloatingActionButton'
 
 export function List() {
   const navigate = useNavigate()
@@ -65,7 +69,13 @@ export function List() {
       <S.CardList>
         <Suspense
           fallback={
-            <S.LoadingContainer>{/* <Loading /> */}</S.LoadingContainer>
+            <S.CardList>
+              <SkeletonTheme baseColor="#d9d8df" highlightColor="#bebbbb">
+                {Array.from({ length: 9 }).map((_, idx) => (
+                  <ContactCardSkelton key={'Skeleton' + idx} />
+                ))}
+              </SkeletonTheme>
+            </S.CardList>
           }
         >
           <ContactList ascendentName={ascendentName} nameValue={nameValue} />

@@ -156,14 +156,14 @@ exports[`ViewContact should render the contact list correctly 1`] = `
       </div>
       <div>
         <div
-          style="width: 100%; height: 100%; opacity: 0.18627757397036382; transform: translateY(244.11672780889091px) translateZ(0);"
+          style="width: 100%; height: 100%; opacity: 0.3027067213852829; transform: translateY(209.18798358441512px) translateZ(0);"
         >
           <section
             class="sc-eLSjS eXINBi"
             data-testid="tab-container"
           >
             <div
-              style="width: 100%; display: flex; opacity: 0.004323708390024716; transform: translateX(-298.7028874829926px) translateZ(0);"
+              style="width: 100%; display: flex; opacity: 0.00748905250463594; transform: translateX(-297.75328424860925px) translateZ(0);"
             >
               <div
                 class="sc-idyqAC hdVvoC"
@@ -235,7 +235,7 @@ exports[`ViewContact should render the contact list correctly 1`] = `
               </div>
             </div>
             <div
-              style="width: 100%; height: 100%; display: flex; background-color: red; opacity: 0.0019726890909496086; transform: translateX(299.4081932727151px) translateZ(0);"
+              style="width: 100%; height: 100%; display: flex; background-color: red; opacity: 0.0030421213605271724; transform: translateX(299.0873635918419px) translateZ(0);"
             >
               <div
                 class="sc-fEyylQ kZgmcW"

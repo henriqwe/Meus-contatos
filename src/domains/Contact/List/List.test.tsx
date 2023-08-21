@@ -53,6 +53,7 @@ describe('List', () => {
         <List />
       </TestProviders>
     )
+
     const namesAsc = await findAllByTestId('name')
     const phonesAsc = await findAllByTestId('phone')
     const emailsAsc = await findAllByTestId('email')
@@ -72,31 +73,7 @@ describe('List', () => {
     expect(phonesDesc[0].textContent).toEqual('493-170-9623 x156')
     expect(emailsDesc[0].textContent).toEqual('Julianne.OConner@kory.org')
   })
-  it('should sort contact name in descendent format', async () => {
-    const { findByTestId, findAllByTestId } = render(
-      <TestProviders>
-        <List />
-      </TestProviders>
-    )
-    const namesAsc = await findAllByTestId('name')
-    const phonesAsc = await findAllByTestId('phone')
-    const emailsAsc = await findAllByTestId('email')
 
-    expect(namesAsc[0].textContent).toEqual('Chelsey Dietrich')
-    expect(phonesAsc[0].textContent).toEqual('(254)954-1289')
-    expect(emailsAsc[0].textContent).toEqual('Lucio_Hettinger@annie.ca')
-
-    const button = await findByTestId('button-sort-name')
-    await waitFor(() => fireEvent.click(button))
-
-    const namesDesc = await findAllByTestId('name')
-    const phonesDesc = await findAllByTestId('phone')
-    const emailsDesc = await findAllByTestId('email')
-
-    expect(namesDesc[0].textContent).toEqual('Patricia Lebsack')
-    expect(phonesDesc[0].textContent).toEqual('493-170-9623 x156')
-    expect(emailsDesc[0].textContent).toEqual('Julianne.OConner@kory.org')
-  })
   it('should show a message and illustration in the screen when not found a searched contact', async () => {
     const { findByTestId, findAllByTestId, findByText } = render(
       <TestProviders>

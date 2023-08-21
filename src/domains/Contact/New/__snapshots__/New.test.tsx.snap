@@ -145,132 +145,136 @@ exports[`NewContact should render the contact list correctly 1`] = `
       class="sc-eDnVMP jYoMzt"
     >
       <div
-        class="sc-jSwlEQ bUSzpO"
+        style="width: 100%; height: 100%; opacity: 0;"
       >
-        <div>
-          <div
-            class="sc-fnOeiS ccaUeN"
-          >
-            <input
-              autocomplete="off"
-              class="sc-fEyylQ gdwRnj"
-              data-testid="input-name"
-              id="name"
-              isinvalid="0"
-              label="Nome *"
-              placeholder=""
-              type="text"
-              value=""
-            />
-            <span
-              class="sc-bjEwCx hbtnzl"
+        <div
+          class="sc-jSwlEQ bUSzpO"
+        >
+          <div>
+            <div
+              class="sc-fnOeiS ccaUeN"
             >
-               
-            </span>
-          </div>
-          <label
-            class="sc-ksJisA cxqOvz"
-          />
-        </div>
-        <div>
-          <div
-            class="sc-fnOeiS ccaUeN"
-          >
-            <input
-              autocomplete="off"
-              class="sc-fEyylQ bAtXRS"
-              data-testid="input-email"
-              id="email"
-              isinvalid="0"
-              label="Email *"
-              placeholder=""
-              type="text"
-              value=""
+              <input
+                autocomplete="off"
+                class="sc-fEyylQ gdwRnj"
+                data-testid="input-name"
+                id="name"
+                isinvalid="0"
+                label="Nome *"
+                placeholder=""
+                type="text"
+                value=""
+              />
+              <span
+                class="sc-bjEwCx hbtnzl"
+              >
+                 
+              </span>
+            </div>
+            <label
+              class="sc-ksJisA cxqOvz"
             />
-            <span
-              class="sc-bjEwCx hbtnzl"
-            >
-               
-            </span>
           </div>
-          <label
-            class="sc-ksJisA cxqOvz"
-          />
-        </div>
-        <div>
-          <div
-            class="sc-fnOeiS ccaUeN"
-          >
-            <input
-              autocomplete="off"
-              class="sc-fEyylQ hCaZTA"
-              data-testid="input-phone"
-              id="phone"
-              isinvalid="0"
-              label="Telefone *"
-              placeholder=""
-              type="text"
-              value=""
+          <div>
+            <div
+              class="sc-fnOeiS ccaUeN"
+            >
+              <input
+                autocomplete="off"
+                class="sc-fEyylQ bAtXRS"
+                data-testid="input-email"
+                id="email"
+                isinvalid="0"
+                label="Email *"
+                placeholder=""
+                type="text"
+                value=""
+              />
+              <span
+                class="sc-bjEwCx hbtnzl"
+              >
+                 
+              </span>
+            </div>
+            <label
+              class="sc-ksJisA cxqOvz"
             />
-            <span
-              class="sc-bjEwCx hbtnzl"
-            >
-               
-            </span>
           </div>
-          <label
-            class="sc-ksJisA cxqOvz"
-          />
-        </div>
-        <div>
-          <div
-            class="sc-fnOeiS ccaUeN"
-          >
-            <input
-              autocomplete="off"
-              class="sc-fEyylQ bXrllK"
-              data-testid="input-username"
-              id="username"
-              isinvalid="0"
-              label="Nome de usuário"
-              placeholder=""
-              type="text"
-              value=""
+          <div>
+            <div
+              class="sc-fnOeiS ccaUeN"
+            >
+              <input
+                autocomplete="off"
+                class="sc-fEyylQ hCaZTA"
+                data-testid="input-phone"
+                id="phone"
+                isinvalid="0"
+                label="Telefone *"
+                placeholder=""
+                type="text"
+                value=""
+              />
+              <span
+                class="sc-bjEwCx hbtnzl"
+              >
+                 
+              </span>
+            </div>
+            <label
+              class="sc-ksJisA cxqOvz"
             />
-            <span
-              class="sc-bjEwCx hbtnzl"
-            >
-               
-            </span>
           </div>
-          <label
-            class="sc-ksJisA cxqOvz"
-          />
-        </div>
-        <div>
-          <div
-            class="sc-fnOeiS ccaUeN"
-          >
-            <input
-              autocomplete="off"
-              class="sc-fEyylQ ZCCvb"
-              data-testid="input-website"
-              id="website"
-              isinvalid="0"
-              label="Website"
-              placeholder=""
-              type="text"
-              value=""
+          <div>
+            <div
+              class="sc-fnOeiS ccaUeN"
+            >
+              <input
+                autocomplete="off"
+                class="sc-fEyylQ bXrllK"
+                data-testid="input-username"
+                id="username"
+                isinvalid="0"
+                label="Nome de usuário"
+                placeholder=""
+                type="text"
+                value=""
+              />
+              <span
+                class="sc-bjEwCx hbtnzl"
+              >
+                 
+              </span>
+            </div>
+            <label
+              class="sc-ksJisA cxqOvz"
             />
-            <span
-              class="sc-bjEwCx hbtnzl"
-            >
-               
-            </span>
           </div>
-          <label
-            class="sc-ksJisA cxqOvz"
-          />
+          <div>
+            <div
+              class="sc-fnOeiS ccaUeN"
+            >
+              <input
+                autocomplete="off"
+                class="sc-fEyylQ ZCCvb"
+                data-testid="input-website"
+                id="website"
+                isinvalid="0"
+                label="Website"
+                placeholder=""
+                type="text"
+                value=""
+              />
+              <span
+                class="sc-bjEwCx hbtnzl"
+              >
+                 
+              </span>
+            </div>
+            <label
+              class="sc-ksJisA cxqOvz"
+            />
+          </div>
         </div>
       </div>
       <div

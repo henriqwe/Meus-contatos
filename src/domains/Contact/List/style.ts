@@ -76,10 +76,9 @@ export const IllustrationContainer = styled.div`
 export const LoadingContainer = styled.div`
   display: flex;
   flex: 1;
+  background-color: red;
   flex-direction: column;
   gap: 3rem;
-  align-items: center;
-  padding-top: 6rem;
 `
 export const IllustrationWrapper = styled.div`
   height: 12rem;

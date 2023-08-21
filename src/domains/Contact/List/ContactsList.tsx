@@ -1,6 +1,5 @@
 import type { IContact } from '&types/contact'
 import { fetchContacts } from '&services/queries/fetchContacts'
-
 import { useEffect, useState } from 'react'
 import { sortArrayByKey } from '&utils/handles/sortArrayByKey'
 import { useNavigate } from 'react-router-dom'
@@ -10,6 +9,7 @@ import * as S from '&domains/Contact/List/style'
 import { IllustrationCard } from '&domains/Contact/List/IllustrationCard'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { FloatingActionButton } from '&components/FloatingActionButton/FloatingActionButton'
+import { motion } from 'framer-motion'
 
 interface props {
   ascendentName: boolean
@@ -81,7 +81,7 @@ export function ContactList({ ascendentName, nameValue }: props) {
       ) : (
         contactsFiltered?.map((contact) => (
           <ContactCard
-            key={contact.id}
+            key={contact.phone + contact.id}
             id={contact.id}
             phone={contact.phone}
             name={contact.name}
@@ -90,7 +90,19 @@ export function ContactList({ ascendentName, nameValue }: props) {
           />
         ))
       )}
-      <FloatingActionButton />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        style={{ width: '100%', height: '100%' }}
+        transition={{
+          type: 'spring',
+          stiffness: 260,
+          damping: 20
+        }}
+      >
+        <FloatingActionButton />
+      </motion.div>
     </S.CardList>
   )
 }

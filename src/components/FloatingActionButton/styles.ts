@@ -21,16 +21,24 @@ export const FloatingActionButtonContainer = styled.div<{
   height: 5rem;
   bottom: 1rem;
   background-color: #ffaf49;
-  transition: all 0.5s;
+  transition: all 100ms ease-in-out;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
   &:hover {
     background-color: #e5993b;
     cursor: pointer;
+    width: 5.5rem;
+    height: 5.5rem;
   }
 
   @media (min-width: 768px) {
     height: 3rem;
     width: 3rem;
+    &:hover {
+      background-color: #e5993b;
+      cursor: pointer;
+      width: 3.5rem;
+      height: 3.5rem;
+    }
   }
 
   ${({ position }) => variantOptions[position]}

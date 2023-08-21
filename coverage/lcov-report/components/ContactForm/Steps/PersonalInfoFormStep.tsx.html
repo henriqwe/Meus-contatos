@@ -144,7 +144,21 @@
 <a name='L79'></a><a href='#L79'>79</a>
 <a name='L80'></a><a href='#L80'>80</a>
 <a name='L81'></a><a href='#L81'>81</a>
-<a name='L82'></a><a href='#L82'>82</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -225,6 +239,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Input } from '&amp;components/Input/Input'
 import {
   Control,
@@ -235,6 +261,7 @@ import {
 } from 'react-hook-form'
 import { ActionButtons } from '../ActionButtons'
 import * as S from '../style'
+import { motion } from 'framer-motion'
 &nbsp;
 interface props {
   isLoading: boolean
@@ -256,48 +283,60 @@ export function PersonalInfoFormStep({
 }: props) {
   return (
     &lt;S.Form onSubmit={handleSubmit(onSubmit)}&gt;
-      &lt;S.InputsSection&gt;
-        &lt;Input
-          control={control}
-          name="name"
-          label="Nome *"
-          error={errors['name']}
-          disabled={isLoading}
-          data-testid={'input-name'}
-        /&gt;
-        &lt;Input
-          control={control}
-          name="email"
-          label="Email *"
-          error={errors['email']}
-          disabled={isLoading}
-          data-testid={'input-email'}
-        /&gt;
-        &lt;Input
-          control={control}
-          name="phone"
-          label="Telefone *"
-          error={errors['phone']}
-          disabled={isLoading}
-          data-testid={'input-phone'}
-        /&gt;
-        &lt;Input
-          control={control}
-          name="username"
-          label="Nome de usuário"
-          error={errors['username']}
-          disabled={isLoading}
-          data-testid={'input-username'}
-        /&gt;
-        &lt;Input
-          control={control}
-          name="website"
-          label="Website"
-          error={errors['website']}
-          disabled={isLoading}
-          data-testid={'input-website'}
-        /&gt;
-      &lt;/S.InputsSection&gt;
+      &lt;motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        style={{ width: '100%', height: '100%' }}
+        transition={{
+          type: 'spring',
+          stiffness: 260,
+          damping: 20
+        }}
+      &gt;
+        &lt;S.InputsSection&gt;
+          &lt;Input
+            control={control}
+            name="name"
+            label="Nome *"
+            error={errors['name']}
+            disabled={isLoading}
+            data-testid={'input-name'}
+          /&gt;
+          &lt;Input
+            control={control}
+            name="email"
+            label="Email *"
+            error={errors['email']}
+            disabled={isLoading}
+            data-testid={'input-email'}
+          /&gt;
+          &lt;Input
+            control={control}
+            name="phone"
+            label="Telefone *"
+            error={errors['phone']}
+            disabled={isLoading}
+            data-testid={'input-phone'}
+          /&gt;
+          &lt;Input
+            control={control}
+            name="username"
+            label="Nome de usuário"
+            error={errors['username']}
+            disabled={isLoading}
+            data-testid={'input-username'}
+          /&gt;
+          &lt;Input
+            control={control}
+            name="website"
+            label="Website"
+            error={errors['website']}
+            disabled={isLoading}
+            data-testid={'input-website'}
+          /&gt;
+        &lt;/S.InputsSection&gt;
+      &lt;/motion.div&gt;
       &lt;ActionButtons
         activeStep={activeStep}
         handlePreviousStep={handlePreviousStep}
@@ -313,7 +352,7 @@ export function PersonalInfoFormStep({
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-08-20T22:24:09.101Z
+                at 2023-08-21T00:10:50.987Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

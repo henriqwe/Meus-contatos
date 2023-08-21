@@ -117,8 +117,909 @@ exports[`List should render the contact list correctly 1`] = `
       class="sc-jSwlEQ kKbemP"
     >
       <div
-        class="sc-eLSjS imMixF"
-      />
+        class="sc-jSwlEQ kKbemP"
+      >
+        <div
+          style="width: 100%; height: 100%; opacity: 0; transform: translateY(100px) translateZ(0);"
+        >
+          <div
+            class="sc-kgvdhe gSkLZF"
+            data-testid="contactcard-container-skeleton"
+          >
+            <div
+              class="sc-fLBbxL gvbVmw"
+            >
+              <div
+                class="sc-bBbNsw detMIc"
+              >
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="avatar-skeleton"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 48px; height: 48px; border-radius: 50%; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+              </div>
+              <div
+                class="sc-ivDvhZ caMIXC"
+              >
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-cwKisF kINtFM"
+                    data-testid="name-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 145px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-lltjXc dzmMAU"
+                    data-testid="phone-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 85px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-lltjXc dzmMAU"
+                    data-testid="email-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 125px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-iJfdHH klRZog"
+            />
+          </div>
+        </div>
+        <div
+          style="width: 100%; height: 100%; opacity: 0; transform: translateY(100px) translateZ(0);"
+        >
+          <div
+            class="sc-kgvdhe gSkLZF"
+            data-testid="contactcard-container-skeleton"
+          >
+            <div
+              class="sc-fLBbxL gvbVmw"
+            >
+              <div
+                class="sc-bBbNsw detMIc"
+              >
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="avatar-skeleton"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 48px; height: 48px; border-radius: 50%; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+              </div>
+              <div
+                class="sc-ivDvhZ caMIXC"
+              >
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-cwKisF kINtFM"
+                    data-testid="name-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 145px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-lltjXc dzmMAU"
+                    data-testid="phone-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 85px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-lltjXc dzmMAU"
+                    data-testid="email-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 125px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-iJfdHH klRZog"
+            />
+          </div>
+        </div>
+        <div
+          style="width: 100%; height: 100%; opacity: 0; transform: translateY(100px) translateZ(0);"
+        >
+          <div
+            class="sc-kgvdhe gSkLZF"
+            data-testid="contactcard-container-skeleton"
+          >
+            <div
+              class="sc-fLBbxL gvbVmw"
+            >
+              <div
+                class="sc-bBbNsw detMIc"
+              >
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="avatar-skeleton"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 48px; height: 48px; border-radius: 50%; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+              </div>
+              <div
+                class="sc-ivDvhZ caMIXC"
+              >
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-cwKisF kINtFM"
+                    data-testid="name-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 145px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-lltjXc dzmMAU"
+                    data-testid="phone-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 85px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-lltjXc dzmMAU"
+                    data-testid="email-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 125px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-iJfdHH klRZog"
+            />
+          </div>
+        </div>
+        <div
+          style="width: 100%; height: 100%; opacity: 0; transform: translateY(100px) translateZ(0);"
+        >
+          <div
+            class="sc-kgvdhe gSkLZF"
+            data-testid="contactcard-container-skeleton"
+          >
+            <div
+              class="sc-fLBbxL gvbVmw"
+            >
+              <div
+                class="sc-bBbNsw detMIc"
+              >
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="avatar-skeleton"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 48px; height: 48px; border-radius: 50%; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+              </div>
+              <div
+                class="sc-ivDvhZ caMIXC"
+              >
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-cwKisF kINtFM"
+                    data-testid="name-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 145px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-lltjXc dzmMAU"
+                    data-testid="phone-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 85px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-lltjXc dzmMAU"
+                    data-testid="email-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 125px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-iJfdHH klRZog"
+            />
+          </div>
+        </div>
+        <div
+          style="width: 100%; height: 100%; opacity: 0; transform: translateY(100px) translateZ(0);"
+        >
+          <div
+            class="sc-kgvdhe gSkLZF"
+            data-testid="contactcard-container-skeleton"
+          >
+            <div
+              class="sc-fLBbxL gvbVmw"
+            >
+              <div
+                class="sc-bBbNsw detMIc"
+              >
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="avatar-skeleton"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 48px; height: 48px; border-radius: 50%; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+              </div>
+              <div
+                class="sc-ivDvhZ caMIXC"
+              >
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-cwKisF kINtFM"
+                    data-testid="name-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 145px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-lltjXc dzmMAU"
+                    data-testid="phone-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 85px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-lltjXc dzmMAU"
+                    data-testid="email-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 125px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-iJfdHH klRZog"
+            />
+          </div>
+        </div>
+        <div
+          style="width: 100%; height: 100%; opacity: 0; transform: translateY(100px) translateZ(0);"
+        >
+          <div
+            class="sc-kgvdhe gSkLZF"
+            data-testid="contactcard-container-skeleton"
+          >
+            <div
+              class="sc-fLBbxL gvbVmw"
+            >
+              <div
+                class="sc-bBbNsw detMIc"
+              >
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="avatar-skeleton"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 48px; height: 48px; border-radius: 50%; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+              </div>
+              <div
+                class="sc-ivDvhZ caMIXC"
+              >
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-cwKisF kINtFM"
+                    data-testid="name-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 145px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-lltjXc dzmMAU"
+                    data-testid="phone-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 85px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-lltjXc dzmMAU"
+                    data-testid="email-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 125px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-iJfdHH klRZog"
+            />
+          </div>
+        </div>
+        <div
+          style="width: 100%; height: 100%; opacity: 0; transform: translateY(100px) translateZ(0);"
+        >
+          <div
+            class="sc-kgvdhe gSkLZF"
+            data-testid="contactcard-container-skeleton"
+          >
+            <div
+              class="sc-fLBbxL gvbVmw"
+            >
+              <div
+                class="sc-bBbNsw detMIc"
+              >
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="avatar-skeleton"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 48px; height: 48px; border-radius: 50%; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+              </div>
+              <div
+                class="sc-ivDvhZ caMIXC"
+              >
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-cwKisF kINtFM"
+                    data-testid="name-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 145px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-lltjXc dzmMAU"
+                    data-testid="phone-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 85px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-lltjXc dzmMAU"
+                    data-testid="email-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 125px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-iJfdHH klRZog"
+            />
+          </div>
+        </div>
+        <div
+          style="width: 100%; height: 100%; opacity: 0; transform: translateY(100px) translateZ(0);"
+        >
+          <div
+            class="sc-kgvdhe gSkLZF"
+            data-testid="contactcard-container-skeleton"
+          >
+            <div
+              class="sc-fLBbxL gvbVmw"
+            >
+              <div
+                class="sc-bBbNsw detMIc"
+              >
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="avatar-skeleton"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 48px; height: 48px; border-radius: 50%; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+              </div>
+              <div
+                class="sc-ivDvhZ caMIXC"
+              >
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-cwKisF kINtFM"
+                    data-testid="name-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 145px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-lltjXc dzmMAU"
+                    data-testid="phone-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 85px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-lltjXc dzmMAU"
+                    data-testid="email-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 125px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-iJfdHH klRZog"
+            />
+          </div>
+        </div>
+        <div
+          style="width: 100%; height: 100%; opacity: 0; transform: translateY(100px) translateZ(0);"
+        >
+          <div
+            class="sc-kgvdhe gSkLZF"
+            data-testid="contactcard-container-skeleton"
+          >
+            <div
+              class="sc-fLBbxL gvbVmw"
+            >
+              <div
+                class="sc-bBbNsw detMIc"
+              >
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="avatar-skeleton"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 48px; height: 48px; border-radius: 50%; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+              </div>
+              <div
+                class="sc-ivDvhZ caMIXC"
+              >
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-cwKisF kINtFM"
+                    data-testid="name-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 145px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-lltjXc dzmMAU"
+                    data-testid="phone-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 85px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="sc-ezGUZh fivcSW"
+                >
+                  <span
+                    class="sc-lltjXc dzmMAU"
+                    data-testid="email-skeleton"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 125px; --base-color: #d9d8df; --highlight-color: #bebbbb;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-iJfdHH klRZog"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </div>

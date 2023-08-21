@@ -5,6 +5,7 @@ import { AnimationRoutes } from '&utils/AnimationRoutes'
 import { ThemeProvider } from 'styled-components'
 import { theme } from './styles'
 import { MainLayout } from '&components/Layout/Layout'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 export default function App() {
   return (

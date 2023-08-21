@@ -6,771 +6,815 @@ exports[`ContactList should render the contact list correctly 1`] = `
     class="sc-jrkPcm efXjYQ"
   >
     <div
-      class="sc-grXZZQ gZllkS"
-      data-testid="contactcard-container"
+      style="width: 100%; height: 100%; opacity: 0; transform: translateY(100px) translateZ(0);"
     >
       <div
-        class="sc-dkjKgF dvdRDZ"
+        class="sc-grXZZQ gZllkS"
+        data-testid="contactcard-container"
       >
         <div
-          class="sc-hLclGa kwlGWp"
+          class="sc-dkjKgF dvdRDZ"
         >
           <div
-            class="sc-bcPKhP LlyrL"
-            data-testid="avatar-container"
-            variant="sm"
+            class="sc-hLclGa kwlGWp"
           >
-            C
-            D
+            <div
+              class="sc-bcPKhP LlyrL"
+              data-testid="avatar-container"
+              variant="sm"
+            >
+              C
+              D
+            </div>
+          </div>
+          <div
+            class="sc-eDnVMP bgmlqB"
+          >
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-jSwlEQ hbBJZR"
+                data-testid="name"
+              >
+                Chelsey Dietrich
+              </span>
+            </div>
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-gKHVLF dipxwJ"
+                data-testid="phone"
+              >
+                (254)954-1289
+              </span>
+            </div>
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-gKHVLF dipxwJ"
+                data-testid="email"
+              >
+                Lucio_Hettinger@annie.ca
+              </span>
+            </div>
           </div>
         </div>
         <div
-          class="sc-eDnVMP bgmlqB"
-        >
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-jSwlEQ hbBJZR"
-              data-testid="name"
-            >
-              Chelsey Dietrich
-            </span>
-          </div>
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-gKHVLF dipxwJ"
-              data-testid="phone"
-            >
-              (254)954-1289
-            </span>
-          </div>
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-gKHVLF dipxwJ"
-              data-testid="email"
-            >
-              Lucio_Hettinger@annie.ca
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        class="sc-iBAaJG kwpJTv"
-      >
-        <svg
-          aria-hidden="true"
-          class="sc-ftLKQv jnvNod"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-    </div>
-    <div
-      class="sc-grXZZQ gZllkS"
-      data-testid="contactcard-container"
-    >
-      <div
-        class="sc-dkjKgF dvdRDZ"
-      >
-        <div
-          class="sc-hLclGa kwlGWp"
-        >
-          <div
-            class="sc-bcPKhP LlyrL"
-            data-testid="avatar-container"
-            variant="sm"
-          >
-            C
-            D
-          </div>
-        </div>
-        <div
-          class="sc-eDnVMP bgmlqB"
-        >
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-jSwlEQ hbBJZR"
-              data-testid="name"
-            >
-              Clementina DuBuque
-            </span>
-          </div>
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-gKHVLF dipxwJ"
-              data-testid="phone"
-            >
-              024-648-3804
-            </span>
-          </div>
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-gKHVLF dipxwJ"
-              data-testid="email"
-            >
-              Rey.Padberg@karina.biz
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        class="sc-iBAaJG kwpJTv"
-      >
-        <svg
-          aria-hidden="true"
-          class="sc-ftLKQv jnvNod"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-    </div>
-    <div
-      class="sc-grXZZQ gZllkS"
-      data-testid="contactcard-container"
-    >
-      <div
-        class="sc-dkjKgF dvdRDZ"
-      >
-        <div
-          class="sc-hLclGa kwlGWp"
-        >
-          <div
-            class="sc-bcPKhP LlyrL"
-            data-testid="avatar-container"
-            variant="sm"
-          >
-            C
-            B
-          </div>
-        </div>
-        <div
-          class="sc-eDnVMP bgmlqB"
-        >
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-jSwlEQ hbBJZR"
-              data-testid="name"
-            >
-              Clementine Bauch
-            </span>
-          </div>
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-gKHVLF dipxwJ"
-              data-testid="phone"
-            >
-              1-463-123-4447
-            </span>
-          </div>
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-gKHVLF dipxwJ"
-              data-testid="email"
-            >
-              Nathan@yesenia.net
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        class="sc-iBAaJG kwpJTv"
-      >
-        <svg
-          aria-hidden="true"
-          class="sc-ftLKQv jnvNod"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-    </div>
-    <div
-      class="sc-grXZZQ gZllkS"
-      data-testid="contactcard-container"
-    >
-      <div
-        class="sc-dkjKgF dvdRDZ"
-      >
-        <div
-          class="sc-hLclGa kwlGWp"
-        >
-          <div
-            class="sc-bcPKhP LlyrL"
-            data-testid="avatar-container"
-            variant="sm"
-          >
-            E
-            H
-          </div>
-        </div>
-        <div
-          class="sc-eDnVMP bgmlqB"
-        >
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-jSwlEQ hbBJZR"
-              data-testid="name"
-            >
-              Ervin Howell
-            </span>
-          </div>
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-gKHVLF dipxwJ"
-              data-testid="phone"
-            >
-              010-692-6593 x09125
-            </span>
-          </div>
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-gKHVLF dipxwJ"
-              data-testid="email"
-            >
-              Shanna@melissa.tv
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        class="sc-iBAaJG kwpJTv"
-      >
-        <svg
-          aria-hidden="true"
-          class="sc-ftLKQv jnvNod"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-    </div>
-    <div
-      class="sc-grXZZQ gZllkS"
-      data-testid="contactcard-container"
-    >
-      <div
-        class="sc-dkjKgF dvdRDZ"
-      >
-        <div
-          class="sc-hLclGa kwlGWp"
-        >
-          <div
-            class="sc-bcPKhP LlyrL"
-            data-testid="avatar-container"
-            variant="sm"
-          >
-            G
-            R
-          </div>
-        </div>
-        <div
-          class="sc-eDnVMP bgmlqB"
-        >
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-jSwlEQ hbBJZR"
-              data-testid="name"
-            >
-              Glenna Reichert
-            </span>
-          </div>
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-gKHVLF dipxwJ"
-              data-testid="phone"
-            >
-              (775)976-6794 x41206
-            </span>
-          </div>
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-gKHVLF dipxwJ"
-              data-testid="email"
-            >
-              Chaim_McDermott@dana.io
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        class="sc-iBAaJG kwpJTv"
-      >
-        <svg
-          aria-hidden="true"
-          class="sc-ftLKQv jnvNod"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-    </div>
-    <div
-      class="sc-grXZZQ gZllkS"
-      data-testid="contactcard-container"
-    >
-      <div
-        class="sc-dkjKgF dvdRDZ"
-      >
-        <div
-          class="sc-hLclGa kwlGWp"
-        >
-          <div
-            class="sc-bcPKhP LlyrL"
-            data-testid="avatar-container"
-            variant="sm"
-          >
-            K
-            W
-          </div>
-        </div>
-        <div
-          class="sc-eDnVMP bgmlqB"
-        >
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-jSwlEQ hbBJZR"
-              data-testid="name"
-            >
-              Kurtis Weissnat
-            </span>
-          </div>
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-gKHVLF dipxwJ"
-              data-testid="phone"
-            >
-              210.067.6132
-            </span>
-          </div>
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-gKHVLF dipxwJ"
-              data-testid="email"
-            >
-              Telly.Hoeger@billy.biz
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        class="sc-iBAaJG kwpJTv"
-      >
-        <svg
-          aria-hidden="true"
-          class="sc-ftLKQv jnvNod"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-    </div>
-    <div
-      class="sc-grXZZQ gZllkS"
-      data-testid="contactcard-container"
-    >
-      <div
-        class="sc-dkjKgF dvdRDZ"
-      >
-        <div
-          class="sc-hLclGa kwlGWp"
-        >
-          <div
-            class="sc-bcPKhP LlyrL"
-            data-testid="avatar-container"
-            variant="sm"
-          >
-            L
-            G
-          </div>
-        </div>
-        <div
-          class="sc-eDnVMP bgmlqB"
-        >
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-jSwlEQ hbBJZR"
-              data-testid="name"
-            >
-              Leanne Graham
-            </span>
-          </div>
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-gKHVLF dipxwJ"
-              data-testid="phone"
-            >
-              1-770-736-8031 x56442
-            </span>
-          </div>
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-gKHVLF dipxwJ"
-              data-testid="email"
-            >
-              Sincere@april.biz
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        class="sc-iBAaJG kwpJTv"
-      >
-        <svg
-          aria-hidden="true"
-          class="sc-ftLKQv jnvNod"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-    </div>
-    <div
-      class="sc-grXZZQ gZllkS"
-      data-testid="contactcard-container"
-    >
-      <div
-        class="sc-dkjKgF dvdRDZ"
-      >
-        <div
-          class="sc-hLclGa kwlGWp"
-        >
-          <div
-            class="sc-bcPKhP LlyrL"
-            data-testid="avatar-container"
-            variant="sm"
-          >
-            M
-            D
-          </div>
-        </div>
-        <div
-          class="sc-eDnVMP bgmlqB"
-        >
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-jSwlEQ hbBJZR"
-              data-testid="name"
-            >
-              Mrs. Dennis Schulist
-            </span>
-          </div>
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-gKHVLF dipxwJ"
-              data-testid="phone"
-            >
-              1-477-935-8478 x6430
-            </span>
-          </div>
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-gKHVLF dipxwJ"
-              data-testid="email"
-            >
-              Karley_Dach@jasper.info
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        class="sc-iBAaJG kwpJTv"
-      >
-        <svg
-          aria-hidden="true"
-          class="sc-ftLKQv jnvNod"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-    </div>
-    <div
-      class="sc-grXZZQ gZllkS"
-      data-testid="contactcard-container"
-    >
-      <div
-        class="sc-dkjKgF dvdRDZ"
-      >
-        <div
-          class="sc-hLclGa kwlGWp"
-        >
-          <div
-            class="sc-bcPKhP LlyrL"
-            data-testid="avatar-container"
-            variant="sm"
-          >
-            N
-            R
-          </div>
-        </div>
-        <div
-          class="sc-eDnVMP bgmlqB"
-        >
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-jSwlEQ hbBJZR"
-              data-testid="name"
-            >
-              Nicholas Runolfsdottir V
-            </span>
-          </div>
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-gKHVLF dipxwJ"
-              data-testid="phone"
-            >
-              586.493.6943 x140
-            </span>
-          </div>
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-gKHVLF dipxwJ"
-              data-testid="email"
-            >
-              Sherwood@rosamond.me
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        class="sc-iBAaJG kwpJTv"
-      >
-        <svg
-          aria-hidden="true"
-          class="sc-ftLKQv jnvNod"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-    </div>
-    <div
-      class="sc-grXZZQ gZllkS"
-      data-testid="contactcard-container"
-    >
-      <div
-        class="sc-dkjKgF dvdRDZ"
-      >
-        <div
-          class="sc-hLclGa kwlGWp"
-        >
-          <div
-            class="sc-bcPKhP LlyrL"
-            data-testid="avatar-container"
-            variant="sm"
-          >
-            P
-            L
-          </div>
-        </div>
-        <div
-          class="sc-eDnVMP bgmlqB"
-        >
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-jSwlEQ hbBJZR"
-              data-testid="name"
-            >
-              Patricia Lebsack
-            </span>
-          </div>
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-gKHVLF dipxwJ"
-              data-testid="phone"
-            >
-              493-170-9623 x156
-            </span>
-          </div>
-          <div
-            class="sc-pqitP cjOBtN"
-          >
-            <span
-              class="sc-gKHVLF dipxwJ"
-              data-testid="email"
-            >
-              Julianne.OConner@kory.org
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        class="sc-iBAaJG kwpJTv"
-      >
-        <svg
-          aria-hidden="true"
-          class="sc-ftLKQv jnvNod"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-    </div>
-    <div
-      class="sc-bBbNsw kdRksC"
-      data-testid="floatingactionbutton-container"
-      position="right"
-      title="Ir para mapa"
-    >
-      <div
-        class="sc-ivDvhZ kSzkOs"
-      >
-        <div
-          class="sc-cwKisF eXRRak"
+          class="sc-iBAaJG kwpJTv"
         >
           <svg
+            aria-hidden="true"
+            class="sc-ftLKQv jnvNod"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              color="white"
-              d="M12 18.5L9 17l-6 3V7l6-3l6 3l6-3v7M9 4v13m6-10v5m6.121 8.121a3 3 0 1 0-4.242 0c.418.419 1.125 1.045 2.121 1.879c1.051-.89 1.759-1.516 2.121-1.879zM19 18v.01"
-              fill="none"
-              stroke="currentColor"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
               stroke-linecap="round"
               stroke-linejoin="round"
-              stroke-width="2"
             />
           </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      style="width: 100%; height: 100%; opacity: 0; transform: translateY(100px) translateZ(0);"
+    >
+      <div
+        class="sc-grXZZQ gZllkS"
+        data-testid="contactcard-container"
+      >
+        <div
+          class="sc-dkjKgF dvdRDZ"
+        >
+          <div
+            class="sc-hLclGa kwlGWp"
+          >
+            <div
+              class="sc-bcPKhP LlyrL"
+              data-testid="avatar-container"
+              variant="sm"
+            >
+              C
+              D
+            </div>
+          </div>
+          <div
+            class="sc-eDnVMP bgmlqB"
+          >
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-jSwlEQ hbBJZR"
+                data-testid="name"
+              >
+                Clementina DuBuque
+              </span>
+            </div>
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-gKHVLF dipxwJ"
+                data-testid="phone"
+              >
+                024-648-3804
+              </span>
+            </div>
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-gKHVLF dipxwJ"
+                data-testid="email"
+              >
+                Rey.Padberg@karina.biz
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-iBAaJG kwpJTv"
+        >
+          <svg
+            aria-hidden="true"
+            class="sc-ftLKQv jnvNod"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      style="width: 100%; height: 100%; opacity: 0; transform: translateY(100px) translateZ(0);"
+    >
+      <div
+        class="sc-grXZZQ gZllkS"
+        data-testid="contactcard-container"
+      >
+        <div
+          class="sc-dkjKgF dvdRDZ"
+        >
+          <div
+            class="sc-hLclGa kwlGWp"
+          >
+            <div
+              class="sc-bcPKhP LlyrL"
+              data-testid="avatar-container"
+              variant="sm"
+            >
+              C
+              B
+            </div>
+          </div>
+          <div
+            class="sc-eDnVMP bgmlqB"
+          >
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-jSwlEQ hbBJZR"
+                data-testid="name"
+              >
+                Clementine Bauch
+              </span>
+            </div>
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-gKHVLF dipxwJ"
+                data-testid="phone"
+              >
+                1-463-123-4447
+              </span>
+            </div>
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-gKHVLF dipxwJ"
+                data-testid="email"
+              >
+                Nathan@yesenia.net
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-iBAaJG kwpJTv"
+        >
+          <svg
+            aria-hidden="true"
+            class="sc-ftLKQv jnvNod"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      style="width: 100%; height: 100%; opacity: 0; transform: translateY(100px) translateZ(0);"
+    >
+      <div
+        class="sc-grXZZQ gZllkS"
+        data-testid="contactcard-container"
+      >
+        <div
+          class="sc-dkjKgF dvdRDZ"
+        >
+          <div
+            class="sc-hLclGa kwlGWp"
+          >
+            <div
+              class="sc-bcPKhP LlyrL"
+              data-testid="avatar-container"
+              variant="sm"
+            >
+              E
+              H
+            </div>
+          </div>
+          <div
+            class="sc-eDnVMP bgmlqB"
+          >
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-jSwlEQ hbBJZR"
+                data-testid="name"
+              >
+                Ervin Howell
+              </span>
+            </div>
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-gKHVLF dipxwJ"
+                data-testid="phone"
+              >
+                010-692-6593 x09125
+              </span>
+            </div>
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-gKHVLF dipxwJ"
+                data-testid="email"
+              >
+                Shanna@melissa.tv
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-iBAaJG kwpJTv"
+        >
+          <svg
+            aria-hidden="true"
+            class="sc-ftLKQv jnvNod"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      style="width: 100%; height: 100%; opacity: 0; transform: translateY(100px) translateZ(0);"
+    >
+      <div
+        class="sc-grXZZQ gZllkS"
+        data-testid="contactcard-container"
+      >
+        <div
+          class="sc-dkjKgF dvdRDZ"
+        >
+          <div
+            class="sc-hLclGa kwlGWp"
+          >
+            <div
+              class="sc-bcPKhP LlyrL"
+              data-testid="avatar-container"
+              variant="sm"
+            >
+              G
+              R
+            </div>
+          </div>
+          <div
+            class="sc-eDnVMP bgmlqB"
+          >
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-jSwlEQ hbBJZR"
+                data-testid="name"
+              >
+                Glenna Reichert
+              </span>
+            </div>
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-gKHVLF dipxwJ"
+                data-testid="phone"
+              >
+                (775)976-6794 x41206
+              </span>
+            </div>
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-gKHVLF dipxwJ"
+                data-testid="email"
+              >
+                Chaim_McDermott@dana.io
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-iBAaJG kwpJTv"
+        >
+          <svg
+            aria-hidden="true"
+            class="sc-ftLKQv jnvNod"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      style="width: 100%; height: 100%; opacity: 0; transform: translateY(100px) translateZ(0);"
+    >
+      <div
+        class="sc-grXZZQ gZllkS"
+        data-testid="contactcard-container"
+      >
+        <div
+          class="sc-dkjKgF dvdRDZ"
+        >
+          <div
+            class="sc-hLclGa kwlGWp"
+          >
+            <div
+              class="sc-bcPKhP LlyrL"
+              data-testid="avatar-container"
+              variant="sm"
+            >
+              K
+              W
+            </div>
+          </div>
+          <div
+            class="sc-eDnVMP bgmlqB"
+          >
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-jSwlEQ hbBJZR"
+                data-testid="name"
+              >
+                Kurtis Weissnat
+              </span>
+            </div>
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-gKHVLF dipxwJ"
+                data-testid="phone"
+              >
+                210.067.6132
+              </span>
+            </div>
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-gKHVLF dipxwJ"
+                data-testid="email"
+              >
+                Telly.Hoeger@billy.biz
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-iBAaJG kwpJTv"
+        >
+          <svg
+            aria-hidden="true"
+            class="sc-ftLKQv jnvNod"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      style="width: 100%; height: 100%; opacity: 0; transform: translateY(100px) translateZ(0);"
+    >
+      <div
+        class="sc-grXZZQ gZllkS"
+        data-testid="contactcard-container"
+      >
+        <div
+          class="sc-dkjKgF dvdRDZ"
+        >
+          <div
+            class="sc-hLclGa kwlGWp"
+          >
+            <div
+              class="sc-bcPKhP LlyrL"
+              data-testid="avatar-container"
+              variant="sm"
+            >
+              L
+              G
+            </div>
+          </div>
+          <div
+            class="sc-eDnVMP bgmlqB"
+          >
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-jSwlEQ hbBJZR"
+                data-testid="name"
+              >
+                Leanne Graham
+              </span>
+            </div>
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-gKHVLF dipxwJ"
+                data-testid="phone"
+              >
+                1-770-736-8031 x56442
+              </span>
+            </div>
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-gKHVLF dipxwJ"
+                data-testid="email"
+              >
+                Sincere@april.biz
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-iBAaJG kwpJTv"
+        >
+          <svg
+            aria-hidden="true"
+            class="sc-ftLKQv jnvNod"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      style="width: 100%; height: 100%; opacity: 0; transform: translateY(100px) translateZ(0);"
+    >
+      <div
+        class="sc-grXZZQ gZllkS"
+        data-testid="contactcard-container"
+      >
+        <div
+          class="sc-dkjKgF dvdRDZ"
+        >
+          <div
+            class="sc-hLclGa kwlGWp"
+          >
+            <div
+              class="sc-bcPKhP LlyrL"
+              data-testid="avatar-container"
+              variant="sm"
+            >
+              M
+              D
+            </div>
+          </div>
+          <div
+            class="sc-eDnVMP bgmlqB"
+          >
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-jSwlEQ hbBJZR"
+                data-testid="name"
+              >
+                Mrs. Dennis Schulist
+              </span>
+            </div>
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-gKHVLF dipxwJ"
+                data-testid="phone"
+              >
+                1-477-935-8478 x6430
+              </span>
+            </div>
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-gKHVLF dipxwJ"
+                data-testid="email"
+              >
+                Karley_Dach@jasper.info
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-iBAaJG kwpJTv"
+        >
+          <svg
+            aria-hidden="true"
+            class="sc-ftLKQv jnvNod"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      style="width: 100%; height: 100%; opacity: 0; transform: translateY(100px) translateZ(0);"
+    >
+      <div
+        class="sc-grXZZQ gZllkS"
+        data-testid="contactcard-container"
+      >
+        <div
+          class="sc-dkjKgF dvdRDZ"
+        >
+          <div
+            class="sc-hLclGa kwlGWp"
+          >
+            <div
+              class="sc-bcPKhP LlyrL"
+              data-testid="avatar-container"
+              variant="sm"
+            >
+              N
+              R
+            </div>
+          </div>
+          <div
+            class="sc-eDnVMP bgmlqB"
+          >
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-jSwlEQ hbBJZR"
+                data-testid="name"
+              >
+                Nicholas Runolfsdottir V
+              </span>
+            </div>
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-gKHVLF dipxwJ"
+                data-testid="phone"
+              >
+                586.493.6943 x140
+              </span>
+            </div>
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-gKHVLF dipxwJ"
+                data-testid="email"
+              >
+                Sherwood@rosamond.me
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-iBAaJG kwpJTv"
+        >
+          <svg
+            aria-hidden="true"
+            class="sc-ftLKQv jnvNod"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      style="width: 100%; height: 100%; opacity: 0; transform: translateY(100px) translateZ(0);"
+    >
+      <div
+        class="sc-grXZZQ gZllkS"
+        data-testid="contactcard-container"
+      >
+        <div
+          class="sc-dkjKgF dvdRDZ"
+        >
+          <div
+            class="sc-hLclGa kwlGWp"
+          >
+            <div
+              class="sc-bcPKhP LlyrL"
+              data-testid="avatar-container"
+              variant="sm"
+            >
+              P
+              L
+            </div>
+          </div>
+          <div
+            class="sc-eDnVMP bgmlqB"
+          >
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-jSwlEQ hbBJZR"
+                data-testid="name"
+              >
+                Patricia Lebsack
+              </span>
+            </div>
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-gKHVLF dipxwJ"
+                data-testid="phone"
+              >
+                493-170-9623 x156
+              </span>
+            </div>
+            <div
+              class="sc-pqitP cjOBtN"
+            >
+              <span
+                class="sc-gKHVLF dipxwJ"
+                data-testid="email"
+              >
+                Julianne.OConner@kory.org
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-iBAaJG kwpJTv"
+        >
+          <svg
+            aria-hidden="true"
+            class="sc-ftLKQv jnvNod"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      style="width: 100%; height: 100%; opacity: 0.33446233050877305;"
+    >
+      <div
+        class="sc-bBbNsw feCeHL"
+        data-testid="floatingactionbutton-container"
+        position="right"
+        title="Ir para mapa"
+      >
+        <div
+          class="sc-ivDvhZ kSzkOs"
+        >
+          <div
+            class="sc-cwKisF eXRRak"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                color="white"
+                d="M12 18.5L9 17l-6 3V7l6-3l6 3l6-3v7M9 4v13m6-10v5m6.121 8.121a3 3 0 1 0-4.242 0c.418.419 1.125 1.045 2.121 1.879c1.051-.89 1.759-1.516 2.121-1.879zM19 18v.01"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
         </div>
       </div>
     </div>

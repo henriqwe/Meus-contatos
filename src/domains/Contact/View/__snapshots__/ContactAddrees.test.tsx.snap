@@ -7,7 +7,7 @@ exports[`ContactAddrees should render the contact list correctly 1`] = `
     data-testid="tab-container"
   >
     <div
-      style="width: 100%; display: flex; opacity: 0.22709520884705758; transform: translateX(-231.87143734588275px) translateZ(0);"
+      style="width: 100%; display: flex; opacity: 0.18119594527698268; transform: translateX(-244.11672780889091px) translateZ(0);"
     >
       <div
         class="sc-bjEwCx cdROzo"
@@ -79,7 +79,7 @@ exports[`ContactAddrees should render the contact list correctly 1`] = `
       </div>
     </div>
     <div
-      style="width: 100%; height: 100%; display: flex; background-color: red; opacity: 0.21688371972280207; transform: translateX(234.93488408315937px) translateZ(0);"
+      style="width: 100%; height: 100%; display: flex; background-color: red; opacity: 0.1710638766022734; transform: translateX(248.68083701931803px) translateZ(0);"
     >
       <div
         class="sc-fnOeiS bqivNc"

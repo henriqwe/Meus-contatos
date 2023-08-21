@@ -148,132 +148,136 @@ exports[`EditContact should render the contact list correctly 1`] = `
       class="sc-eDnVMP jYoMzt"
     >
       <div
-        class="sc-jSwlEQ bUSzpO"
+        style="width: 100%; height: 100%; opacity: 0;"
       >
-        <div>
-          <div
-            class="sc-fnOeiS ccaUeN"
-          >
-            <input
-              autocomplete="off"
-              class="sc-fEyylQ gdwRnj"
-              data-testid="input-name"
-              id="name"
-              isinvalid="0"
-              label="Nome *"
-              placeholder="Clementine Bauch"
-              type="text"
-              value="Clementine Bauch"
-            />
-            <span
-              class="sc-bjEwCx hbtnzl"
+        <div
+          class="sc-jSwlEQ bUSzpO"
+        >
+          <div>
+            <div
+              class="sc-fnOeiS ccaUeN"
             >
-               
-            </span>
-          </div>
-          <label
-            class="sc-ksJisA cxqOvz"
-          />
-        </div>
-        <div>
-          <div
-            class="sc-fnOeiS ccaUeN"
-          >
-            <input
-              autocomplete="off"
-              class="sc-fEyylQ bAtXRS"
-              data-testid="input-email"
-              id="email"
-              isinvalid="0"
-              label="Email *"
-              placeholder="Nathan@yesenia.net"
-              type="text"
-              value="Nathan@yesenia.net"
+              <input
+                autocomplete="off"
+                class="sc-fEyylQ gdwRnj"
+                data-testid="input-name"
+                id="name"
+                isinvalid="0"
+                label="Nome *"
+                placeholder="Clementine Bauch"
+                type="text"
+                value="Clementine Bauch"
+              />
+              <span
+                class="sc-bjEwCx hbtnzl"
+              >
+                 
+              </span>
+            </div>
+            <label
+              class="sc-ksJisA cxqOvz"
             />
-            <span
-              class="sc-bjEwCx hbtnzl"
-            >
-               
-            </span>
           </div>
-          <label
-            class="sc-ksJisA cxqOvz"
-          />
-        </div>
-        <div>
-          <div
-            class="sc-fnOeiS ccaUeN"
-          >
-            <input
-              autocomplete="off"
-              class="sc-fEyylQ hCaZTA"
-              data-testid="input-phone"
-              id="phone"
-              isinvalid="0"
-              label="Telefone *"
-              placeholder="1-463-123-4447"
-              type="text"
-              value="1-463-123-4447"
+          <div>
+            <div
+              class="sc-fnOeiS ccaUeN"
+            >
+              <input
+                autocomplete="off"
+                class="sc-fEyylQ bAtXRS"
+                data-testid="input-email"
+                id="email"
+                isinvalid="0"
+                label="Email *"
+                placeholder="Nathan@yesenia.net"
+                type="text"
+                value="Nathan@yesenia.net"
+              />
+              <span
+                class="sc-bjEwCx hbtnzl"
+              >
+                 
+              </span>
+            </div>
+            <label
+              class="sc-ksJisA cxqOvz"
             />
-            <span
-              class="sc-bjEwCx hbtnzl"
-            >
-               
-            </span>
           </div>
-          <label
-            class="sc-ksJisA cxqOvz"
-          />
-        </div>
-        <div>
-          <div
-            class="sc-fnOeiS ccaUeN"
-          >
-            <input
-              autocomplete="off"
-              class="sc-fEyylQ bXrllK"
-              data-testid="input-username"
-              id="username"
-              isinvalid="0"
-              label="Nome de usuário"
-              placeholder="Samantha"
-              type="text"
-              value="Samantha"
+          <div>
+            <div
+              class="sc-fnOeiS ccaUeN"
+            >
+              <input
+                autocomplete="off"
+                class="sc-fEyylQ hCaZTA"
+                data-testid="input-phone"
+                id="phone"
+                isinvalid="0"
+                label="Telefone *"
+                placeholder="1-463-123-4447"
+                type="text"
+                value="1-463-123-4447"
+              />
+              <span
+                class="sc-bjEwCx hbtnzl"
+              >
+                 
+              </span>
+            </div>
+            <label
+              class="sc-ksJisA cxqOvz"
             />
-            <span
-              class="sc-bjEwCx hbtnzl"
-            >
-               
-            </span>
           </div>
-          <label
-            class="sc-ksJisA cxqOvz"
-          />
-        </div>
-        <div>
-          <div
-            class="sc-fnOeiS ccaUeN"
-          >
-            <input
-              autocomplete="off"
-              class="sc-fEyylQ ZCCvb"
-              data-testid="input-website"
-              id="website"
-              isinvalid="0"
-              label="Website"
-              placeholder="ramiro.info"
-              type="text"
-              value="ramiro.info"
+          <div>
+            <div
+              class="sc-fnOeiS ccaUeN"
+            >
+              <input
+                autocomplete="off"
+                class="sc-fEyylQ bXrllK"
+                data-testid="input-username"
+                id="username"
+                isinvalid="0"
+                label="Nome de usuário"
+                placeholder="Samantha"
+                type="text"
+                value="Samantha"
+              />
+              <span
+                class="sc-bjEwCx hbtnzl"
+              >
+                 
+              </span>
+            </div>
+            <label
+              class="sc-ksJisA cxqOvz"
             />
-            <span
-              class="sc-bjEwCx hbtnzl"
-            >
-               
-            </span>
           </div>
-          <label
-            class="sc-ksJisA cxqOvz"
-          />
+          <div>
+            <div
+              class="sc-fnOeiS ccaUeN"
+            >
+              <input
+                autocomplete="off"
+                class="sc-fEyylQ ZCCvb"
+                data-testid="input-website"
+                id="website"
+                isinvalid="0"
+                label="Website"
+                placeholder="ramiro.info"
+                type="text"
+                value="ramiro.info"
+              />
+              <span
+                class="sc-bjEwCx hbtnzl"
+              >
+                 
+              </span>
+            </div>
+            <label
+              class="sc-ksJisA cxqOvz"
+            />
+          </div>
         </div>
       </div>
       <div

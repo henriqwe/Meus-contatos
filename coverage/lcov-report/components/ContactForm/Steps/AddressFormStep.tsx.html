@@ -173,7 +173,20 @@
 <a name='L108'></a><a href='#L108'>108</a>
 <a name='L109'></a><a href='#L109'>109</a>
 <a name='L110'></a><a href='#L110'>110</a>
-<a name='L111'></a><a href='#L111'>111</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -283,6 +296,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Input } from '&amp;components/Input/Input'
 import {
   Control,
@@ -294,6 +318,7 @@ import {
 import { ActionButtons } from '../ActionButtons'
 import * as S from '../style'
 import { Map } from '&amp;components/Map/Map'
+import { motion } from 'framer-motion'
 &nbsp;
 interface props {
   isLoading: boolean
@@ -341,40 +366,52 @@ export function AddressFormStep({
 &nbsp;
   return (
     &lt;S.Form onSubmit={handleSubmit(onSubmit)}&gt;
-      &lt;S.InputsSection&gt;
-        &lt;Input
-          control={control}
-          name="street"
-          label="Rua"
-          error={errors['street']}
-          disabled={isLoading}
-          data-testid={'input-street'}
-        /&gt;
-        &lt;Input
-          control={control}
-          name="suite"
-          label="Número"
-          error={errors['suite']}
-          disabled={isLoading}
-          data-testid={'input-suite'}
-        /&gt;
-        &lt;Input
-          control={control}
-          name="city"
-          label="Cidade"
-          error={errors['city']}
-          disabled={isLoading}
-          data-testid={'input-city'}
-        /&gt;
-        &lt;Input
-          control={control}
-          name="zipcode"
-          label="CEP"
-          error={errors['zipcode']}
-          disabled={isLoading}
-          data-testid={'input-zipcode'}
-        /&gt;
-      &lt;/S.InputsSection&gt;
+      &lt;motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        style={{ width: '100%', height: '100%' }}
+        transition={{
+          type: 'spring',
+          stiffness: 260,
+          damping: 20
+        }}
+      &gt;
+        &lt;S.InputsSection&gt;
+          &lt;Input
+            control={control}
+            name="street"
+            label="Rua"
+            error={errors['street']}
+            disabled={isLoading}
+            data-testid={'input-street'}
+          /&gt;
+          &lt;Input
+            control={control}
+            name="suite"
+            label="Número"
+            error={errors['suite']}
+            disabled={isLoading}
+            data-testid={'input-suite'}
+          /&gt;
+          &lt;Input
+            control={control}
+            name="city"
+            label="Cidade"
+            error={errors['city']}
+            disabled={isLoading}
+            data-testid={'input-city'}
+          /&gt;
+          &lt;Input
+            control={control}
+            name="zipcode"
+            label="CEP"
+            error={errors['zipcode']}
+            disabled={isLoading}
+            data-testid={'input-zipcode'}
+          /&gt;
+        &lt;/S.InputsSection&gt;
+      &lt;/motion.div&gt;
 &nbsp;
       &lt;S.MapContainer&gt;
         &lt;Map
@@ -384,7 +421,6 @@ export function AddressFormStep({
           formMarkerPosition={contactMapLocalition}
         /&gt;
       &lt;/S.MapContainer&gt;
-&nbsp;
       &lt;ActionButtons
         activeStep={activeStep}
         handlePreviousStep={handlePreviousStep}
@@ -400,7 +436,7 @@ export function AddressFormStep({
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-08-20T22:24:09.101Z
+                at 2023-08-21T00:10:50.987Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

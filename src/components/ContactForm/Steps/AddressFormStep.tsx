@@ -9,6 +9,7 @@ import {
 import { ActionButtons } from '../ActionButtons'
 import * as S from '../style'
 import { Map } from '&components/Map/Map'
+import { motion } from 'framer-motion'
 
 interface props {
   isLoading: boolean
@@ -56,40 +57,52 @@ export function AddressFormStep({
 
   return (
     <S.Form onSubmit={handleSubmit(onSubmit)}>
-      <S.InputsSection>
-        <Input
-          control={control}
-          name="street"
-          label="Rua"
-          error={errors['street']}
-          disabled={isLoading}
-          data-testid={'input-street'}
-        />
-        <Input
-          control={control}
-          name="suite"
-          label="Número"
-          error={errors['suite']}
-          disabled={isLoading}
-          data-testid={'input-suite'}
-        />
-        <Input
-          control={control}
-          name="city"
-          label="Cidade"
-          error={errors['city']}
-          disabled={isLoading}
-          data-testid={'input-city'}
-        />
-        <Input
-          control={control}
-          name="zipcode"
-          label="CEP"
-          error={errors['zipcode']}
-          disabled={isLoading}
-          data-testid={'input-zipcode'}
-        />
-      </S.InputsSection>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        style={{ width: '100%', height: '100%' }}
+        transition={{
+          type: 'spring',
+          stiffness: 260,
+          damping: 20
+        }}
+      >
+        <S.InputsSection>
+          <Input
+            control={control}
+            name="street"
+            label="Rua"
+            error={errors['street']}
+            disabled={isLoading}
+            data-testid={'input-street'}
+          />
+          <Input
+            control={control}
+            name="suite"
+            label="Número"
+            error={errors['suite']}
+            disabled={isLoading}
+            data-testid={'input-suite'}
+          />
+          <Input
+            control={control}
+            name="city"
+            label="Cidade"
+            error={errors['city']}
+            disabled={isLoading}
+            data-testid={'input-city'}
+          />
+          <Input
+            control={control}
+            name="zipcode"
+            label="CEP"
+            error={errors['zipcode']}
+            disabled={isLoading}
+            data-testid={'input-zipcode'}
+          />
+        </S.InputsSection>
+      </motion.div>
 
       <S.MapContainer>
         <Map
@@ -99,7 +112,6 @@ export function AddressFormStep({
           formMarkerPosition={contactMapLocalition}
         />
       </S.MapContainer>
-
       <ActionButtons
         activeStep={activeStep}
         handlePreviousStep={handlePreviousStep}

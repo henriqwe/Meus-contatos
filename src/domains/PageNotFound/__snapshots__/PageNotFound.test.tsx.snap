@@ -3,7 +3,7 @@
 exports[`PageNotFound should render the contact PageNotFound correctly 1`] = `
 <div>
   <div
-    class="sc-dkjKgF jychpp"
+    class="sc-dkjKgF kSZHvY"
     data-testid="container-page-not-found"
   >
     <h3>
