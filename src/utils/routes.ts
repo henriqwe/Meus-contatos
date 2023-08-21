@@ -5,16 +5,16 @@ export const routes = {
   createContact: {
     path: '/cadastrar'
   },
-  viewContact: {
-    path: (id: string | number) => `/contato/${id}`,
-    pathWithParam: `/contato/:id`
-  },
-  editContact: {
-    path: (id: string | number) => `/editar/${id}`,
-    pathWithParam: `/editar/:id`
-  },
   map: {
     path: `/mapa`
+  },
+  viewContact: {
+    path: (id: string | number) => `/${id}`,
+    pathWithParam: `/:id`
+  },
+  editContact: {
+    path: (id: string | number) => `/${id}/editar`,
+    pathWithParam: `/:id/editar`
   },
   pageNotFound: {
     path: `/*`
